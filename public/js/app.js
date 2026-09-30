@@ -8,27 +8,6 @@ let currentPage = 'home';
 let currentFilter = 'all';
 let productsCache = null;
 
-// ==================== DARK MODE ====================
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  const icon = document.getElementById('themeIcon');
-  if (icon) icon.textContent = theme === 'dark' ? '☀' : '☾';
-}
-
-function initTheme() {
-  const saved = localStorage.getItem('elateve_theme') || 'light';
-  applyTheme(saved);
-
-  const btn = document.getElementById('themeToggle');
-  if (btn) {
-    btn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') || 'light';
-      const next = current === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-      localStorage.setItem('elateve_theme', next);
-    });
-  }
-}
 
 // ==================== CONTACT MODAL ====================
 function initContactModal() {
@@ -538,7 +517,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   initNavigation();
   initScrollEffects();
-  initTheme();
   initContactModal();
 
   // Push initial state

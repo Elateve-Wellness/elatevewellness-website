@@ -27,7 +27,7 @@ const PAGE_META = {
     description: 'Field notes from the team: the longevity technology we test, run and get asked about. What works, what is hype, and what just landed on the market.'
   },
   '/about': {
-    title: 'Two Companies. One Refusal. — ELATEVE powered by Kloodos',
+    title: 'Two Companies. One Standard. — ELATEVE powered by Kloodos',
     description: 'ELATEVE powered by Kloodos: two specialists, one longevity offer, built by women who were done being told to push through it.'
   }
 };

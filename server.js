@@ -19,7 +19,7 @@ app.use(express.json());
 // API routes
 app.use('/api', productsRouter);
 
-// Subscribe endpoint — stores emails and forwards to hello@elateve.com
+// Subscribe endpoint — stores emails and forwards to team@elatevewellness.com
 const SUBSCRIBERS_FILE = path.join(__dirname, 'data', 'subscribers.json');
 const QUIZ_RESULTS_FILE = path.join(__dirname, 'data', 'quiz-results.json');
 
@@ -63,7 +63,7 @@ app.post('/api/subscribe', (req, res) => {
   fs.writeFileSync(SUBSCRIBERS_FILE, JSON.stringify(subscribers, null, 2));
   forwardToSheet({ type: 'newsletter', ...entry });
 
-  console.log(`New subscriber: ${email} → forward to hello@elateve.com`);
+  console.log(`New subscriber: ${email} → forward to team@elatevewellness.com`);
   res.json({ success: true, message: 'Subscribed' });
 });
 

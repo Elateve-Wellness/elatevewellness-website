@@ -212,10 +212,14 @@
     'modal.email': 'Escríbanos un correo',
 
     // about page
-    'about.eyebrow': 'Nuestra historia',
-    'about.title': 'Dos empresas. Un mismo estándar.',
-    'about.sub': 'Consejos de longevidad de mujeres que lo han vivido',
+    'about.eyebrow': 'Nuestro equipo · Barcelona × Reino Unido',
+    'about.title': 'Las personas detrás de <br>su planta de longevidad.',
+    'about.sub': 'Gente de la hostelería que entiende la ciencia, y científicas que entienden la hostelería.',
     'about.tagline': 'ELATEVE powered by Kloodos — <br>la alianza de tecnología de longevidad para España y Europa.',
+    'about.pill1label': 'Elateve',
+    'about.pill1text': 'Mujeres de 30, 40, 50 y 60 años, de la hostelería, el bienestar y el sector inmobiliario de lujo en Barcelona, París y Londres. Aportamos el concepto, el caso de negocio y un único partner que lidera su proyecto desde el plano hasta la apertura.',
+    'about.pill2label': 'Kloodos',
+    'about.pill2text': 'Una empresa familiar liderada por mujeres que lleva tecnología de recuperación del deporte profesional a los spas desde 2014. Aporta equipamiento de grado médico de primer nivel, protocolos desarrollados por médicos y formación interna.',
     'about.introlead': 'Para nosotras, la longevidad no es cuestión de más años. Es sentirse una misma en todos ellos.',
     'about.introp': 'Creamos ELATEVE, y nos aliamos en exclusiva con Kloodos, para que usted no tenga que adivinar qué protocolos y tecnología merecen realmente la pena.',
     'about.l1': 'Las mujeres detrás de ELATEVE',
@@ -259,7 +263,7 @@
     'about.p3d': 'Desde la salud del suelo pélvico posparto hasta la libido posmenopáusica, hablamos con apertura, honestidad y sin juzgar.',
     'about.quote': '«Para nosotras, la longevidad no es solo vivir más. Es despertar con la mente clara, con fuerza para tu vida y con confianza en tu propio cuerpo.»',
     'about.close1': 'Hemos hecho la investigación, validado la tecnología y probado los protocolos, para que usted no tenga que adivinar.',
-    'about.closelead': 'Elevemos lo cotidiano, juntas.',
+    'about.closelead': 'Déjenos 30 minutos en su espacio.',
     'about.ctajournal': 'Leer lo último del diario'
   };
 

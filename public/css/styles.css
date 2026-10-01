@@ -229,6 +229,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 .about-hero-sub { font-size: clamp(1rem, 2vw, 1.3rem); font-weight: 300; color: var(--gold); letter-spacing: 0.08em; margin-top: var(--space-sm); }
 .about-hero-tagline { font-size: 0.85rem; font-weight: 300; color: var(--grey); margin-top: var(--space-xs); font-style: italic; }
 .about-content { max-width: 800px; margin: 0 auto; padding: 0 var(--space-md) var(--space-xl); text-align: center; }
+.about-content--tight { padding-bottom: 2rem; }
 .about-block { margin-bottom: var(--space-lg); }
 .about-block--intro { margin-bottom: var(--space-lg); }
 .about-text h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: var(--space-sm); }
@@ -279,7 +280,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 
 /* About Pills (intro blurbs) */
 .about-pills { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); text-align: left; padding-top: var(--space-md); border-top: 1px solid rgba(197,151,62,0.35); }
-.about-pill-label { font-family: var(--font-display); font-size: 1.05rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); margin-bottom: 0.5rem; }
+.about-pill-label { font-family: var(--font-display); font-size: 1.05rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
 .about-pill p { font-size: 0.92rem; color: var(--charcoal-light); line-height: 1.8; }
 @media (max-width: 640px) { .about-pills { grid-template-columns: 1fr; gap: var(--space-md); } }
 
@@ -832,6 +833,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; line-height
 
 /* ── SECTION SCAFFOLD ── */
 .kx-section { max-width: 1200px; }
+#kx-people { padding-top: 2rem; }
 .kx-section-head { max-width: 680px; margin-bottom: var(--space-lg); }
 .kx-section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
 .kx-section--band { max-width: 100%; background: #111111; padding: 4.5rem var(--space-md); }

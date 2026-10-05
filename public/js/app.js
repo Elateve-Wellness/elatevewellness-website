@@ -55,7 +55,7 @@ async function fetchBlog() {
 }
 
 // ==================== ROUTER ====================
-function navigateTo(page, category = null, season = null, { push = true } = {}) {
+function navigateTo(page, category = null, season = null, { push = true, anchor = null } = {}) {
   const activePage = document.querySelector('.page.active');
   if (activePage) {
     activePage.classList.remove('visible');
@@ -88,17 +88,19 @@ function navigateTo(page, category = null, season = null, { push = true } = {}) 
       }
 
       currentPage = page;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const target = anchor ? document.getElementById(anchor) : null;
+      if (target) target.scrollIntoView({ block: 'start' });
+      else window.scrollTo({ top: 0, behavior: 'smooth' });
       updateNavActive(page);
       if (window.ELATEVE_setTitle) window.ELATEVE_setTitle(page); // keep the tab title in step with the page and language
 
       // Update URL without reload
-      const paths = { home: '/', shop: '/shop', blog: '/blog', about: '/about', machinery: '/machinery', whyus: '/why-us' };
+      const paths = { home: '/', shop: '/shop', blog: '/blog', projects: '/projects', machinery: '/machinery', whyus: '/why-us' };
       const params = new URLSearchParams();
       if (category) params.set('category', category);
       if (season) params.set('season', season);
       const qs = params.toString();
-      const url = qs ? `${paths[page]}?${qs}` : paths[page];
+      const url = (qs ? `${paths[page]}?${qs}` : paths[page]) + (anchor ? `#${anchor}` : '');
       if (push) history.pushState({ page, category, season }, "", url); // back/forward must not add new entries
     }, 300);
   }
@@ -429,11 +431,21 @@ function initNavigation() {
       const page = link.dataset.page;
       const category = link.dataset.category || null;
       const season = link.dataset.season || null;
-      navigateTo(page, category, season);
+      navigateTo(page, category, season, { anchor: link.dataset.anchor || null });
 
       document.getElementById('navLinks')?.classList.remove('open');
       document.getElementById('navToggle')?.classList.remove('active');
     }
+  });
+
+  // In-page jumps: [data-jump] scrolls to an element id (machinery index, "pairs with" links), [data-scroll] likewise
+  document.addEventListener('click', (e) => {
+    const jump = e.target.closest('[data-jump],[data-scroll]');
+    if (!jump) return;
+    const el = document.getElementById(jump.dataset.jump || jump.dataset.scroll);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   document.addEventListener('click', (e) => {
@@ -544,7 +556,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Determine initial page from URL
   const path = window.location.pathname;
   const params = new URLSearchParams(window.location.search);
-  const pageMap = { '/': 'home', '/blog': 'blog', '/about': 'about', '/machinery': 'machinery', '/why-us': 'whyus' };
+  const pageMap = { '/': 'home', '/blog': 'blog', '/projects': 'projects', '/machinery': 'machinery', '/why-us': 'whyus' };
   let initialPage = pageMap[path] || 'home';
   // Fall back to home if a retired page (e.g. /shop) is requested
   if (!document.getElementById(`page-${initialPage}`)) initialPage = 'home';
@@ -561,6 +573,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   currentPage = initialPage;
   updateNavActive(initialPage);
+
+  // Deep link such as /why-us#team: scroll once the page is laid out
+  if (location.hash.length > 1) {
+    const anchorEl = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (anchorEl && page && page.contains(anchorEl)) setTimeout(() => anchorEl.scrollIntoView({ block: 'start' }), 350);
+  }
 
   // Load data
   if (initialPage === 'shop') {

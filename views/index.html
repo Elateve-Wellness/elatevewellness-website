@@ -42,7 +42,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=20261005-kx31">
+  <link rel="stylesheet" href="/css/styles.css?v=20261005-kx41">
+  <link rel="stylesheet" href="/css/pages.css?v=20261005-kx41">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -50,16 +51,16 @@
   <meta property="og:title" content="{{PAGE_TITLE}}">
   <meta property="og:description" content="{{PAGE_DESCRIPTION}}">
   <meta property="og:url" content="{{CANONICAL_URL}}">
-  <meta property="og:image" content="https://www.elatevewellness.com/images/partnership/lounge.jpg">
-  <meta property="og:image:width" content="1800">
-  <meta property="og:image:height" content="1192">
+  <meta property="og:image" content="https://www.elatevewellness.com/images/site/hero-machines.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="684">
   <meta property="og:locale" content="en_GB">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{PAGE_TITLE}}">
   <meta name="twitter:description" content="{{PAGE_DESCRIPTION}}">
-  <meta name="twitter:image" content="https://www.elatevewellness.com/images/partnership/lounge.jpg">
+  <meta name="twitter:image" content="https://www.elatevewellness.com/images/site/hero-machines.jpg">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -102,9 +103,9 @@
       </a>
       <div class="nav-links" id="navLinks">
         <a href="/" data-page="home" data-i18n="nav.home">Home</a>
+        <a href="/projects" data-page="projects" data-i18n="nav.projects">Our Projects</a>
         <a href="/machinery" data-page="machinery" data-i18n="nav.machinery">The Machinery</a>
         <a href="/why-us" data-page="whyus" data-i18n="nav.whyus">Why Us</a>
-        <a href="/about" data-page="about" data-i18n="nav.about">Who Are We</a>
         <a href="/blog" data-page="blog" data-i18n="nav.journal">Journal</a>
         <a href="mailto:team@elatevewellness.com" class="nav-book" data-contact data-i18n="cta.book">Book 30 Minutes</a>
       </div>
@@ -122,10 +123,7 @@
     <div class="logo-strip-in">
       <span class="logo-strip-lbl" data-i18n="strip.label">Installed &amp; running at</span>
       <div class="marquee">
-        <div class="track">
-          <span>Manchester United FC</span><span>FC Porto</span><span>Soho House International</span><span>Gleneagles Townhouse</span><span>ESPA International</span><span>PGA Catalunya</span><span>KX Life &amp; KXU</span><span>Repose Space</span>
-          <span aria-hidden="true">Manchester United FC</span><span aria-hidden="true">FC Porto</span><span aria-hidden="true">Soho House International</span><span aria-hidden="true">Gleneagles Townhouse</span><span aria-hidden="true">ESPA International</span><span aria-hidden="true">PGA Catalunya</span><span aria-hidden="true">KX Life &amp; KXU</span><span aria-hidden="true">Repose Space</span>
-        </div>
+        <div class="track"><img src="/images/site/logos/manutd.png" alt="Manchester United FC" class="tall" loading="eager" decoding="async"><img src="/images/site/logos/soho-house.png" alt="Soho House" class="tall" loading="eager" decoding="async"><img src="/images/site/logos/mandarin-oriental.png" alt="Mandarin Oriental" class="tall" loading="eager" decoding="async"><img src="/images/site/logos/gleneagles.png" alt="Gleneagles" class="tall" loading="eager" decoding="async"><img src="/images/site/logos/espa.png" alt="ESPA" loading="eager" decoding="async"><img src="/images/site/logos/raffles.png" alt="Raffles" class="tall" loading="eager" decoding="async"><img src="/images/site/logos/kx.png" alt="KX" loading="eager" decoding="async"><img src="/images/site/logos/rebase.png" alt="Rebase" loading="eager" decoding="async"><img src="/images/site/logos/bamford.png" alt="Bamford" loading="eager" decoding="async"><img src="/images/site/logos/proper.png" alt="Proper Hotels" loading="eager" decoding="async"><img src="/images/site/logos/cipriani.png" alt="Cipriani" class="tall" loading="eager" decoding="async"><img src="/images/site/logos/randox.png" alt="Randox" loading="eager" decoding="async"><img src="/images/site/logos/manutd.png" alt="" aria-hidden="true" class="tall" loading="lazy" decoding="async"><img src="/images/site/logos/soho-house.png" alt="" aria-hidden="true" class="tall" loading="lazy" decoding="async"><img src="/images/site/logos/mandarin-oriental.png" alt="" aria-hidden="true" class="tall" loading="lazy" decoding="async"><img src="/images/site/logos/gleneagles.png" alt="" aria-hidden="true" class="tall" loading="lazy" decoding="async"><img src="/images/site/logos/espa.png" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/images/site/logos/raffles.png" alt="" aria-hidden="true" class="tall" loading="lazy" decoding="async"><img src="/images/site/logos/kx.png" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/images/site/logos/rebase.png" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/images/site/logos/bamford.png" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/images/site/logos/proper.png" alt="" aria-hidden="true" loading="lazy" decoding="async"><img src="/images/site/logos/cipriani.png" alt="" aria-hidden="true" class="tall" loading="lazy" decoding="async"><img src="/images/site/logos/randox.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
       </div>
     </div>
   </div>
@@ -134,178 +132,326 @@
   <main id="app">
 
     <!-- ==================== HOME PAGE ==================== -->
-    <section class="page page--home active" id="page-home">
-
-      <!-- HERO -->
-      <div class="kx-hero">
-        <div class="kx-hero-wrap">
-          <div class="kx-hero-grid">
-            <div class="kx-hero-copy">
-              <p class="kx-eyebrow" data-i18n="hero.eyebrow">A Longevity Partnership &middot; Barcelona</p>
-              <h1 class="kx-hero-title" data-i18n-html="hero.title">The complete <span class="gold-text">wellness &amp; longevity</span> offer <br>for hospitality, delivered end to end.</h1>
-              <p class="kx-hero-sub" data-i18n="hero.sub">ELATEVE powered by Kloodos turns underused wellness space into a measurable recovery offer, for hotel spas, sports clubs, coworking spaces and wellness centres. Guests want real renewal, not passive relaxation. We deliver protocols, technology and training from one partner, exclusively for Spain and Europe.</p>
-              <div class="kx-hero-cta">
-                <a href="mailto:team@elatevewellness.com" class="btn btn--gold" data-contact data-i18n="cta.book">Book 30 Minutes</a>
-                <a href="#kx-system" class="btn btn--outline" data-i18n="hero.cta2">See What We Deliver</a>
-              </div>
-            </div>
-            <div class="kx-hero-media">
-              <div class="kx-hm">
-                <div class="kx-hm-cell kx-hm-cell--float"><img src="/images/web/hero-float.jpg" alt="K Float dry float couch" data-i18n-alt="alt.float" width="560" height="718" fetchpriority="high"></div>
-                <div class="kx-hm-cell kx-hm-cell--kokoon"><img src="/images/web/hero-kokoon.jpg" alt="Kokoon nervous system recovery pod" data-i18n-alt="alt.kokoon" width="560" height="718"></div>
-                <div class="kx-hm-cell kx-hm-cell--pbm"><img src="/images/web/hero-pbm.jpg" alt="Cell Stack red light therapy bed" data-i18n-alt="alt.pbm" width="560" height="718"></div>
-              </div>
-              <p class="kx-hm-cap"><span>K Float</span><span>Kokoon</span><span>Cell Stack</span></p>
-            </div>
+    <section class="page page--home active" id="page-home"><div class="px">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="h.hero.eye">A longevity partnership · Barcelona · Spain &amp; Europe</p>
+          <h1 data-i18n-html="h.hero.h">Your spa is the most <span class="gold-text">underused room</span> in the building.</h1>
+          <p class="lead" data-i18n="h.hero.lead">ELATEVE powered by Kloodos turns it into a medical-grade longevity floor that guests pay a premium for: concept, technology, protocols, training and service from one partner. The complete wellness &amp; longevity offer for hospitality, delivered end to end.</p>
+          <div class="btn-row">
+            <a class="btn btn-gold" href="mailto:team@elatevewellness.com" data-contact data-i18n="cta.book">Book 30 Minutes</a>
+            <a class="btn btn-line" href="#home-return" data-scroll="home-return" data-i18n="h.hero.see">See the return</a>
           </div>
-          <div class="kx-kpis">
-            <div class="kx-kpi"><span class="kx-kpi-n">+36%</span><span class="kx-kpi-l" data-i18n="hero.m4">More spend per trip from wellness travellers</span></div>
-            <div class="kx-kpi"><span class="kx-kpi-n">15+</span><span class="kx-kpi-l" data-i18n="hero.m1">Medical grade technologies</span></div>
-            <div class="kx-kpi"><span class="kx-kpi-n">70+</span><span class="kx-kpi-l" data-i18n="hero.m2">Years of protocol design</span></div>
-            <div class="kx-kpi"><span class="kx-kpi-n">1</span><span class="kx-kpi-l" data-i18n="hero.m3">Partner, install to outcome</span></div>
+        </div>
+        <div class="hero-media">
+          <img src="/images/site/hero-machines.jpg" alt="K-Float dry float, Kokoon nervous system pod and Cell-Stack red light bed" data-i18n-alt="h.hero.alt" class="hero-wide" width="1600" height="684" fetchpriority="high">
+          <div class="float-card">
+            <span class="eyebrow" data-i18n="h.fc.eye">Modelled payback</span>
+            <span class="num" data-i18n="h.fc.num">5–8 months</span>
+            <span class="cap" style="grid-column:1/-1" data-i18n="h.fc.cap">per machine, on comparable installations</span>
           </div>
         </div>
       </div>
-
-      <div class="kx-rule" aria-hidden="true"></div>
-
-      <!-- TRACK RECORD -->
-      <div class="section kx-section" id="kx-record">
-        <div class="kx-section-head kx-reveal">
-          <p class="kx-eyebrow" data-i18n="rec.eyebrow">Track Record</p>
-          <h2 class="kx-h2" data-i18n-html="rec.title">Already trusted in the rooms <br>that accept nothing less.</h2>
-          <p class="kx-lead" data-i18n="rec.lead">The technology and protocols behind ELATEVE powered by Kloodos are installed and running across elite sport, luxury hospitality and private medical wellness, from Premier League recovery suites to five star spas.</p>
-          <p class="kx-lead kx-lead--standard" data-i18n="rec.standard">We specify medical grade, clinically validated equipment only. Never consumer devices, never second rate materials. That standard is why these names let it into their buildings.</p>
-        </div>
-
-        <div class="kx-record-media kx-reveal">
-          <img src="/images/web/p-lounge.jpg" alt="A calm luxury spa pool and lounge" data-i18n-alt="alt.lounge" loading="lazy">
-        </div>
-
-        <div class="kx-roll kx-reveal">
-          <p class="kx-roll-label" data-i18n="rec.rolllabel">A few of the rooms it already runs in</p>
-          <p class="kx-roll-names"><span>Manchester United FC</span> <span>FC Porto</span> <span>Soho House International</span> <span>Gleneagles Townhouse</span> <span>ESPA International</span> <span>PGA Catalunya</span> <span>KX Life &amp; KXU</span> <span>Repose Space</span></p>
-          <p class="kx-roll-more" data-i18n="rec.rollmore">And more, shared on request</p>
-        </div>
+      <div class="kpis">
+        <div class="kpi"><span class="num">+36%</span><span class="cap" data-i18n="h.k1">More spend per trip from wellness travellers</span></div>
+        <div class="kpi"><span class="num">€140k+</span><span class="cap" data-i18n-html="h.k2">A year from one HBOT lounger on ~4&nbsp;m² (illustrative)</span></div>
+        <div class="kpi"><span class="num">15+</span><span class="cap" data-i18n="h.k3">Medical-grade technologies, one source</span></div>
+        <div class="kpi"><span class="num">1</span><span class="cap" data-i18n="h.k4">Partner, from floor plan to outcome</span></div>
       </div>
+    </div>
+  </section>
 
-      <!-- WHO WE ARE -->
-      <div class="section kx-section kx-section--band">
-        <div class="kx-who kx-reveal">
-          <div class="kx-who-mark">
-            <span class="kx-who-a">ELATEVE</span>
-            <span class="kx-who-x">&times;</span>
-            <span class="kx-who-b">KLOODOS</span>
-          </div>
-          <div class="kx-who-body">
-            <p class="kx-eyebrow" data-i18n="who.eyebrow">Who We Are</p>
-            <h2 class="kx-h2" data-i18n-html="who.title">Two specialists. <br>One longevity offer.</h2>
-            <p data-i18n="who.p1">ELATEVE is the longevity curator: the experience, the protocols and the guest facing brand. Kloodos is the wellness technology curator to elite sport, luxury hospitality and private medical health, and a manufacturer of the world&rsquo;s leading wellness technologies since 2014.</p>
-            <p data-i18n-html="who.p2">Together we are the <strong>exclusive longevity technology partnership for Spain and Europe</strong>, based in Barcelona. A property never has to assemble a wellness offer from parts that were never designed to work together.</p>
-            <p data-i18n="who.p3">We specify medical grade equipment only, stay your one point of contact from before installation through ongoing service, and keep protocols and training constantly updated. Everything centralised with a single partner.</p>
-            <div class="kx-tags">
-              <span data-i18n="who.t1">Exclusive &middot; Spain &amp; Europe</span>
-              <span data-i18n="who.t2">Based in Barcelona</span>
-              <span data-i18n="who.t3">Medical grade only</span>
-              <span data-i18n="who.t4">One point of contact</span>
+  <section class="opp">
+    <div class="wrap">
+      <div class="opp-grid">
+        <div class="opp-left">
+          <p class="eyebrow" data-i18n="h.opp.eye">The opportunity</p>
+          <h2 data-i18n="h.opp.h">Guests want real renewal, not passive relaxation.</h2>
+          <p class="lead" data-i18n="h.opp.lead">The clients who spend the most, and a fast-growing wave of longevity travellers, are actively looking for somewhere to put that spend. A serious, science-backed longevity offer is increasingly the reason they choose one property, or one club, over another.</p>
+        </div>
+        <div class="opp-right">
+          <p class="muted" data-i18n="h.opp.p1">Most venues cannot meet that demand, because the offer has to be assembled from parts that were never designed to work together.</p>
+          <p class="muted" data-i18n="h.opp.p2">Your spa was designed for a different guest, in a different decade of demand. We assess what you already have, walk the space, draw the floor plan and advise on where every modality belongs, then propose the changes that appeal to the client walking in now.</p>
+          <div class="opp-venues">
+            <p class="eyebrow" style="color:var(--muted)" data-i18n="h.opp.v">Not only spas. We plan and advise across hospitality</p>
+            <div class="chips">
+              <span class="chip gold" data-i18n="h.c1">Hotels &amp; resorts</span><span class="chip" data-i18n="h.c2">Private members’ clubs</span><span class="chip" data-i18n="h.c3">Coworking spaces</span><span class="chip" data-i18n="h.c4">Gyms &amp; fitness clubs</span><span class="chip" data-i18n="h.c5">Athletic &amp; sports clubs</span><span class="chip" data-i18n="h.c6">Residences</span><span class="chip" data-i18n="h.c7">Longevity clinics</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- THE SYSTEM / WHAT WE DELIVER -->
-      <div class="section kx-section" id="kx-system">
-        <div class="kx-section-head kx-reveal">
-          <p class="kx-eyebrow" data-i18n="sys.eyebrow">What We Deliver</p>
-          <h2 class="kx-h2" data-i18n-html="sys.title">A turnkey longevity floor. <br>One contract, one partner.</h2>
-          <p class="kx-lead" data-i18n="sys.lead">Not a catalogue of machines. A complete longevity offer, designed for your building and installed, staffed and marketed for you.</p>
-        </div>
-        <div class="kx-system-grid kx-reveal">
-          <div class="kx-svc">
-            <span class="kx-svc-n">01</span>
-            <h3 data-i18n="sys.s1t">Concept &amp; feasibility</h3>
-            <p data-i18n="sys.s1d">We walk the space, draw the floor plan and map the guest journey before anything is ordered.</p>
-          </div>
-          <div class="kx-svc">
-            <span class="kx-svc-n">02</span>
-            <h3 data-i18n="sys.s2t">Technology supply &amp; install</h3>
-            <p data-i18n="sys.s2d">15+ medical grade modalities from a single source: whole body cryotherapy, HBOT, red light therapy, IV and NAD+, FDA cleared compression, EMS, dry float and more.</p>
-          </div>
-          <div class="kx-svc">
-            <span class="kx-svc-n">03</span>
-            <h3 data-i18n="sys.s3t">Integrated protocols</h3>
-            <p data-i18n="sys.s3d">Treatments sequenced to work together, so guests stay longer, spend more and return.</p>
-          </div>
-          <div class="kx-svc">
-            <span class="kx-svc-n">04</span>
-            <h3 data-i18n="sys.s4t">Team training &amp; certification</h3>
-            <p data-i18n="sys.s4d">Your staff trained across every modality, the what, the how, the when and the why, with ongoing education and protocol support.</p>
-          </div>
-          <div class="kx-svc">
-            <span class="kx-svc-n">05</span>
-            <h3 data-i18n="sys.s5t">Launch &amp; commercial support</h3>
-            <p data-i18n="sys.s5d">Positioning, naming, menu design, launch assets and pricing guidance, so the floor fills from opening week.</p>
-          </div>
-          <div class="kx-svc">
-            <span class="kx-svc-n">06</span>
-            <h3 data-i18n="sys.s6t">Service, maintenance &amp; one point of contact</h3>
-            <p data-i18n="sys.s6d">One number for technology, parts, servicing and support, for the life of the installation.</p>
-          </div>
-        </div>
-        <p class="kx-system-line kx-reveal" data-i18n="sys.line">From the first drawing to the outcome your guests feel, end to end, under one roof.</p>
-      </div>
-
-      <!-- THE MARKET / WHY NOW -->
-      <div class="section kx-section kx-section--band" id="kx-market">
-        <div class="kx-mk-head kx-reveal">
-          <div>
-            <p class="kx-eyebrow" data-i18n="mkt.eyebrow">The Market</p>
-            <h2 class="kx-h2" data-i18n-html="mkt.title">The demand is already here. <br>The supply isn&rsquo;t.</h2>
-          </div>
-          <div class="kx-fomo">
-            <p data-i18n-html="mkt.fomo1">The people driving that spend, wealthy guests, longevity travellers, executive health and elite sport budgets, are <strong>actively looking for a credible place to put it</strong>. Most properties cannot give them one.</p>
-            <p data-i18n-html="mkt.fomo2">There is room for roughly <strong>one serious longevity destination per city</strong>. Whoever installs first usually keeps that position. Your competitors are already having this conversation with us.</p>
-          </div>
-        </div>
-        <div class="kx-stats kx-reveal">
-          <div class="kx-stat">
-            <div class="kx-stat-n">+36%</div>
-            <div class="kx-stat-l" data-i18n="mkt.s1l">What an international wellness traveller spends per trip over the average tourist</div>
-          </div>
-          <div class="kx-stat">
-            <div class="kx-stat-n" data-i18n="mkt.n2">7.8% &rarr; 18%</div>
-            <div class="kx-stat-l" data-i18n="mkt.s2l">Wellness trips are 7.8% of all travel, but nearly a fifth of what travellers spend</div>
-          </div>
-          <div class="kx-stat">
-            <div class="kx-stat-n" data-i18n="mkt.n3">$1.4tn</div>
-            <div class="kx-stat-l" data-i18n="mkt.s3l">Forecast size of wellness tourism by 2027, up from $1tn in 2024</div>
-          </div>
-          <div class="kx-stat">
-            <div class="kx-stat-n" data-i18n="mkt.n4">$9.8tn</div>
-            <div class="kx-stat-l" data-i18n="mkt.s4l">Forecast global wellness economy by 2029. Longevity is its fastest growing part</div>
-          </div>
-        </div>
-        <p class="kx-roi-note" data-i18n="mkt.src">Sources: Global Wellness Institute, 2023&ndash;2024.</p>
-      </div>
-
-      <!-- EXPLORE FURTHER (merged Why Us + Machinery teaser) -->
-      <div class="section kx-section" id="kx-explore">
-        <div class="kx-section-head kx-reveal">
-          <p class="kx-eyebrow" data-i18n="exp.eyebrow">Go Deeper</p>
-          <h2 class="kx-h2" data-i18n="exp.title">See the case, and see the machines.</h2>
-        </div>
-        <div class="kx-deeper kx-reveal">
-          <a href="/machinery" class="kx-deeper-card" data-page="machinery">
-            <img src="/images/web/m-hbot-oxystack.jpg" alt="" loading="lazy">
-            <div class="kx-deeper-t"><span data-i18n="nav.machinery">The Machinery</span><b data-i18n="inst.cta">See It For Yourself</b></div>
-          </a>
-          <a href="/why-us" class="kx-deeper-card" data-page="whyus">
-            <img src="/images/web/p-lounge.jpg" alt="" loading="lazy">
-            <div class="kx-deeper-t"><span data-i18n="nav.whyus">Why Us</span><b data-i18n="why.cta">See Why Us &amp; Who Trusts Us</b></div>
-          </a>
+  <section class="band">
+    <div class="wrap">
+      <div class="mk-head">
+        <div class="stack" style="gap:12px"><p class="eyebrow" data-i18n="h.mk.eye">The market</p><h2 data-i18n="h.mk.h">The demand is already here. The supply isn’t.</h2></div>
+        <div class="stack" style="gap:12px">
+          <p class="muted" data-i18n="h.mk.p1">The people driving that spend, wealthy guests, longevity travellers, executive health and elite sport budgets, are actively looking for a credible place to put it. Most properties cannot give them one.</p>
+          <p style="color:var(--on-night)" data-i18n-html="h.mk.p2">There is room for roughly one serious longevity destination per city. Whoever installs first usually keeps that position. <span class="gold-text" style="font-weight:400">Your competitors are already having this conversation with us.</span></p>
         </div>
       </div>
-    </section>
+      <div class="stats">
+        <div class="stat"><span class="num gold-text">+36%</span><p data-i18n="h.st1">What an international wellness traveller spends per trip over the average tourist</p></div>
+        <div class="stat"><span class="num gold-text" style="white-space:nowrap">7.8% → 18%</span><p data-i18n="h.st2">Wellness trips are 7.8% of all travel, but nearly a fifth of what travellers spend</p></div>
+        <div class="stat"><span class="num gold-text">$1.4tn</span><p data-i18n="h.st3">Forecast size of wellness tourism by 2027, up from $1tn in 2024</p></div>
+        <div class="stat"><span class="num gold-text">$9.8tn</span><p data-i18n="h.st4">Forecast global wellness economy by 2029. Longevity is its fastest-growing part</p></div>
+      </div>
+      <p class="fine" style="color:var(--on-night-muted);margin-top:0" data-i18n="h.mk.src">Sources: Global Wellness Institute, 2023–2024.</p>
+    </div>
+  </section>
+
+  <section id="home-return">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="h.rt.eye">The return</p>
+        <h2 data-i18n="h.rt.h">What the floor gives back.</h2>
+        <p class="lead" data-i18n="h.rt.lead">Three illustrative examples. Real figures depend on your footprint, positioning and rate, and are modelled properly in the proposal.</p>
+      </div>
+      <div class="cards3">
+        <div class="rcard"><span class="tag" data-i18n="h.r1.tag">HBOT lounger</span><span class="big">€140k+ / <i style="font-style:normal" data-i18n="h.yr">yr</i></span><p data-i18n-html="h.r1.p"><b style="font-weight:500">Highest earner per m².</b> Run across daily sessions from a compact footprint, a reclining HBOT lounger is one of the highest-earning assets on the floor.</p></div>
+        <div class="rcard"><span class="tag" data-i18n="h.r2.tag">Spa reconfiguration</span><span class="big" data-i18n="h.r2.big">Higher margin tier</span><p data-i18n="h.r2.p">Repositioning an underused treatment room as a cryotherapy and compression recovery suite typically lifts room utilisation and adds a premium service tier above standard treatments.</p></div>
+        <div class="rcard"><span class="tag" data-i18n="h.r3.tag">Membership &amp; retention</span><span class="big" data-i18n="h.r3.big">Recurring revenue</span><p data-i18n="h.r3.p">Operators quote a credible longevity offer as a top reason clients join and stay, protecting recurring revenue, not just treatment income.</p></div>
+      </div>
+
+      <div class="model" style="margin-top:28px">
+        <div class="stack">
+          <p class="eyebrow" data-i18n="h.mod.eye">The revenue model</p>
+          <h3 style="font-size:1.6rem" data-i18n="h.mod.h">You don’t have to take a leap of faith.</h3>
+          <p class="muted" data-i18n="h.mod.p">Before we propose anything, we model your footprint, guest profile and existing wellness revenue, and show you what a longevity studio would generate in years one, two and three. You decide on numbers, not a brochure.</p>
+          <p class="small" style="border-top:1px solid var(--line);padding-top:14px"><span class="eyebrow" style="margin-right:10px" data-i18n="h.mod.ex">Example</span><span data-i18n-html="h.mod.exd">5 treatment rooms (~200&nbsp;m²), built into your existing spa</span></p>
+        </div>
+        <div class="stack">
+          <p class="small muted" data-i18n="h.mod.cap">Studio revenue, example 5-room studio</p>
+          <div class="bars" role="img" data-i18n-alt="h.mod.aria" aria-label="Year 1 €240k to €280k, Year 2 €360k to €420k, Year 3 €480k to €560k">
+            <div class="bar-row"><span class="y" data-i18n="h.y1">Year 1</span><div class="bar"><span style="width:50%"></span><b style="width:42.9%"></b><em>€240–280k</em></div></div>
+            <div class="bar-row"><span class="y" data-i18n="h.y2">Year 2</span><div class="bar"><span style="width:75%"></span><b style="width:64.3%"></b><em>€360–420k</em></div></div>
+            <div class="bar-row"><span class="y" data-i18n="h.y3">Year 3</span><div class="bar"><span style="width:100%"></span><b style="width:85.7%"></b><em>€480–560k</em></div></div>
+          </div>
+          <p class="small muted" data-i18n="h.mod.note">Year 2 as utilisation and repeat rate build; year 3 as word of mouth and membership compound.</p>
+          <div class="payback">
+            <div><span class="num" data-i18n="h.pb1n">5 mo</span><span class="cap" data-i18n="h.pb1">Whole-body cryo, Storm</span></div>
+            <div><span class="num" data-i18n="h.pb2n">6 mo</span><span class="cap" data-i18n="h.pb2">HBOT lounger, Oxy-Stack 1S</span></div>
+            <div><span class="num" data-i18n="h.pb2n">6 mo</span><span class="cap" data-i18n="h.pb3">Red light bed, Cell-Stack Lux</span></div>
+            <div><span class="num" data-i18n="h.pb4n">8 mo</span><span class="cap" data-i18n="h.pb4">Multi-place HBOT, Oxy-Stack 2</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="fine" data-i18n="h.mod.fine">Figures are illustrative, modelled on comparable installations, not a quote or a guarantee. Your numbers are built from your footprint, guest profile and existing wellness revenue during the walkthrough.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--gold-light)" data-i18n="h.ask.eye">The ask</p>
+      <h2 data-i18n="h.ask.h">Give us 30 minutes in your space.</h2>
+      <p data-i18n="h.ask.p">Whatever the venue, hotel, resort, private club, gym or coworking floor, by the end of it you will know the footprint, the technology and the protocols that fit.</p>
+      <div class="steps">
+        <div class="step"><span class="n">01</span><h3 data-i18n="h.ask.s1">Discovery call</h3><p data-i18n="h.ask.s1d">Your property, your guest, your current space. 30 minutes.</p></div>
+        <div class="step"><span class="n">02</span><h3 data-i18n="h.ask.s2">Onsite walkthrough</h3><p data-i18n="h.ask.s2d">We walk the space, measure the footprint and map the guest flow.</p></div>
+        <div class="step"><span class="n">03</span><h3 data-i18n="h.ask.s3">Tailored proposal</h3><p data-i18n="h.ask.s3d">Technology stack, protocols, staffing and modelled return, shaped to your property.</p></div>
+      </div>
+      <a class="btn btn-gold" href="mailto:team@elatevewellness.com" data-contact data-i18n="cta.book">Book 30 Minutes</a>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow" data-i18n="h.dp.eye">Go deeper</p><h2 data-i18n="h.dp.h">See the projects, the machines and the people.</h2></div>
+      <div class="deeper">
+        <a href="/projects" data-page="projects"><img src="/images/site/mufc-pod.jpg" alt="" loading="lazy" width="800" height="600"><div class="t"><span data-i18n="h.dp1k">Our projects</span><b data-i18n="h.dp1t">From Manchester United to Soho House</b></div></a>
+        <a href="/machinery" data-page="machinery"><img src="/images/site/m-hbot-vip.jpg" alt="" loading="lazy" width="800" height="600"><div class="t"><span data-i18n="h.dp2k">The machinery</span><b data-i18n="h.dp2t">Nine medical-grade technologies</b></div></a>
+        <a href="/why-us" data-page="whyus"><img src="/images/site/soho-plunge.jpg" alt="" loading="lazy" width="800" height="600"><div class="t"><span data-i18n="h.dp3k">Why us</span><b data-i18n="h.dp3t">One partner, end to end</b></div></a>
+      </div>
+    </div>
+  </section>
+    </div></section>
+
+    <!-- ==================== OUR PROJECTS PAGE ==================== -->
+    <section class="page page--projects" id="page-projects"><div class="px">
+  <section class="phero">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="p.hero.eye">Our projects · Track record</p>
+      <h1 data-i18n="p.hero.h">Already trusted in the rooms that accept nothing less.</h1>
+      <p class="lead" data-i18n="p.hero.lead">Our technology and protocols are installed and running across elite sport, luxury hospitality and private medical wellness, from Premier League recovery suites to five-star spas. We specify medical-grade, clinically validated equipment only. Never consumer devices, never second-rate materials. That standard is why these names let it into their buildings.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="logo-wall"><div><img src="/images/site/logos/manutd.png" alt="Manchester United FC" class="tall" loading="eager" decoding="async"></div><div><img src="/images/site/logos/soho-house.png" alt="Soho House" class="tall" loading="eager" decoding="async"></div><div><img src="/images/site/logos/mandarin-oriental.png" alt="Mandarin Oriental" class="tall" loading="eager" decoding="async"></div><div><img src="/images/site/logos/gleneagles.png" alt="Gleneagles" class="tall" loading="eager" decoding="async"></div><div><img src="/images/site/logos/espa.png" alt="ESPA" loading="eager" decoding="async"></div><div><img src="/images/site/logos/raffles.png" alt="Raffles" class="tall" loading="eager" decoding="async"></div><div><img src="/images/site/logos/kx.png" alt="KX" loading="eager" decoding="async"></div><div><img src="/images/site/logos/rebase.png" alt="Rebase" loading="eager" decoding="async"></div><div><img src="/images/site/logos/bamford.png" alt="Bamford" loading="eager" decoding="async"></div><div><img src="/images/site/logos/proper.png" alt="Proper Hotels" loading="eager" decoding="async"></div><div><img src="/images/site/logos/cipriani.png" alt="Cipriani" class="tall" loading="eager" decoding="async"></div><div><img src="/images/site/logos/randox.png" alt="Randox" loading="eager" decoding="async"></div></div>
+      <p class="fine" data-i18n="p.wall.fine">A few of the rooms it already runs in. More shared on request, including FC Porto (launching).</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap feature-v">
+      <div class="txt">
+        <div><p class="eyebrow" data-i18n="p.mu.eye">Case in point · Manchester United FC</p><h2 data-i18n="p.mu.h">A world-first recovery suite for the first team.</h2><div class="tech"><span data-i18n="p.mu.t1">Kokoon pods</span><span data-i18n="p.mu.t2">K-Float dry float</span><span data-i18n="p.mu.t3">Oxy-Stack HBOT</span><span data-i18n="p.mu.t4">Cell-Stack Lux PBM</span><span data-i18n="p.mu.t5">Powercab cryo</span></div></div>
+        <div>
+          <p class="muted" data-i18n="p.mu.p1">Multiple Kokoon and K-Float immersive pods, along with the full range of certified wellness technology, including Cell-Stack Lux red light therapy and Oxy-Stack HBOT, are installed in Manchester United’s state-of-the-art Recovery &amp; Performance ‘K-Suite’.</p>
+          <p class="muted" data-i18n="p.mu.p2">We designed this complete, structured and science-based journey specifically for the first team. Each player follows an adjustable, custom-made but logical journey that helps them identify what their mind and body need. Players find it fresh, engaging and effective, and linger longer in the passive recovery zone that lets them switch off and heal.</p>
+        </div>
+      </div>
+      <div class="pics">
+        <img src="/images/site/mufc-pod.jpg" alt="Manchester United branded hyperbaric pod" data-i18n-alt="p.mu.a1" loading="lazy" decoding="async">
+        <img src="/images/site/mufc-cryo.jpg" alt="Powercab cryotherapy at the K-Suite" data-i18n-alt="p.mu.a2" loading="lazy" decoding="async" class="contain">
+        <img src="/images/site/mufc-red.jpg" alt="Red light recovery session" data-i18n-alt="p.mu.a3" loading="lazy" decoding="async">
+        <img src="/images/site/mufc-lounge.jpg" alt="K-Suite recovery lounge" data-i18n-alt="p.mu.a4" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="p.sel.eye">Selected projects</p>
+        <h2 data-i18n="p.sel.h">Luxury hospitality, members’ clubs and elite sport.</h2>
+      </div>
+      <div class="proj-grid">
+        <article class="proj">
+          <div class="ph"><img src="/images/site/soho-hbot.jpg" alt="Oxy-Stack hyperbaric chamber at Soho House" data-i18n-alt="p.soho.a1" loading="lazy" decoding="async"><img src="/images/site/soho-plunge.jpg" alt="Cold plunge terrace at Soho House" data-i18n-alt="p.soho.a2" loading="lazy" decoding="async"></div>
+          <span class="where" data-i18n="p.soho.w">Rome · London · Soho Farmhouse · Barcelona</span>
+          <h3>Soho House International</h3>
+          <p data-i18n="p.soho.d">A recovery offer rolled out across the group: 180 The Strand, White City, Soho Farmhouse, Rome and Barcelona, with more to follow.</p>
+          <div class="tech"><span data-i18n="p.soho.t1">Oxy-Stack HBOT</span><span data-i18n="p.soho.t2">Red light therapy</span><span data-i18n="p.soho.t3">Cold plunge</span></div>
+        </article>
+        <article class="proj">
+          <div class="ph"><img src="/images/site/rebase-hbot.jpg" alt="Hyperbaric chamber at Rebase" data-i18n-alt="p.rebase.a1" loading="lazy" decoding="async"><img src="/images/site/rebase-storm.jpg" alt="Whole-body cryotherapy at Rebase" data-i18n-alt="p.rebase.a2" style="object-position:center top" loading="lazy" decoding="async"></div>
+          <span class="where" data-i18n="p.rebase.w">Recovery club</span>
+          <h3>Rebase</h3>
+          <p data-i18n="p.rebase.d">A destination recovery club built around contrast and oxygen: whole-body cryotherapy, hyperbaric oxygen and a hall of cold plunges.</p>
+          <div class="tech"><span data-i18n="p.rebase.t1">Whole-body cryo</span><span data-i18n="p.rebase.t2">HBOT</span><span data-i18n="p.rebase.t3">Cold plunge</span></div>
+        </article>
+        <article class="proj">
+          <div class="ph"><img src="/images/site/bamford-pbm.jpg" alt="Red light bed at Bamford Wellness" data-i18n-alt="p.bamford.a1" loading="lazy" decoding="async"><img src="/images/site/bamford-storm.jpg" alt="Storm cryotherapy chamber at Bamford" data-i18n-alt="p.bamford.a2" loading="lazy" decoding="async"></div>
+          <span class="where" data-i18n="p.bamford.w">Wellness spa</span>
+          <h3>Bamford Wellness</h3>
+          <p data-i18n="p.bamford.d">Storm whole-body cryotherapy and red light therapy integrated into a calm, organic spa setting.</p>
+          <div class="tech"><span data-i18n="p.bamford.t1">Storm cryo</span><span data-i18n="p.bamford.t2">Red light therapy</span></div>
+        </article>
+        <article class="proj">
+          <div class="ph"><img src="/images/site/gleneagles-ext.jpg" alt="Gleneagles hotel in winter" data-i18n-alt="p.glen.a1" loading="lazy" decoding="async"><img src="/images/site/gleneagles-pool.jpg" alt="Gleneagles spa pool" data-i18n-alt="p.glen.a2" loading="lazy" decoding="async"></div>
+          <span class="where" data-i18n="p.glen.w">Scotland</span>
+          <h3>Gleneagles &amp; Gleneagles Townhouse</h3>
+          <p data-i18n="p.glen.d">A century of hospitality, reimagined with recovery technology and protocols for today’s wellness guest.</p>
+          <div class="tech"><span data-i18n="p.glen.t1">Spa technology</span><span data-i18n="p.glen.t2">Protocols</span></div>
+        </article>
+        <article class="proj">
+          <div class="ph"><img src="/images/site/espa-hall.jpg" alt="ESPA spa interior" data-i18n-alt="p.espa.a1" loading="lazy" decoding="async"><img src="/images/site/espa-pool.jpg" alt="ESPA spa pool" data-i18n-alt="p.espa.a2" loading="lazy" decoding="async"></div>
+          <span class="where" data-i18n="p.espa.w">Spa brand · worldwide</span>
+          <h3>ESPA International</h3>
+          <p data-i18n="p.espa.d">Recovery technology integrated into signature spa journeys for one of the world’s leading spa brands.</p>
+          <div class="tech"><span data-i18n="p.espa.t1">Signature protocols</span><span data-i18n="p.espa.t2">Spa technology</span></div>
+        </article>
+        <article class="proj">
+          <div class="ph"><img src="/images/site/chenot-cryo.jpg" alt="Whole-body cryotherapy chamber at Chenot" data-i18n-alt="p.chenot.a1" loading="lazy" decoding="async"><img src="/images/site/chenot-ext.jpg" alt="Chenot on the lake" data-i18n-alt="p.chenot.a2" loading="lazy" decoding="async"></div>
+          <span class="where" data-i18n="p.chenot.w">Switzerland</span>
+          <h3>Chenot</h3>
+          <p data-i18n="p.chenot.d">Whole-body cryotherapy for one of Europe’s best-known medical wellness destinations.</p>
+          <div class="tech"><span data-i18n="p.chenot.t1">Whole-body cryo</span></div>
+        </article>
+        <article class="proj">
+          <div class="ph"><img src="/images/site/burgen-cryo.jpg" alt="Cryotherapy chamber at Bürgenstock" data-i18n-alt="p.burgen.a1" loading="lazy" decoding="async"><img src="/images/site/burgen-pool.jpg" alt="Bürgenstock infinity pool at dusk" data-i18n-alt="p.burgen.a2" loading="lazy" decoding="async"></div>
+          <span class="where" data-i18n="p.burgen.w">Lake Lucerne, Switzerland</span>
+          <h3>Bürgenstock Resort</h3>
+          <p data-i18n="p.burgen.d">Whole-body cryotherapy inside an alpine destination spa, delivered as part of the resort’s recovery offer.</p>
+          <div class="tech"><span data-i18n="p.burgen.t1">Whole-body cryo</span></div>
+        </article>
+        <article class="proj">
+          <div class="ph"><img src="/images/site/pga-night.jpg" alt="PGA Catalunya wellness building at night" data-i18n-alt="p.pga.a1" loading="lazy" decoding="async"><img src="/images/site/pga-lounge.jpg" alt="PGA Catalunya lounge" data-i18n-alt="p.pga.a2" loading="lazy" decoding="async"></div>
+          <span class="where" data-i18n="p.pga.w">Girona, Spain</span>
+          <h3>PGA Catalunya</h3>
+          <p data-i18n="p.pga.d">Signature concepts and protocols for a leading golf and residential resort, close to home in Catalonia.</p>
+          <div class="tech"><span data-i18n="p.pga.t1">Signature protocols</span><span data-i18n="p.pga.t2">Recovery technology</span></div>
+        </article>
+        <article class="proj">
+          <div class="ph"><img src="/images/site/kx-cryo.jpg" alt="Cryotherapy at KX" data-i18n-alt="p.kx.a1" loading="lazy" decoding="async"><img src="/images/site/kx-red.jpg" alt="Red light therapy at KX" data-i18n-alt="p.kx.a2" loading="lazy" decoding="async"></div>
+          <span class="where" data-i18n="p.kx.w">London</span>
+          <h3>KX Life &amp; KXU</h3>
+          <p data-i18n="p.kx.d">Whole-body cryotherapy and red light therapy for one of London’s most exclusive private gyms.</p>
+          <div class="tech"><span data-i18n="p.kx.t1">Whole-body cryo</span><span data-i18n="p.kx.t2">Red light therapy</span></div>
+        </article>
+      </div>
+      <p class="fine" data-i18n="p.sel.fine">We’re also putting together a list and photos of what each of our partners has installed in their own space. Coming soon.</p>
+    </div>
+  </section>
+
+  <section style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="p.how.eye">How we handle a project</p>
+        <h2 data-i18n="p.how.h">A turnkey longevity floor. One contract, one partner.</h2>
+        <p class="lead" data-i18n="p.how.lead">Not a catalogue of machines. A complete longevity offer, designed for your building and installed, staffed and marketed for you.</p>
+      </div>
+      <div class="steps six">
+        <div class="step"><span class="n">01</span><h3 data-i18n="p.hs01">Concept &amp; feasibility</h3><p data-i18n="p.hs01d">We walk the space, draw the floor plan and map the guest journey before anything is ordered. Schematic drawings and advice on the logical flow and positioning of every technology.</p></div>
+        <div class="step"><span class="n">02</span><h3 data-i18n="p.hs02">Technology supply &amp; install</h3><p data-i18n="p.hs02d">15+ medical-grade modalities from a single source: whole-body cryotherapy, HBOT, red light therapy, IV and NAD+, FDA-cleared compression, EMS, dry float and more.</p></div>
+        <div class="step"><span class="n">03</span><h3 data-i18n="p.hs03">Integrated protocols</h3><p data-i18n="p.hs03d">Treatments sequenced to work together, so guests stay longer, spend more and return.</p></div>
+        <div class="step"><span class="n">04</span><h3 data-i18n="p.hs04">Team training &amp; certification</h3><p data-i18n="p.hs04d">Your staff trained across every modality, the what, the how, the when and the why, with ongoing education and protocol support.</p></div>
+        <div class="step"><span class="n">05</span><h3 data-i18n="p.hs05">Launch &amp; commercial support</h3><p data-i18n="p.hs05d">Positioning, naming, menu design, launch assets and pricing guidance, so the floor fills from opening week.</p></div>
+        <div class="step"><span class="n">06</span><h3 data-i18n="p.hs06">Service, maintenance &amp; one contact</h3><p data-i18n="p.hs06d">One number for technology, parts, servicing and support, for the life of the installation.</p></div>
+      </div>
+      <p class="lead" style="margin-top:28px" data-i18n="p.how.end">From the first drawing to the outcome your guests feel, end to end, under one roof.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="two" style="margin-bottom:clamp(28px,4vw,44px)">
+        <div class="stack">
+          <p class="eyebrow" data-i18n="p.sig.eye">Bespoke signature protocols</p>
+          <h2 data-i18n="p.sig.h">Protocols that turn machines into a menu.</h2>
+        </div>
+        <div class="stack">
+          <p class="muted" data-i18n="p.sig.p1">Our team has been commissioned by leading gyms (David Lloyd, KX, PGA Catalunya), high-end hospitality (ESPA Life, Mandarin Oriental, Raffles, Soneva Jani), premier sports facilities (Wimbledon, Roland Garros, Manchester United, Manchester City), skincare houses (ESPA, Oskia) and corporates (Google) to develop signature concepts that combine our technologies with hands-on massage technique.</p>
+          <p class="muted" data-i18n="p.sig.p2">Every protocol interfaces with both fitness and spa, and is designed for your guest. A few from our library:</p>
+        </div>
+      </div>
+      <div class="protos">
+        <div class="proto">
+          <span class="eyebrow" data-i18n="p.flow.eye">Stress &amp; sleep</span>
+          <h3>FLOW</h3>
+          <p class="small muted" data-i18n="p.flow.sub">Raised parasympathetic tone, altered brain states, emotional resilience and circadian balance.</p>
+          <ol>
+            <li><span><b data-i18n="p.flow.l1b">K-Float.</b> <span data-i18n="p.flow.l1">Weightless serenity; sound-led entry slows breathing before Theta onset.</span></span></li>
+            <li><span><b data-i18n="p.flow.l2b">Kokoon.</b> <span data-i18n="p.flow.l2">Vibroacoustic and audio-visual sequencing takes the primed brain deeper into Theta.</span></span></li>
+            <li><span><b data-i18n="p.flow.l3b">Cell-Stack PBM.</b> <span data-i18n="p.flow.l3">A regenerative close: red and near-infrared light consolidates the gains.</span></span></li>
+          </ol>
+        </div>
+        <div class="proto">
+          <span class="eyebrow" data-i18n="p.infin.eye">Mental clarity · ~100 min</span>
+          <h3>Infin8</h3>
+          <p class="small muted" data-i18n="p.infin.sub">Part of our Bridge Series, pairing hands-on technique with technology to clear brain fog.</p>
+          <ol>
+            <li><span><b data-i18n="p.infin.l1b">Cryo-to-Couch.</b> <span data-i18n="p.infin.l1">Local −30°C cryo with acupressure and lymphatic technique along the spine. ≈40 min</span></span></li>
+            <li><span><b data-i18n="p.infin.l2b">K-Float.</b> <span data-i18n="p.infin.l2">Assisted, guided meditation into Theta. ≈40 min</span></span></li>
+            <li><span><b data-i18n="p.infin.l3b">Whole-body PBM.</b> <span data-i18n="p.infin.l3">Delivered last by design, when the body is most receptive. ≈20 min</span></span></li>
+          </ol>
+        </div>
+        <div class="proto">
+          <span class="eyebrow" data-i18n="p.kund.eye">Cold therapy</span>
+          <h3>Kundalini Cryo</h3>
+          <p class="small muted" data-i18n="p.kund.sub">Our most complete cold-therapy experience, from a 1-to-1 treatment to the full stack.</p>
+          <ol>
+            <li><span><b data-i18n="p.kund.l1b">Local −30°C cryo + spinal technique.</b> <span data-i18n="p.kund.l1">Manual lymphatic drainage and vagus-nerve toning, stand-alone or stacked.</span></span></li>
+            <li><span><b data-i18n="p.kund.l2b">Optional whole-body cryo.</b> <span data-i18n="p.kund.l2">Add a Powercab session for the ultimate version of the experience.</span></span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2 data-i18n="p.cta.h">Your property could be the next project.</h2>
+      <p data-i18n="p.cta.p">Book a 30-minute discovery call. We will tell you which footprint, technology and protocols fit your building.</p>
+      <a class="btn btn-gold" href="mailto:team@elatevewellness.com" data-contact data-i18n="cta.book">Book 30 Minutes</a>
+    </div>
+  </section>
+    </div></section>
 
     <!-- ==================== BLOG PAGE ==================== -->
     <section class="page page--blog" id="page-blog">
@@ -330,392 +476,257 @@
     </section>
 
     <!-- ==================== MACHINERY PAGE ==================== -->
-    <section class="page page--machinery" id="page-machinery">
-      <div class="blog-hero">
-        <p class="section-eyebrow" data-i18n="mach.eyebrow">See It For Yourself</p>
-        <h1 class="page-title" data-i18n="mach.title">The Machinery</h1>
-        <p class="page-sub" data-i18n="mach.sub">Nine technologies. Real photos, explained simply.</p>
+    <section class="page page--machinery" id="page-machinery"><div class="px">
+  <section class="phero">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="m.hero.eye">See it for yourself · The machinery</p>
+      <h1 data-i18n="m.hero.h">Nine medical-grade technologies, chosen to work together.</h1>
+      <p class="lead" data-i18n="m.hero.lead">Every machine we install is medical grade and clinically validated, and specified with doctors, physiologists and sports scientists. Here is why each one is in demand, what it does, and the details your engineers will ask about.</p>
+      <div class="index"><button type="button" data-jump="m-cryo"><b>01</b><span data-i18n="m.cryo.n">Whole-body cryotherapy</span></button><button type="button" data-jump="m-hbot"><b>02</b><span data-i18n="m.hbot.n">Hyperbaric oxygen therapy</span></button><button type="button" data-jump="m-pbm"><b>03</b><span data-i18n="m.pbm.n">Photobiomodulation</span></button><button type="button" data-jump="m-float"><b>04</b><span data-i18n="m.float.n">Dry flotation</span></button><button type="button" data-jump="m-kokoon"><b>05</b><span data-i18n="m.kokoon.n">Nervous system pods</span></button><button type="button" data-jump="m-plunge"><b>06</b><span data-i18n="m.plunge.n">Cold plunge</span></button><button type="button" data-jump="m-compression"><b>07</b><span data-i18n="m.compression.n">Compression therapy</span></button><button type="button" data-jump="m-ihht"><b>08</b><span data-i18n="m.ihht.n">IHHT</span></button><button type="button" data-jump="m-sauna"><b>09</b><span data-i18n="m.sauna.n">Infrared sauna</span></button></div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="mgrid">
+    <article class="mcard" id="m-cryo">
+      <div class="mc-photo"><img src="/images/site/m-cryo-site.jpg" alt="Powercab Performance · Storm" data-i18n-alt="m.cryo.alt" loading="lazy" decoding="async"></div>
+      <div class="mc-body">
+        <div class="mc-head"><span class="mc-num">01</span><h3 data-i18n="m.cryo.n">Whole-body cryotherapy</h3><p class="mc-brand">Powercab Performance · Storm</p><p class="mc-tag" data-i18n="m.cryo.tag">Three minutes at −110°C.</p></div>
+        <div class="trend"><span class="eyebrow" data-i18n="m.trendlbl">Why it’s trending</span><p data-i18n="m.cryo.trend">Cold has become the most visible recovery ritual of the decade, from elite sport to members’ clubs. The global cryotherapy market reached about $366m in 2025 and keeps growing around 5% a year, led by electric cryochambers.</p><span class="src" data-i18n="m.cryo.src">Source: IMARC Group, Cryotherapy Market 2026–2034</span></div>
+        <div class="mc-sec"><h4 data-i18n="m.doeslbl">What it does</h4><p data-i18n="m.cryo.does">An electric cold chamber surrounds the body with dry air at −110°C for two to three minutes. Guests report less muscle soreness and inflammation, a lift in energy and mood, and better sleep. One client per session, tailored programme per client.</p></div>
+        <dl class="spec"><div><dt data-i18n="m.cryo.s1k">Chamber temp</dt><dd data-i18n="m.cryo.s1v">−110°C nominal</dd></div><div><dt data-i18n="m.cryo.s2k">Session</dt><dd data-i18n="m.cryo.s2v">3 min · 1 guest</dd></div><div><dt data-i18n="m.cryo.s3k">Cooling</dt><dd data-i18n="m.cryo.s3v">850 W @ −110°C</dd></div><div><dt data-i18n="m.cryo.s4k">Power</dt><dd data-i18n="m.cryo.s4v">3.5 / 4.5 kW, 400 V 3ph</dd></div><div><dt data-i18n="m.cryo.s5k">Unit size</dt><dd data-i18n="m.cryo.s5v">0.6 × 1.0 × 1.3 m</dd></div><div><dt data-i18n="m.cryo.s6k">Standards</dt><dd data-i18n="m.cryo.s6v">EN 378 · PED 2014/68/EU</dd></div></dl>
+        <div class="mc-sec"><h4 data-i18n="m.edgelbl">What sets ours apart</h4><ul><li data-i18n="m.cryo.e1">Fully electric: no liquid nitrogen, no gas cylinders, no hazardous handling on site.</li><li data-i18n="m.cryo.e2">Storm is plug-and-play, with no chiller or condenser install required.</li><li data-i18n="m.cryo.e3">Routine servicing only: no gas refills, no consumables.</li></ul></div>
+        <div class="m-foot"><span class="pill gold" data-i18n-html="m.cryo.f1"><b>5 months</b> modelled payback (Storm)</span><span class="pill" data-i18n-html="m.cryo.f2">Installed at Manchester United, Chenot, Bürgenstock, KX</span></div>
       </div>
-
-      <!-- 360 APPROACH -->
-      <div class="section kx-section kx-section--band" id="kx-approach">
-        <div class="kx-section-head kx-reveal">
-          <p class="kx-eyebrow" data-i18n="app.eyebrow">Our 360&deg; Approach</p>
-          <h2 class="kx-h2" data-i18n="app.title">Regulate. Detoxify. Regenerate.</h2>
-          <p class="kx-lead" data-i18n-html="app.lead">True health is not treating symptoms one by one. It is restoring the body&rsquo;s own ability to regulate, adapt, repair and thrive. At the centre of everything we build is <strong>nervous system regulation</strong>: the system behind brain performance, emotional resilience, hormones, immunity, cardiovascular health, digestion, recovery and cellular repair.</p>
-        </div>
-        <div class="kx-stages kx-reveal">
-          <div class="kx-stage">
-            <span class="kx-stage-n">01</span>
-            <h3 data-i18n="app.s1t">Regulate</h3>
-            <p data-i18n="app.s1d">Shift the body out of chronic stress into a balanced state where healing and recovery can actually happen. The foundation that makes every therapy after this work harder.</p>
-          </div>
-          <div class="kx-stage">
-            <span class="kx-stage-n">02</span>
-            <h3 data-i18n="app.s2t">Detoxify</h3>
-            <p data-i18n="app.s2d">Support the body&rsquo;s natural detoxification pathways, optimise circulation and oxygen delivery, and improve lymphatic and mitochondrial performance. Balance restored across multiple systems.</p>
-          </div>
-          <div class="kx-stage">
-            <span class="kx-stage-n">03</span>
-            <h3 data-i18n="app.s3t">Regenerate</h3>
-            <p data-i18n="app.s3d">Raise cellular energy production, improve tissue oxygenation, reduce inflammation and support the body&rsquo;s own repair. Building resilience, vitality and healthy ageing over time.</p>
-          </div>
-        </div>
-        <p class="kx-stages-note kx-reveal" data-i18n="app.note">Not isolated treatments. An integrated system of clinically proven technologies, sequenced so each modality prepares the body for the next. The outcome is greater than the sum of its parts.</p>
+    </article>
+    <article class="mcard" id="m-hbot">
+      <div class="mc-photo"><img src="/images/site/m-hbot.jpg" alt="Oxy-Stack 1S · ONE · VIP · 2 / 2 LUX" data-i18n-alt="m.hbot.alt" loading="lazy" decoding="async" class="contain"></div>
+      <div class="mc-body">
+        <div class="mc-head"><span class="mc-num">02</span><h3 data-i18n="m.hbot.n">Hyperbaric oxygen therapy</h3><p class="mc-brand">Oxy-Stack 1S · ONE · VIP · 2 / 2 LUX</p><p class="mc-tag" data-i18n="m.hbot.tag">Oxygen under pressure, in a lounger.</p></div>
+        <div class="trend"><span class="eyebrow" data-i18n="m.trendlbl">Why it’s trending</span><p data-i18n="m.hbot.trend">Once confined to hospitals, HBOT is now the machine longevity guests ask about first, and a regular subject in mainstream wellness media. It is also one of the highest earners per square metre on a wellness floor.</p></div>
+        <div class="mc-sec"><h4 data-i18n="m.doeslbl">What it does</h4><p data-i18n="m.hbot.does">Breathing concentrated oxygen at 2 to 2.5 atmospheres dissolves far more oxygen into the blood plasma, supporting recovery, tissue repair and energy. Sessions run 60 to 90 minutes, fully automated: pressure profile, oxygen delivery and timing.</p></div>
+        <dl class="spec"><div><dt data-i18n="m.hbot.s1k">Pressure</dt><dd data-i18n="m.hbot.s1v">2–2.5 ATA</dd></div><div><dt data-i18n="m.hbot.s2k">Capacity</dt><dd data-i18n="m.hbot.s2v">1 or 2 guests</dd></div><div><dt data-i18n="m.hbot.s3k">Session</dt><dd data-i18n="m.hbot.s3v">60–90 min</dd></div><div><dt data-i18n="m.hbot.s4k">1S footprint</dt><dd data-i18n="m.hbot.s4v">1.83 × 1.43 × 1.99 m</dd></div><div><dt data-i18n="m.hbot.s5k">Masks</dt><dd data-i18n="m.hbot.s5v">Medical BIBS (Dräger)</dd></div><div><dt data-i18n="m.hbot.s6k">Standards</dt><dd data-i18n="m.hbot.s6v">EN 14931 · MDR 2017/745 · PED</dd></div></dl>
+        <div class="mc-sec"><h4 data-i18n="m.edgelbl">What sets ours apart</h4><ul><li data-i18n="m.hbot.e1">Medical-grade stainless steel (AISI 316/304) valves and piping, where much of the market uses galvanised steel and PU hose.</li><li data-i18n="m.hbot.e2">Fail-safe valve positioners, and the session ends automatically if the operator misses a check-in within 10 seconds.</li><li data-i18n="m.hbot.e3">Reclining heated leather lounger with whole-body massage, custom RAL colours, optional SONIC immersive audio.</li></ul></div>
+        <div class="m-foot"><span class="pill gold" data-i18n-html="m.hbot.f1"><b>6–8 months</b> modelled payback</span><span class="pill" data-i18n-html="m.hbot.f2">Installed at Manchester United’s K-Suite, Soho House, Rebase</span></div>
       </div>
-
-      <div class="kx-machinery-grid">
-        <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/web/m-cryotherapy-powercab.jpg" alt="Powercab whole body cryotherapy chamber" data-i18n-alt="mc.a1" loading="lazy"></div>
-          <div class="kx-machine-body">
-            <span class="kx-machine-tag">01</span>
-            <h3 data-i18n="mc.t1">Whole Body Cryotherapy</h3>
-            <p class="kx-machine-brand">Powercab</p>
-            <p data-i18n="mc.d1">An electric cold chamber, no nitrogen, reaching &minus;110&deg;C. Medical grade and tailored to each client.</p>
-          </div>
-        </article>
-
-        <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/web/m-hbot-oxystack.jpg" alt="Oxy Stack hyperbaric oxygen chamber" data-i18n-alt="mc.a2" loading="lazy"></div>
-          <div class="kx-machine-body">
-            <span class="kx-machine-tag">02</span>
-            <h3 data-i18n="mc.t2">Hyperbaric Oxygen</h3>
-            <p class="kx-machine-brand">Oxy Stack</p>
-            <p data-i18n="mc.d2">A certified, medical grade pressure chamber for one or two people. Full automation and real time monitoring.</p>
-          </div>
-        </article>
-
-        <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/web/m-pbm-cellstack.jpg" alt="Cell Stack red light therapy bed" data-i18n-alt="mc.a3" loading="lazy"></div>
-          <div class="kx-machine-body">
-            <span class="kx-machine-tag">03</span>
-            <h3 data-i18n="mc.t3">Photobiomodulation</h3>
-            <p class="kx-machine-brand" data-i18n="mc.b3">Cell Stack &middot; Red Light Therapy</p>
-            <p data-i18n="mc.d3">A whole body red and near infrared light bed. Reduces inflammation and speeds recovery, no downtime.</p>
-          </div>
-        </article>
-
-        <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/web/m-ihht-cellready.jpg" alt="IHHT mask based cellular training" data-i18n-alt="mc.a4" loading="lazy"></div>
-          <div class="kx-machine-body">
-            <span class="kx-machine-tag">04</span>
-            <h3 data-i18n="mc.t4">IHHT</h3>
-            <p class="kx-machine-brand">Cell Ready</p>
-            <p data-i18n="mc.d4">A mask based workout for the cells. Alternating oxygen levels train mitochondria in twenty five to forty minutes.</p>
-          </div>
-        </article>
-
-        <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/web/m-sauna-clearlight.jpg" alt="Clearlight infrared sauna" data-i18n-alt="mc.a5" loading="lazy"></div>
-          <div class="kx-machine-body">
-            <span class="kx-machine-tag">05</span>
-            <h3 data-i18n="mc.t5">Infrared Sauna</h3>
-            <p class="kx-machine-brand">Clearlight Sanctuary</p>
-            <p data-i18n="mc.d5">Full spectrum infrared with zero EMF and zero ELF. Pain relief, better sleep, sharper focus.</p>
-          </div>
-        </article>
-
-        <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/web/m-compression-ballancer.jpg" alt="Ballancer Gold compression therapy" data-i18n-alt="mc.a6" loading="lazy"></div>
-          <div class="kx-machine-body">
-            <span class="kx-machine-tag">06</span>
-            <h3 data-i18n="mc.t6">Compression Therapy</h3>
-            <p class="kx-machine-brand">Ballancer Gold</p>
-            <p data-i18n="mc.d6">Medical pneumatic compression built on lymphatic drainage. FDA cleared, over thirty five years of clinical use.</p>
-          </div>
-        </article>
-
-        <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/web/m-dryfloat-kfloat.jpg" alt="K Float dry float couch" data-i18n-alt="mc.a7" loading="lazy"></div>
-          <div class="kx-machine-body">
-            <span class="kx-machine-tag">07</span>
-            <h3 data-i18n="mc.t7">Dry Float</h3>
-            <p class="kx-machine-brand">K Float</p>
-            <p data-i18n="mc.d7">A weightless float experience with no water contact. Sound, light and massage, combined in one session.</p>
-          </div>
-        </article>
-
-        <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/web/m-coldplunge-kooled.jpg" alt="Kooled cold plunge ice baths" data-i18n-alt="mc.a8" loading="lazy"></div>
-          <div class="kx-machine-body">
-            <span class="kx-machine-tag">08</span>
-            <h3 data-i18n="mc.t8">Cold Plunge</h3>
-            <p class="kx-machine-brand">Kooled Ice Baths</p>
-            <p data-i18n="mc.d8">British handmade, stainless steel tubs. Temperature selectable from 0&deg;C to 10&deg;C, filtered and self cleaning.</p>
-          </div>
-        </article>
-
-        <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/web/m-kokoon.jpg" alt="Kokoon nervous system recovery pod" data-i18n-alt="mc.a9" loading="lazy"></div>
-          <div class="kx-machine-body">
-            <span class="kx-machine-tag">09</span>
-            <h3 data-i18n="mc.t9">Nervous System Pods</h3>
-            <p class="kx-machine-brand">Kokoon</p>
-            <p data-i18n="mc.d9">An immersive pod combining sound, vibration and light. The same technology built for Manchester United&rsquo;s first team recovery suite.</p>
-          </div>
-        </article>
+    </article>
+    <article class="mcard" id="m-pbm">
+      <div class="mc-photo"><img src="/images/site/bamford-pbm.jpg" alt="Cell-Stack Lux" data-i18n-alt="m.pbm.alt" loading="lazy" decoding="async"></div>
+      <div class="mc-body">
+        <div class="mc-head"><span class="mc-num">03</span><h3 data-i18n="m.pbm.n">Photobiomodulation</h3><p class="mc-brand">Cell-Stack Lux</p><p class="mc-tag" data-i18n="m.pbm.tag">Whole-body light, dosed by the joule.</p></div>
+        <div class="trend"><span class="eyebrow" data-i18n="m.trendlbl">Why it’s trending</span><p data-i18n="m.pbm.trend">Red light has moved from dermatology into whole-body recovery and longevity. Guests now arrive asking for it by name and tracking the effect on their Whoop or Oura.</p></div>
+        <div class="mc-sec"><h4 data-i18n="m.doeslbl">What it does</h4><p data-i18n="m.pbm.does">Red (660 nm) and near-infrared (850 nm) light is absorbed by the mitochondria, raising cellular energy, reducing inflammation and speeding recovery. Short sessions, no downtime, and the perfect close to almost any protocol.</p></div>
+        <dl class="spec"><div><dt data-i18n="m.pbm.s1k">LEDs</dt><dd data-i18n="m.pbm.s1v">10,000</dd></div><div><dt data-i18n="m.pbm.s2k">Wavelengths</dt><dd data-i18n="m.pbm.s2v">660 / 850 nm</dd></div><div><dt data-i18n="m.pbm.s3k">Irradiance</dt><dd data-i18n="m.pbm.s3v">10–60 mW/cm²</dd></div><div><dt data-i18n="m.pbm.s4k">Session</dt><dd data-i18n="m.pbm.s4v">1–40 min (avg 20)</dd></div><div><dt data-i18n="m.pbm.s5k">Lux size</dt><dd data-i18n="m.pbm.s5v">1.2 × 2.2 × 1.0 m</dd></div><div><dt data-i18n="m.pbm.s6k">Power</dt><dd data-i18n="m.pbm.s6v">220 V · 2,000 W</dd></div></dl>
+        <div class="mc-sec"><h4 data-i18n="m.edgelbl">What sets ours apart</h4><ul><li data-i18n="m.pbm.e1">The only doctor-led and developed whole-body PBM bed: set an exact time or an exact dose, and the bed calculates the other.</li><li data-i18n="m.pbm.e2">Molecular hydrogen and negative-ion delivery through a contoured silicone mattress.</li><li data-i18n="m.pbm.e3">Splits top and bottom to pass narrow doorways; can auto-match run time to an IHHT cycle.</li></ul></div>
+        <div class="m-foot"><span class="pill gold" data-i18n-html="m.pbm.f1"><b>6 months</b> modelled payback</span><span class="pill" data-i18n-html="m.pbm.f2">Installed at Manchester United’s K-Suite</span><a class="pill link" href="#m-ihht" data-jump="m-ihht" data-i18n-html="m.pbm.f3">Pairs with IHHT <b>→ see 08</b></a></div>
       </div>
+    </article>
+    <article class="mcard" id="m-float">
+      <div class="mc-photo"><img src="/images/site/m-float2.jpg" alt="K-Float · Theta-Float" data-i18n-alt="m.float.alt" loading="lazy" decoding="async"></div>
+      <div class="mc-body">
+        <div class="mc-head"><span class="mc-num">04</span><h3 data-i18n="m.float.n">Dry flotation</h3><p class="mc-brand">K-Float · Theta-Float</p><p class="mc-tag" data-i18n="m.float.tag">Weightless, without getting wet.</p></div>
+        <div class="trend"><span class="eyebrow" data-i18n="m.trendlbl">Why it’s trending</span><p data-i18n="m.float.trend">Stress and sleep are the top reasons guests book wellness today. Dry float delivers deep rest in a single session, without the showers, salt and water handling of a float tank.</p></div>
+        <div class="mc-sec"><h4 data-i18n="m.doeslbl">What it does</h4><p data-i18n="m.float.does">The guest lies clothed on a warm, water-filled membrane and sinks into weightlessness. Sound, light and massage combine to shift the brain from alpha/beta to theta, the state usually reached only in deep meditation.</p></div>
+        <dl class="spec"><div><dt data-i18n="m.float.s1k">Footprint</dt><dd data-i18n="m.float.s1v">~2 m²</dd></div><div><dt data-i18n="m.float.s2k">Power</dt><dd data-i18n="m.float.s2v">230 V · 2,500 W</dd></div><div><dt data-i18n="m.float.s3k">Filled weight</dt><dd data-i18n="m.float.s3v">580 kg (350 L)</dd></div><div><dt data-i18n="m.float.s4k">Water</dt><dd data-i18n="m.float.s4v">½″ cold tap</dd></div><div><dt data-i18n="m.float.s5k">Min. door</dt><dd data-i18n="m.float.s5v">70 cm</dd></div><div><dt data-i18n="m.float.s6k">Massage</dt><dd data-i18n="m.float.s6v">20 jets</dd></div></dl>
+        <div class="mc-sec"><h4 data-i18n="m.edgelbl">What sets ours apart</h4><ul><li data-i18n="m.float.e1">No water contact, no wet changing rooms, no chemical treatment.</li><li data-i18n="m.float.e2">SONIC immersive audio built in, for guided meditation and breathwork.</li></ul></div>
+        <div class="m-foot"><span class="pill" data-i18n-html="m.float.f1">Installed at Manchester United’s K-Suite</span></div>
+      </div>
+    </article>
+    <article class="mcard" id="m-kokoon">
+      <div class="mc-photo"><img src="/images/site/m-kokoon.jpg" alt="Kokoon · Kokoon Mini" data-i18n-alt="m.kokoon.alt" loading="lazy" decoding="async"></div>
+      <div class="mc-body">
+        <div class="mc-head"><span class="mc-num">05</span><h3 data-i18n="m.kokoon.n">Nervous system pods</h3><p class="mc-brand">Kokoon · Kokoon Mini</p><p class="mc-tag" data-i18n="m.kokoon.tag">A sanctuary for deep recovery.</p></div>
+        <div class="trend"><span class="eyebrow" data-i18n="m.trendlbl">Why it’s trending</span><p data-i18n="m.kokoon.trend">Nervous system regulation is the new centre of longevity: burnout, sleep and stress resilience are what executive guests want fixed, and it is the foundation of our whole approach.</p></div>
+        <div class="mc-sec"><h4 data-i18n="m.doeslbl">What it does</h4><p data-i18n="m.kokoon.does">A private, acoustically dark pod combining vibroacoustic therapy, immersive sound, light and visuals to shift the body into a parasympathetic state. Every session is programmable. Kokoon Mini brings the same protocols to a portable mat for suites, events and pop-ups.</p></div>
+        <dl class="spec"><div><dt data-i18n="m.kokoon.s1k">Session</dt><dd data-i18n="m.kokoon.s1v">20–60 min</dd></div><div><dt data-i18n="m.kokoon.s2k">Materials</dt><dd data-i18n="m.kokoon.s2v">Oak, wool, natural</dd></div><div><dt data-i18n="m.kokoon.s3k">Mini kits</dt><dd data-i18n="m.kokoon.s3v">1, 2 or 4 guests</dd></div></dl>
+        <div class="mc-sec"><h4 data-i18n="m.edgelbl">What sets ours apart</h4><ul><li data-i18n="m.kokoon.e1">Designed and manufactured by Kloodos: the same technology built for Manchester United’s first-team K-Suite.</li><li data-i18n="m.kokoon.e2">Soundtracks composed in-house by our scientific and composer team.</li><li data-i18n="m.kokoon.e3">Low maintenance: no consumables, only software and protocol updates.</li></ul></div>
+        
+      </div>
+    </article>
+    <article class="mcard" id="m-plunge">
+      <div class="mc-photo"><img src="/images/site/rebase-thermal.jpg" alt="Kooled · Original Pro · XL Pro · Dual" data-i18n-alt="m.plunge.alt" loading="lazy" decoding="async"></div>
+      <div class="mc-body">
+        <div class="mc-head"><span class="mc-num">06</span><h3 data-i18n="m.plunge.n">Cold plunge</h3><p class="mc-brand">Kooled · Original Pro · XL Pro · Dual</p><p class="mc-tag" data-i18n="m.plunge.tag">Spa-scale ice baths.</p></div>
+        <div class="trend"><span class="eyebrow" data-i18n="m.trendlbl">Why it’s trending</span><p data-i18n="m.plunge.trend">Contrast therapy is the social ritual of modern wellness. Venues now schedule guided hot-and-cold sessions, and the plunge is the photo guests share.</p><span class="src" data-i18n="m.plunge.src">Source: Global Wellness Institute, Hydrothermal Initiative trends 2026</span></div>
+        <div class="mc-sec"><h4 data-i18n="m.doeslbl">What it does</h4><p data-i18n="m.plunge.does">Cold immersion at a temperature you choose, for a short, sharp reset: circulation, alertness and recovery, paired with sauna for contrast.</p></div>
+        <dl class="spec"><div><dt data-i18n="m.plunge.s1k">Temperature</dt><dd data-i18n="m.plunge.s1v">0–10°C selectable</dd></div><div><dt data-i18n="m.plunge.s2k">Materials</dt><dd data-i18n="m.plunge.s2v">316 steel + red cedar</dd></div><div><dt data-i18n="m.plunge.s3k">Sanitation</dt><dd data-i18n="m.plunge.s3v">24/7 filtration, UV + ozone</dd></div><div><dt data-i18n="m.plunge.s4k">Original Pro</dt><dd data-i18n="m.plunge.s4v">1300 × 1370 mm</dd></div><div><dt data-i18n="m.plunge.s5k">Dual (2 ppl)</dt><dd data-i18n="m.plunge.s5v">1740 × 1650 mm</dd></div><div><dt data-i18n="m.plunge.s6k">Plant</dt><dd data-i18n="m.plunge.s6v">Under the step</dd></div></dl>
+        <div class="mc-sec"><h4 data-i18n="m.edgelbl">What sets ours apart</h4><ul><li data-i18n="m.plunge.e1">British, handmade and commercial grade, with continuous ice generation.</li><li data-i18n="m.plunge.e2">No separate plant room; optional mains plumbing, auto-chlorination and dosing for heavy use.</li></ul></div>
+        <div class="m-foot"><span class="pill" data-i18n-html="m.plunge.f1">Installed at Soho House, Rebase</span></div>
+      </div>
+    </article>
+    <article class="mcard" id="m-compression">
+      <div class="mc-photo"><img src="/images/site/m-compression.jpg" alt="Ballancer Gold · Ballancer Pro" data-i18n-alt="m.compression.alt" loading="lazy" decoding="async"></div>
+      <div class="mc-body">
+        <div class="mc-head"><span class="mc-num">07</span><h3 data-i18n="m.compression.n">Compression therapy</h3><p class="mc-brand">Ballancer Gold · Ballancer Pro</p><p class="mc-tag" data-i18n="m.compression.tag">Lymphatic drainage, by machine.</p></div>
+        <div class="trend"><span class="eyebrow" data-i18n="m.trendlbl">Why it’s trending</span><p data-i18n="m.compression.trend">Compression has moved from the athlete’s locker room to the spa menu: a short, comfortable, results-you-can-see treatment that guests book again and again.</p></div>
+        <div class="mc-sec"><h4 data-i18n="m.doeslbl">What it does</h4><p data-i18n="m.compression.does">Overlapping air chambers apply sequential pressure, following the principles of manual lymphatic drainage. It boosts circulation, reduces swelling and heaviness, and speeds recovery. In our protocols it is the first step, preparing the body for everything after it.</p></div>
+        <dl class="spec"><div><dt data-i18n="m.compression.s1k">Chambers</dt><dd data-i18n="m.compression.s1v">24 overlapping</dd></div><div><dt data-i18n="m.compression.s2k">Pressure</dt><dd data-i18n="m.compression.s2v">20–80 mmHg</dd></div><div><dt data-i18n="m.compression.s3k">Programmes</dt><dd data-i18n="m.compression.s3v">Pretreat · Ballancer · Intense</dd></div><div><dt data-i18n="m.compression.s4k">Console</dt><dd data-i18n="m.compression.s4v">38 × 31 × 17 cm</dd></div><div><dt data-i18n="m.compression.s5k">Weight</dt><dd data-i18n="m.compression.s5v">6 kg</dd></div><div><dt data-i18n="m.compression.s6k">Clearance</dt><dd data-i18n="m.compression.s6v">FDA-cleared</dd></div></dl>
+        <div class="mc-sec"><h4 data-i18n="m.edgelbl">What sets ours apart</h4><ul><li data-i18n="m.compression.e1">Medical pneumatic compression with over 35 years of clinical use, often called “the Rolls-Royce of lymphatic massage”.</li><li data-i18n="m.compression.e2">Fits on any treatment bed, so it adds a premium tier without new space.</li></ul></div>
+        
+      </div>
+    </article>
+    <article class="mcard" id="m-ihht">
+      <div class="mc-photo"><img src="/images/site/m-ihht2.jpg" alt="Cell-Ready" data-i18n-alt="m.ihht.alt" loading="lazy" decoding="async"></div>
+      <div class="mc-body">
+        <div class="mc-head"><span class="mc-num">08</span><h3 data-i18n="m.ihht.n">IHHT</h3><p class="mc-brand">Cell-Ready</p><p class="mc-tag" data-i18n="m.ihht.tag">A workout for the cells.</p></div>
+        <div class="trend"><span class="eyebrow" data-i18n="m.trendlbl">Why it’s trending</span><p data-i18n="m.ihht.trend">Altitude-style cellular training without a chamber. IHHT is fast becoming a standard in European medical wellness clinics, and it fits into a room you already have.</p></div>
+        <div class="mc-sec"><h4 data-i18n="m.doeslbl">What it does</h4><p data-i18n="m.ihht.does">Through a mask, the guest breathes alternating low- and high-oxygen air in cycles of three to five minutes. The swing trains the mitochondria to use oxygen more efficiently, in 25 to 40 minutes while reclining.</p></div>
+        <dl class="spec"><div><dt data-i18n="m.ihht.s1k">Hypoxic phase</dt><dd data-i18n="m.ihht.s1v">9–17% O₂</dd></div><div><dt data-i18n="m.ihht.s2k">Hyperoxic phase</dt><dd data-i18n="m.ihht.s2v">32–34% O₂</dd></div><div><dt data-i18n="m.ihht.s3k">Session</dt><dd data-i18n="m.ihht.s3v">25–40 min</dd></div><div><dt data-i18n="m.ihht.s4k">Size</dt><dd data-i18n="m.ihht.s4v">465 × 406 × 640 mm</dd></div><div><dt data-i18n="m.ihht.s5k">Weight</dt><dd data-i18n="m.ihht.s5v">46.6 kg</dd></div><div><dt data-i18n="m.ihht.s6k">Service life</dt><dd data-i18n="m.ihht.s6v">10–15 years</dd></div></dl>
+        <div class="mc-sec"><h4 data-i18n="m.edgelbl">What sets ours apart</h4><ul><li data-i18n="m.ihht.e1">Medically approved German-made mask and finger clip; 99.8% filtered air.</li><li data-i18n="m.ihht.e2">On wheels and on WiFi: no plumbing, no dedicated room, two double sockets.</li><li data-i18n="m.ihht.e3">Delivered on the PBM bed, it turns one room into the strongest pairing on our menu.</li></ul></div>
+        <div class="m-foot"><span class="pill" data-i18n-html="m.ihht.f1">Modelled ROI per site, on request</span></div>
+      </div>
+    </article>
+    <article class="mcard" id="m-sauna">
+      <div class="mc-photo"><img src="/images/site/m-sauna2.jpg" alt="Clearlight Sanctuary" data-i18n-alt="m.sauna.alt" loading="lazy" decoding="async"></div>
+      <div class="mc-body">
+        <div class="mc-head"><span class="mc-num">09</span><h3 data-i18n="m.sauna.n">Infrared sauna</h3><p class="mc-brand">Clearlight Sanctuary</p><p class="mc-tag" data-i18n="m.sauna.tag">Full-spectrum heat, zero EMF.</p></div>
+        <div class="trend"><span class="eyebrow" data-i18n="m.trendlbl">Why it’s trending</span><p data-i18n="m.sauna.trend">Thermal circuits are moving from the basement to the centre of the hotel. Heat, cold and rest are now sold as a guided journey, and attract serious investment in city venues.</p><span class="src" data-i18n="m.sauna.src">Source: Global Wellness Institute, Hydrothermal Initiative trends 2026</span></div>
+        <div class="mc-sec"><h4 data-i18n="m.doeslbl">What it does</h4><p data-i18n="m.sauna.does">Near, mid and far infrared warm the body directly at a comfortable air temperature. Guests come for pain relief and faster muscle recovery, better sleep, sharper focus and a lift in mood.</p></div>
+        <dl class="spec"><div><dt data-i18n="m.sauna.s1k">Spectrum</dt><dd data-i18n="m.sauna.s1v">Full (near, mid, far)</dd></div><div><dt data-i18n="m.sauna.s2k">EMF / ELF</dt><dd data-i18n="m.sauna.s2v">Cancelled</dd></div><div><dt data-i18n="m.sauna.s3k">Models</dt><dd data-i18n="m.sauna.s3v">2, 3, 4 and 4–5 person</dd></div></dl>
+        <div class="mc-sec"><h4 data-i18n="m.edgelbl">What sets ours apart</h4><ul><li data-i18n="m.sauna.e1">Clearlight is the only infrared sauna on the market that cancels out both EMF and ELF.</li><li data-i18n="m.sauna.e2">Contemporary cabinetry, including a 4-person yoga model for group classes.</li></ul></div>
+        
+      </div>
+    </article>
+  </div></div>
 
-      <p class="kx-machinery-note" data-i18n="mach.note">Plus NAD and vitamin therapy, EMS and more, scoped into your protocol. Every machine here is medical grade and clinically validated.</p>
-      <p class="kx-machinery-note kx-machinery-note--soon" data-i18n="mach.soon">We&rsquo;re also putting together a list and photos of what each of our partners has installed in their own space. Coming soon.</p>
-    </section>
+  <section style="padding-top:12px">
+    <div class="wrap"><p class="lead" data-i18n="m.plus">Plus NAD+ and vitamin therapy (including needle-free jetting), K-Sculpt EMS, local −30°C cryotherapy and more, scoped into your protocol. Every machine here is medical grade and clinically validated.</p></div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="two">
+        <div class="stack"><p class="eyebrow" data-i18n="m.360.eye">Our 360° approach</p><h2 data-i18n="m.360.h">Regulate. Detoxify. Regenerate.</h2></div>
+        <p class="muted" data-i18n="m.360.p">True health is not treating symptoms one by one. It is restoring the body’s own ability to regulate, adapt, repair and thrive. At the centre of everything we build is nervous system regulation: the system behind brain performance, emotional resilience, hormones, immunity, cardiovascular health, digestion, recovery and cellular repair.</p>
+      </div>
+      <div class="flow">
+        <div><span class="eyebrow" data-i18n="m.360.n1">01</span><b data-i18n="m.360.t1">Regulate</b><p data-i18n="m.360.d1">Shift the body out of chronic stress into a balanced state where healing and recovery can actually happen. The foundation that makes every therapy after this work harder.</p></div>
+        <div><span class="eyebrow" data-i18n="m.360.n2">02</span><b data-i18n="m.360.t2">Detoxify</b><p data-i18n="m.360.d2">Support the body’s natural detoxification pathways, optimise circulation and oxygen delivery, and improve lymphatic and mitochondrial performance. Balance restored across multiple systems.</p></div>
+        <div><span class="eyebrow" data-i18n="m.360.n3">03</span><b data-i18n="m.360.t3">Regenerate</b><p data-i18n="m.360.d3">Raise cellular energy production, improve tissue oxygenation, reduce inflammation and support the body’s own repair. Building resilience, vitality and healthy ageing over time.</p></div>
+      </div>
+      <p class="muted" style="margin-top:28px;max-width:70ch" data-i18n="m.360.seq">Not isolated treatments. An integrated system of clinically proven technologies, sequenced so each modality prepares the body for the next. The outcome is greater than the sum of its parts. Our general bio-stacking sequence:</p>
+      <div class="seq"><span data-i18n="m.360.q1">Compression</span><i>→</i><span data-i18n="m.360.q2">IHHT or HBOT</span><i>→</i><span data-i18n="m.360.q3">Red light (PBM)</span></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2 data-i18n="m.cta.h">Which machines fit your footprint?</h2>
+      <p data-i18n="m.cta.p">Spec sheets, install requirements and modelled ROI for each technology are shared in the proposal, built for your space.</p>
+      <a class="btn btn-gold" href="mailto:team@elatevewellness.com" data-contact data-i18n="cta.book">Book 30 Minutes</a>
+    </div>
+  </section>
+    </div></section>
 
     <!-- ==================== WHY US PAGE ==================== -->
-    <section class="page page--whyus" id="page-whyus">
-      <div class="blog-hero">
-        <p class="section-eyebrow" data-i18n="wu.eyebrow">Trust</p>
-        <h1 class="page-title" data-i18n="wu.title">Why Us &amp; Who Trusts Us Already</h1>
-        <p class="page-sub" data-i18n="wu.sub">The case for one partner, and the names already backing it.</p>
+    <section class="page page--whyus" id="page-whyus"><div class="px">
+  <section style="padding-top:clamp(40px,6vw,80px)">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="w.hero.eye">Why us · Who we are · Barcelona × United Kingdom</p>
+        <h1 data-i18n="w.hero.h">Two specialists. One longevity offer.</h1>
+        <p class="lead" data-i18n="w.hero.lead">Hospitality people who understand the science, and scientists who understand hospitality. Together we are the exclusive longevity technology partnership for Spain and Europe, based in Barcelona. A property never has to assemble a wellness offer from parts that were never designed to work together.</p>
       </div>
-
-      <div class="section kx-section" id="wu-why">
-        <div class="kx-section-head kx-reveal">
-          <p class="kx-eyebrow" data-i18n="why.eyebrow">Why ELATEVE powered by Kloodos</p>
-          <h2 class="kx-h2" data-i18n-html="why.title">The only partner that owns <br>the whole thing, end to end.</h2>
-          <p class="kx-lead" data-i18n="why.lead">Most wellness suppliers sell you a machine and walk away. We design the concept, supply every technology, build the protocols that make them work together, train your team, and stay for the life of the installation.</p>
+      <div class="duo">
+        <div>
+          <span class="eyebrow" data-i18n="w.duo1.eye">ELATEVE · the longevity curator</span>
+          <p data-i18n="w.duo1.p">The experience, the protocols and the guest-facing brand. Women in their 30s, 40s, 50s and 60s, from hospitality, wellness and luxury real estate across Barcelona, Paris and London. We bring the concept, the business case and one partner who leads your project from floor plan to launch.</p>
         </div>
-        <div class="kx-why-grid kx-reveal">
-          <div class="kx-why-item"><h3 data-i18n="why.i1t">An address book you can&rsquo;t buy</h3><p data-i18n="why.i1d">An unrivalled network of experts from elite professional sport and private medical health, available to call on for your project.</p></div>
-          <div class="kx-why-item"><h3 data-i18n="why.i2t">Turnkey, not guesswork</h3><p data-i18n="why.i2d">Schematic drawings, guidance on the logical flow and positioning of each technology, and turnkey solutions for complete, real wellness.</p></div>
-          <div class="kx-why-item"><h3 data-i18n="why.i3t">Protocols, not just products</h3><p data-i18n="why.i3d">Integrated protocols that sequence every technology together, so guests spend longer and return time after time.</p></div>
-          <div class="kx-why-item"><h3 data-i18n="why.i4t">Training that goes deep</h3><p data-i18n="why.i4d">Thorough training across every technology, the what, the how, the when and the why, plus ongoing education and support for the protocols.</p></div>
-          <div class="kx-why-item"><h3 data-i18n="why.i5t">70+ years of protocol design</h3><p data-i18n="why.i5d">A team with more than 70 years&rsquo; combined experience developing award winning treatment protocols for premium spas worldwide.</p></div>
-          <div class="kx-why-item"><h3 data-i18n="why.i6t">Proven on the devices guests already wear</h3><p data-i18n="why.i6d">Protocols shown to produce instant and accruing results on everyday diagnostics: Whoop, Oura and the rest.</p></div>
-        </div>
-        <p class="kx-why-motto kx-reveal" data-i18n="why.motto">Relevant &middot; Cohesive &middot; Logical &middot; Reliable &middot; Engaging &middot; Integrated &middot; Complete</p>
-      </div>
-
-      <div class="kx-rule" aria-hidden="true"></div>
-
-      <!-- THE OPPORTUNITY -->
-      <div class="section kx-section" id="kx-opportunity">
-        <div class="kx-opp kx-reveal">
-          <div class="kx-opp-l">
-            <p class="kx-eyebrow" data-i18n="opp.eyebrow">The Opportunity</p>
-            <h2 class="kx-h2" data-i18n-html="opp.title">Your wellness floor is the most <br>underused space in the building.</h2>
-            <p class="kx-opp-lead" data-i18n="opp.lead">The clients who spend the most, and a fast growing wave of longevity travellers, are actively looking for somewhere to put that spend. A serious, science backed longevity offer is increasingly the reason they choose one property, or one club, over another.</p>
-          </div>
-          <div class="kx-opp-r">
-            <p data-i18n="opp.p2">Most venues cannot meet that demand, because the offer has to be assembled from parts that were never designed to work together. We do not just supply the technology. We walk the space, draw the floor plan and advise on where every modality belongs.</p>
-            <p data-i18n="opp.p3">Your spa was designed for a different guest, in a different decade of demand. We assess what you already have and propose the changes that appeal to the client walking in now.</p>
-            <p class="kx-opp-sub" data-i18n="opp.sub">And it is not only spas. We plan the space and advise across hospitality:</p>
-            <div class="kx-opp-tags">
-              <span data-i18n="opp.t1">Hotels &amp; Resorts</span>
-              <span data-i18n="opp.t2">Private Members&rsquo; Clubs</span>
-              <span data-i18n="opp.t3">Coworking Spaces</span>
-              <span data-i18n="opp.t4">Gyms &amp; Fitness Clubs</span>
-              <span data-i18n="opp.t5">Athletic &amp; Sports Clubs</span>
-              <span data-i18n="opp.t6">Residences</span>
-              <span data-i18n="opp.t7">Longevity Clinics</span>
-            </div>
-          </div>
+        <div>
+          <span class="eyebrow" data-i18n="w.duo2.eye">KLOODOS · the technology curator</span>
+          <p data-i18n="w.duo2.p">A female-led family business bringing pro sport recovery technology to spas since 2014, and a manufacturer of the world’s leading wellness technologies. Best-in-class medical-grade equipment, sole distribution rights, doctor-developed protocols and in-house training, for elite sport, luxury hospitality and private medical health.</p>
         </div>
       </div>
+      <div class="chips" style="margin-top:22px"><span class="chip gold" data-i18n="w.ch1">Exclusive · Spain &amp; Europe</span><span class="chip" data-i18n="w.ch2">Based in Barcelona</span><span class="chip" data-i18n="w.ch3">Medical grade only</span><span class="chip" data-i18n="w.ch4">One point of contact</span></div>
 
-      <div class="kx-rule" aria-hidden="true"></div>
-
-      <!-- THE RETURN / ROI -->
-      <div class="section kx-section" id="kx-roi">
-        <div class="kx-section-head kx-reveal">
-          <p class="kx-eyebrow" data-i18n="roi.eyebrow">The Return</p>
-          <h2 class="kx-h2" data-i18n="roi.title">What the floor gives back.</h2>
-          <p class="kx-lead" data-i18n="roi.lead">Three illustrative examples. Real figures depend on your footprint, positioning and rate, modelled properly in the proposal.</p>
-        </div>
-        <div class="kx-roi-grid kx-reveal">
-          <div class="kx-roi-card">
-            <span class="kx-roi-k" data-i18n="roi.c1k">HBOT lounger</span>
-            <div class="kx-roi-fig" data-i18n="roi.c1fig">Highest earner per m&sup2;</div>
-            <p data-i18n="roi.c1d">Run across daily sessions from a compact footprint, a reclining HBOT lounger is one of the highest earning assets on the floor.</p>
-          </div>
-          <div class="kx-roi-card">
-            <span class="kx-roi-k" data-i18n="roi.c2k">Spa reconfiguration</span>
-            <div class="kx-roi-fig" data-i18n="roi.c2fig">Higher margin tier</div>
-            <p data-i18n="roi.c2d">Repositioning an underused treatment room as a cryotherapy and compression recovery suite typically lifts room utilisation and adds a premium service tier above standard treatments.</p>
-          </div>
-          <div class="kx-roi-card">
-            <span class="kx-roi-k" data-i18n="roi.c3k">Membership &amp; retention</span>
-            <div class="kx-roi-fig" data-i18n="roi.c3fig">Recurring revenue</div>
-            <p data-i18n="roi.c3d">Operators quote a credible longevity offer as a top reason clients join and stay, protecting recurring revenue, not just treatment income.</p>
-          </div>
-        </div>
-        <p class="kx-roi-note kx-reveal" data-i18n="roi.note">Examples shown are illustrative, not quotes or guarantees.</p>
+      <div class="team-h" id="team"><b data-i18n="w.g1">ELATEVE · Barcelona</b><span class="small muted" data-i18n="w.t1">Your team on the ground</span></div>
+      <div class="team">
+        <div class="person"><img src="/images/site/team-karen.jpg" alt="Karen Reith" loading="lazy" decoding="async"><div><span class="role" data-i18n="w.karen.role">Co-founder &amp; CEO</span><h3>Karen Reith</h3><q data-i18n="w.karen.q">A longevity floor has to earn its place in the building. We make sure it does.</q><p data-i18n="w.karen.p">A natural leader with a sharp commercial instinct, Karen turns ambitious concepts into sound businesses. Strategy, partnerships and financial rigour shape every project she steers.</p><span class="mail">team@elatevewellness.com</span></div></div>
+        <div class="person"><img src="/images/site/team-melissa.jpg" alt="Melissa Reith" loading="lazy" decoding="async"><div><span class="role" data-i18n="w.melissa.role">Co-founder &amp; COO</span><h3>Melissa Reith</h3><q data-i18n="w.melissa.q">A spa room is real estate. The properties that plan for tomorrow’s wellness guest will earn the most from it.</q><p data-i18n="w.melissa.p">Meli reads a spa as an asset. She pairs a clear view of revenue per square metre with a strong sense of where wellness is heading, helping owners invest in what guests will want next.</p><span class="mail">melissa@elatevewellness.com</span></div></div>
+        <div class="person"><img src="/images/site/team-lourdes.jpg" alt="Lourdes Mateos" loading="lazy" decoding="async"><div><span class="role" data-i18n="w.lourdes.role">Strategy</span><h3>Lourdes Mateos</h3><q data-i18n="w.lourdes.q">Trust is earned after opening day. We build partnerships that last as long as the installation.</q><p data-i18n="w.lourdes.p">Strategic clarity is Lourdes’s strength. She anticipates where a market is going and positions each property’s offer for lasting advantage, drawing on a strong network across Spanish business and hospitality.</p><span class="mail">team@elatevewellness.com</span></div></div>
+        <div class="person"><img src="/images/site/team-anne-claire.jpg" alt="Anne Claire Dubois" loading="lazy" decoding="async"><div><span class="role" data-i18n="w.anne.role">Head of Business Development</span><h3>Anne Claire Dubois</h3><q data-i18n="w.anne.q">A great concept only counts once it opens on time and fills from the first week.</q><p data-i18n="w.anne.p">From the first site visit to opening week, Anne Claire keeps projects on track. Her background in property management and wellness helps her align owners, operators and suppliers behind one plan and one timeline.</p><span class="mail">anne@elatevewellness.com</span></div></div>
       </div>
 
-      <div class="kx-rule" aria-hidden="true"></div>
-
-      <div class="section kx-section" id="wu-record">
-        <div class="kx-section-head kx-reveal">
-          <p class="kx-eyebrow" data-i18n="rec.eyebrow">Who Trusts Us Already</p>
-          <h2 class="kx-h2" data-i18n-html="rec.title">Already trusted in the rooms <br>that accept nothing less.</h2>
-          <p class="kx-lead kx-lead--standard" data-i18n="rec.standard">We specify medical grade, clinically validated equipment only. Never consumer devices, never second rate materials. That standard is why these names let it into their buildings.</p>
-        </div>
-        <div class="kx-roll kx-reveal">
-          <p class="kx-roll-label" data-i18n="rec.rolllabel">A few of the rooms it already runs in</p>
-          <p class="kx-roll-names"><span>Manchester United FC</span> <span>FC Porto</span> <span>Soho House International</span> <span>Gleneagles Townhouse</span> <span>ESPA International</span> <span>PGA Catalunya</span> <span>KX Life &amp; KXU</span> <span>Repose Space</span></p>
-          <p class="kx-roll-more" data-i18n="rec.rollmore">And more, shared on request</p>
-        </div>
+      <div class="team-h"><b data-i18n="w.g2">KLOODOS · United Kingdom</b><span class="small muted" data-i18n="w.t2">Technology, protocols &amp; training</span></div>
+      <div class="team">
+        <div class="person"><img src="/images/site/julie.jpg" alt="Julie Cichocki" loading="lazy" decoding="async" style="object-position:70% 30%"><div><span class="role" data-i18n="w.julie.role">Founder &amp; Director</span><h3>Julie Cichocki</h3><p data-i18n="w.julie.p">With more than 30 years in premium spas and award-winning protocol design, Julie translates the technology of elite sport into treatments guests love. Ahead of the curve, she began advising spas and gyms in 2014 after working closely with the sports science teams at Manchester City and Manchester United, combining clinical credibility with a rare sense of what the market needs next.</p><span class="mail">team@elatevewellness.com</span></div></div>
+        <div class="person"><span class="ini" aria-hidden="true">HT</span><div><span class="role" data-i18n="w.harriet.role">Director</span><h3>Harriet Taylor</h3><p data-i18n="w.harriet.p">Harriet’s focus is performance after opening: precise installations, hands-on staff training and continuous optimisation, so each technology delivers results for guests and revenue for the property.</p><span class="mail">team@elatevewellness.com</span></div></div>
       </div>
+    </div>
+  </section>
 
-      <div class="section kx-section kx-section--band" id="wu-asseen">
-        <div class="kx-asseen kx-reveal">
-          <p class="kx-eyebrow" data-i18n="wu.asl">As Seen In</p>
-          <h2 class="kx-h2" data-i18n="wu.ast">Manchester United FC</h2>
-          <p data-i18n="wu.asd">The Kokoon nervous system pod on our stack is the same technology built for Manchester United&rsquo;s first team Recovery &amp; Performance suite, the &lsquo;K-Suite&rsquo;, sequencing sound, vibration and light into their players&rsquo; recovery.</p>
-        </div>
-        <div class="kx-asseen-media kx-reveal">
-          <img src="/images/web/man-utd-recovery-pod.jpg" alt="Manchester United branded recovery pod concept" data-i18n-alt="alt.mu1">
-          <img src="/images/press/man-utd-ksuite.jpg" alt="Manchester United K-Suite recovery pod interior" data-i18n-alt="alt.mu2">
-        </div>
+  <section style="background:var(--surface);border-block:1px solid var(--line)">
+    <div class="wrap"><div class="sec-head"><p class="eyebrow" data-i18n="w.exp.eye">Experience</p><h2 data-i18n="w.exp.h">What stands behind every project.</h2></div></div>
+    <div class="wrap">
+      <div class="reasons">
+        <div><p class="eyebrow" data-i18n="w.r1n">01</p><h3 data-i18n="w.r1t">70+ years of protocol design</h3><p data-i18n="w.r1d">A team with more than 70 years’ combined experience developing award-winning treatment protocols for premium spas worldwide.</p></div>
+        <div><p class="eyebrow" data-i18n="w.r2n">02</p><h3 data-i18n="w.r2t">An address book you can’t buy</h3><p data-i18n="w.r2d">An unrivalled network of experts from elite professional sport and private medical health, available to call on for your project.</p></div>
+        <div><p class="eyebrow" data-i18n="w.r3n">03</p><h3 data-i18n="w.r3t">Turnkey, not guesswork</h3><p data-i18n="w.r3d">Schematic drawings, guidance on the logical flow and positioning of each technology, and turnkey solutions for complete, real wellness.</p></div>
+        <div><p class="eyebrow" data-i18n="w.r4n">04</p><h3 data-i18n="w.r4t">Protocols, not just products</h3><p data-i18n="w.r4d">Integrated protocols that sequence every technology together, so guests spend longer and return time after time.</p></div>
+        <div><p class="eyebrow" data-i18n="w.r5n">05</p><h3 data-i18n="w.r5t">Training that goes deep</h3><p data-i18n="w.r5d">Thorough training across every technology, the what, the how, the when and the why, plus ongoing education and support for the protocols.</p></div>
+        <div><p class="eyebrow" data-i18n="w.r6n">06</p><h3 data-i18n="w.r6t">Proven on the devices guests already wear</h3><p data-i18n="w.r6d">Protocols shown to produce instant and accruing results on everyday diagnostics: Whoop, Oura and the rest.</p></div>
       </div>
+      <p class="values" data-i18n-html="w.values">Relevant<i> · </i> Cohesive<i> · </i> Logical<i> · </i> Reliable<i> · </i> Engaging<i> · </i> Integrated<i> · </i> Complete</p>
+    </div>
+  </section>
 
-      <!-- THE ASK -->
-      <div class="section kx-section kx-section--band" id="kx-ask">
-        <div class="kx-section-head center kx-reveal">
-          <p class="kx-eyebrow" data-i18n="ask.eyebrow">The Ask</p>
-          <h2 class="kx-h2" data-i18n="ask.title">Give us 30 minutes in your space.</h2>
-          <p class="kx-lead" data-i18n="ask.lead">Whatever the venue, hotel, resort, private club, gym or coworking floor, by the end of it you will know the footprint, the technology and the protocols that fit.</p>
-        </div>
-        <div class="kx-steps kx-reveal">
-          <div class="kx-step"><span class="kx-step-n">01</span><h3 data-i18n="ask.s1t">Discovery call</h3><p data-i18n="ask.s1d">Your property, your guest, your current space. 30 minutes.</p></div>
-          <div class="kx-step"><span class="kx-step-n">02</span><h3 data-i18n="ask.s2t">Onsite walkthrough</h3><p data-i18n="ask.s2d">We walk the space, measure the footprint and map the guest flow.</p></div>
-          <div class="kx-step"><span class="kx-step-n">03</span><h3 data-i18n="ask.s3t">Tailored proposal</h3><p data-i18n="ask.s3d">Technology stack, protocols, staffing and modelled return, shaped to your property.</p></div>
-        </div>
-        <div class="kx-ask-cta kx-reveal">
-          <a href="mailto:team@elatevewellness.com" class="btn btn--gold" data-contact data-i18n="cta.book">Book 30 Minutes</a>
-        </div>
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow" data-i18n="w.safe.eye">Medical grade only</p><h2 data-i18n="w.safe.h">You are not experimenting on your guests.</h2><p class="muted" data-i18n="w.safe.p">Every piece of technology we install is medical grade, clinically validated and engineered to European standards: the same equipment trusted by elite sport and private medical facilities, never a consumer import.</p></div>
+      <div class="flow two-col">
+        <div><b data-i18n="w.f1t">Medical-grade, certified</b><p data-i18n="w.f1d">Specified and reviewed with doctors, physiologists and sports scientists. Never consumer devices.</p></div>
+        <div style="border-left:1px solid rgba(255,255,255,.12)"><b data-i18n="w.f2t">Liability you don’t inherit</b><p data-i18n="w.f2d">Protected from the reputational and safety risk of unvetted, non-clinical equipment.</p></div>
+        <div style="border-top:0;border-left:1px solid rgba(255,255,255,.12)"><b data-i18n="w.f3t">Secure by design</b><p data-i18n="w.f3d">Electric, fully automated, monitored in real time. No hazardous gas handling on site.</p></div>
+        <div style="border-top:0;border-left:0"><b data-i18n="w.f4t">One partner, end to end</b><p data-i18n="w.f4d">Concept, technology, protocols, training and support, with one point of contact throughout.</p></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ==================== ABOUT PAGE ==================== -->
-    <section class="page page--about" id="page-about">
-
-      <div class="about-hero">
-        <p class="section-eyebrow" data-i18n="about.eyebrow">Our team &middot; Barcelona &times; United Kingdom</p>
-        <h1 class="page-title" data-i18n-html="about.title">The people behind <br>your longevity floor.</h1>
-        <p class="about-hero-sub" data-i18n="about.sub">Hospitality people who understand the science, and scientists who understand hospitality.</p>
+  <section>
+    <div class="wrap two">
+      <div class="stack"><p class="eyebrow" data-i18n-html="w.sw.eye">The software <span class="soon">In development</span></p><h2 data-i18n="w.sw.h">It works even when we’re not in the room.</h2></div>
+      <div class="stack">
+        <p class="muted" data-i18n="w.sw.p">Every partner location will run on our digital protocol system. Most wellness concepts fall apart six months after launch. Ours won’t, because the system runs it.</p>
+        <dl class="facts">
+          <div class="fact"><dt data-i18n="w.sw.k1">Guided sessions</dt><dd data-i18n="w.sw.v1">On-screen protocols mean consistent delivery, with or without a specialist on site.</dd></div>
+          <div class="fact"><dt data-i18n="w.sw.k2">Outcome tracking</dt><dd data-i18n="w.sw.v2">Guest results are logged and trackable session to session, not anecdotal.</dd></div>
+          <div class="fact"><dt data-i18n="w.sw.k3">Live dashboard</dt><dd data-i18n="w.sw.v3">Occupancy, revenue per treatment room and guest return rates, room by room.</dd></div>
+        </dl>
       </div>
+    </div>
+  </section>
 
-      <div class="about-content about-content--tight">
-        <div class="about-pills kx-reveal">
-          <div class="about-pill">
-            <p class="about-pill-label" data-i18n="about.pill1label">Elateve</p>
-            <p data-i18n="about.pill1text">Women in their 30s, 40s, 50s and 60s, from hospitality, wellness and luxury real estate across Barcelona, Paris and London. We bring the concept, the business case and one partner who leads your project from floor plan to launch.</p>
-          </div>
-          <div class="about-pill">
-            <p class="about-pill-label" data-i18n="about.pill2label">Kloodos</p>
-            <p data-i18n="about.pill2text">A female led family business bringing pro sport recovery technology to spas since 2014. It brings best in class medical grade equipment, doctor developed protocols and in house training.</p>
-          </div>
-        </div>
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow" data-i18n="w.one.eye">The only partner that owns the whole thing</p><h2 data-i18n="w.one.h">One partner, end to end.</h2><p class="muted" data-i18n="w.one.p">Most wellness suppliers sell you a machine and walk away. Consultants advise but never install. Trend-led concepts fade the moment the trend does. We design the concept, supply every technology, build the protocols that make them work together, train your team, and stay for the life of the installation.</p></div>
+      <div class="tbl small">
+        <table class="compare small">
+          <thead><tr><th scope="col"></th><th scope="col" data-i18n="w.cmp.h1">The usual way</th><th scope="col">ELATEVE powered by Kloodos</th></tr></thead>
+          <tbody>
+            <tr><td data-i18n="w.cmp.a">Equipment</td><td data-i18n="w.cmp.a1">Multiple vendors, no shared standard</td><td data-i18n="w.cmp.a2">One curated, medical-grade stack</td></tr>
+            <tr><td data-i18n="w.cmp.b">Protocols &amp; training</td><td data-i18n="w.cmp.b1">Left for your team to figure out</td><td data-i18n="w.cmp.b2">Doctor-developed, trained in house</td></tr>
+            <tr><td data-i18n="w.cmp.c">Ongoing support</td><td data-i18n="w.cmp.c1">Ends at installation</td><td data-i18n="w.cmp.c2">Ongoing supervision and performance tracking</td></tr>
+            <tr><td data-i18n="w.cmp.d">Accountability</td><td data-i18n="w.cmp.d1">No single point of contact</td><td data-i18n="w.cmp.d2">One partner, start to finish</td></tr>
+          </tbody>
+        </table>
       </div>
+    </div>
+  </section>
 
-      <div class="kx-rule" aria-hidden="true"></div>
+  <section>
+    <div class="wrap two" style="align-items:center">
+      <div class="stack"><p class="eyebrow" data-i18n="w.home.eye">Home base</p><h2 data-i18n="w.home.h">Based in Barcelona. Partnering across Spain &amp; Europe.</h2><p class="muted" data-i18n="w.home.p">One partner on the ground for Spain and Europe, with the Kloodos technology, protocol and training team behind every project. And we never stop: we keep researching the market, testing the latest technology launches and educating our partners, so your floor stays relevant long after opening.</p></div>
+      <img src="/images/site/pga-night.jpg" alt="A Catalan wellness resort at night" data-i18n-alt="w.home.alt" loading="lazy" decoding="async" style="width:100%;aspect-ratio:16/10;object-fit:cover">
+    </div>
+  </section>
 
-      <!-- MEET THE TEAM -->
-      <div class="section kx-section" id="kx-people">
-        <div class="kx-people-group kx-reveal">
-          <div class="kx-people-head">
-            <span class="kx-people-label" data-i18n="ppl.g1label">ELATEVE &middot; Barcelona</span>
-            <span class="kx-people-sub" data-i18n="ppl.g1sub">Your team on the ground</span>
-          </div>
-          <div class="kx-people-grid">
-            <article class="kx-person">
-              <div class="kx-person-photo"><img src="/images/team/karen-reith.jpg" alt="Karen Reith" loading="lazy"></div>
-              <div class="kx-person-body">
-                <h3>Karen Reith</h3>
-                <p class="kx-person-role" data-i18n="ppl.karen.role">Co-founder &amp; CEO</p>
-                <p class="kx-person-quote" data-i18n="ppl.karen.quote">&ldquo;A longevity floor has to earn its place in the building. We make sure it does.&rdquo;</p>
-                <p class="kx-person-bio" data-i18n="ppl.karen.bio">A natural leader with a sharp commercial instinct, Karen turns ambitious concepts into sound businesses. Strategy, partnerships and financial rigour shape every project she steers.</p>
-                <div class="kx-person-links">
-                  <a class="kx-person-li kx-person-email" href="mailto:team@elatevewellness.com">team@elatevewellness.com</a>
-                  <a class="kx-person-li" href="https://www.linkedin.com/in/karenreith/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
-                </div>
-              </div>
-            </article>
-            <article class="kx-person">
-              <div class="kx-person-photo"><img src="/images/team/melissa-reith.jpg" alt="Melissa Reith" loading="lazy"></div>
-              <div class="kx-person-body">
-                <h3>Melissa Reith</h3>
-                <p class="kx-person-role" data-i18n="ppl.melissa.role">Co-founder &amp; COO</p>
-                <p class="kx-person-quote" data-i18n="ppl.melissa.quote">&ldquo;A spa room is real estate. The properties that plan for tomorrow&rsquo;s wellness guest will earn the most from it.&rdquo;</p>
-                <p class="kx-person-bio" data-i18n="ppl.melissa.bio">Meli reads a spa as an asset. She pairs a clear view of revenue per square metre with a strong sense of where wellness is heading, helping owners invest in what guests will want next.</p>
-                <div class="kx-person-links">
-                  <a class="kx-person-li kx-person-email" href="mailto:melissa@elatevewellness.com">melissa@elatevewellness.com</a>
-                  <a class="kx-person-li" href="https://www.linkedin.com/in/melissacreith/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
-                </div>
-              </div>
-            </article>
-            <article class="kx-person">
-              <div class="kx-person-photo"><img src="/images/team/lourdes-mateos.jpg" alt="Lourdes Mateos" loading="lazy"></div>
-              <div class="kx-person-body">
-                <h3>Lourdes Mateos</h3>
-                <p class="kx-person-role" data-i18n="ppl.lourdes.role">Strategy</p>
-                <p class="kx-person-quote" data-i18n="ppl.lourdes.quote">&ldquo;Trust is earned after opening day. We build partnerships that last as long as the installation.&rdquo;</p>
-                <p class="kx-person-bio" data-i18n="ppl.lourdes.bio">Strategic clarity is Lourdes&rsquo;s strength. She anticipates where a market is going and positions each property&rsquo;s offer for lasting advantage, drawing on a strong network across Spanish business and hospitality.</p>
-                <div class="kx-person-links">
-                  <a class="kx-person-li kx-person-email" href="mailto:team@elatevewellness.com">team@elatevewellness.com</a>
-                  <a class="kx-person-li" href="https://www.linkedin.com/in/maria-lourdes-mateos-castello/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
-                </div>
-              </div>
-            </article>
-            <article class="kx-person">
-              <div class="kx-person-photo"><img src="/images/team/anne-claire-dubois.jpg" alt="Anne Claire Dubois" loading="lazy"></div>
-              <div class="kx-person-body">
-                <h3>Anne Claire Dubois</h3>
-                <p class="kx-person-role" data-i18n="ppl.anneclaire.role">Head of Business Development</p>
-                <p class="kx-person-quote" data-i18n="ppl.anneclaire.quote">&ldquo;A great concept only counts once it opens on time and fills from the first week.&rdquo;</p>
-                <p class="kx-person-bio" data-i18n="ppl.anneclaire.bio">From the first site visit to opening week, Anne Claire keeps projects on track. Her background in property management and wellness helps her align owners, operators and suppliers behind one plan and one timeline.</p>
-                <div class="kx-person-links">
-                  <a class="kx-person-li kx-person-email" href="mailto:anne@elatevewellness.com">anne@elatevewellness.com</a>
-                  <a class="kx-person-li" href="https://www.linkedin.com/in/anneclairedubois/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="kx-people-group kx-reveal">
-          <div class="kx-people-head">
-            <span class="kx-people-label" data-i18n="ppl.g2label">KLOODOS &middot; United Kingdom</span>
-            <span class="kx-people-sub" data-i18n="ppl.g2sub">Technology, protocols &amp; training</span>
-          </div>
-          <div class="kx-people-grid">
-            <article class="kx-person">
-              <div class="kx-person-photo"><img src="/images/team/julie-cichocki.jpg" alt="Julie Cichocki" loading="lazy"></div>
-              <div class="kx-person-body">
-                <h3>Julie Cichocki</h3>
-                <p class="kx-person-role" data-i18n="ppl.julie.role">Founder &amp; Director</p>
-                <p class="kx-person-bio" data-i18n="ppl.julie.bio">With more than 30 years in premium spas and award winning protocol design, Julie translates the technology of elite sport into treatments guests love, combining clinical credibility with a rare sense of what the market needs next.</p>
-                <div class="kx-person-links">
-                  <a class="kx-person-li kx-person-email" href="mailto:team@elatevewellness.com">team@elatevewellness.com</a>
-                  <a class="kx-person-li" href="https://www.linkedin.com/in/julie-cichocki-40a27a5/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
-                </div>
-              </div>
-            </article>
-            <article class="kx-person">
-              <div class="kx-person-photo"><img src="/images/team/harriet-taylor.jpg" alt="Harriet Taylor" loading="lazy"></div>
-              <div class="kx-person-body">
-                <h3>Harriet Taylor</h3>
-                <p class="kx-person-role" data-i18n="ppl.harriet.role">Director</p>
-                <p class="kx-person-bio" data-i18n="ppl.harriet.bio">Harriet&rsquo;s focus is performance after opening: precise installations, hands on staff training and continuous optimisation, so each technology delivers results for guests and revenue for the property.</p>
-                <div class="kx-person-links">
-                  <a class="kx-person-li kx-person-email" href="mailto:team@elatevewellness.com">team@elatevewellness.com</a>
-                  <a class="kx-person-li" href="https://www.linkedin.com/in/harriet-taylor-29b4a995/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      <!-- BARCELONA -->
-      <div class="kx-place">
-        <img src="/images/web/p-barcelona.jpg" alt="Casa Batlló, Barcelona, at dusk" data-i18n-alt="alt.bcn" loading="lazy">
-        <div class="kx-place-caption">
-          <p class="kx-eyebrow" data-i18n="place.eyebrow">Home Base</p>
-          <p class="kx-place-line" data-i18n-html="place.line">Based in Barcelona. <br>Partnering across Spain &amp; Europe.</p>
-        </div>
-      </div>
-    </section>
+  <section class="cta">
+    <div class="wrap">
+      <h2 data-i18n="w.cta.h">Let’s talk longevity.</h2>
+      <p data-i18n="w.cta.p">Reach a human directly and we will set up your 30 minutes: a discovery call, an onsite walkthrough, then a proposal shaped to your property.</p>
+      <a class="btn btn-gold" href="mailto:team@elatevewellness.com" data-contact data-i18n="cta.book">Book 30 Minutes</a>
+    </div>
+  </section>
+    </div></section>
 
   </main>
 
@@ -735,14 +746,14 @@
         </div>
         <div class="footer-col">
           <h4 data-i18n="foot.partnership">Partnership</h4>
-          <a href="/" data-page="home" data-i18n="foot.track">Track Record</a>
+          <a href="/projects" data-page="projects" data-i18n="nav.projects">Our Projects</a>
           <a href="/machinery" data-page="machinery" data-i18n="nav.machinery">The Machinery</a>
           <a href="/why-us" data-page="whyus" data-i18n="nav.whyus">Why Us</a>
           <a href="mailto:team@elatevewellness.com" data-contact data-i18n="cta.book">Book 30 Minutes</a>
         </div>
         <div class="footer-col">
           <h4 data-i18n="foot.company">Company</h4>
-          <a href="/about" data-page="about" data-i18n="foot.about">Who Are We</a>
+          <a href="/why-us#team" data-page="whyus" data-anchor="team" data-i18n="foot.about">Who We Are</a>
           <a href="/blog" data-page="blog" data-i18n="nav.journal">Journal</a>
         </div>
         <div class="footer-col">
@@ -782,7 +793,7 @@
     </div>
   </div>
 
-  <script src="/js/i18n.js?v=20261005-kx31"></script>
-  <script src="/js/app.js?v=20261005-kx31"></script>
+  <script src="/js/i18n.js?v=20261005-kx41"></script>
+  <script src="/js/app.js?v=20261005-kx41"></script>
 </body>
 </html>

@@ -290,7 +290,8 @@ const THUMBS = {
   '/images/partnership/coast.jpg': '/images/web/p-coast-sm.jpg',
   '/images/partnership/lounge.jpg': '/images/web/p-lounge-sm.jpg',
   '/images/partnership/sauna.jpg': '/images/web/p-sauna-sm.jpg',
-  '/images/partnership/barcelona.jpg': '/images/web/p-barcelona-sm.jpg'
+  '/images/partnership/barcelona.jpg': '/images/web/p-barcelona-sm.jpg',
+  '/images/machinery/pbm-cellstack.png': '/images/web/p-cellstack-sm.jpg'
 };
 const ES_MONTHS = { Jan: 'Ene', Feb: 'Feb', Mar: 'Mar', Apr: 'Abr', May: 'May', Jun: 'Jun', Jul: 'Jul', Aug: 'Ago', Sep: 'Sep', Oct: 'Oct', Nov: 'Nov', Dec: 'Dic' };
 const ASSET_QS = (document.querySelector('script[src*="/js/app.js"]')?.src.split('?')[1]) || '';

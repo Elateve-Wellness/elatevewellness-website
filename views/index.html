@@ -42,7 +42,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=20261001-kx28">
+  <link rel="stylesheet" href="/css/styles.css?v=20261005-kx31">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -98,7 +98,7 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="/" class="nav-logo" data-page="home">
-        <img src="/images/elateve-logo-lockup.png" alt="ELATEVE powered by Kloodos" class="nav-logo-img">
+        <img src="/images/web/logo-lockup.png" alt="ELATEVE powered by Kloodos" class="nav-logo-img" width="640" height="157">
       </a>
       <div class="nav-links" id="navLinks">
         <a href="/" data-page="home" data-i18n="nav.home">Home</a>
@@ -117,6 +117,19 @@
     </div>
   </nav>
 
+  <!-- PARTNER STRIP -->
+  <div class="logo-strip">
+    <div class="logo-strip-in">
+      <span class="logo-strip-lbl" data-i18n="strip.label">Installed &amp; running at</span>
+      <div class="marquee">
+        <div class="track">
+          <span>Manchester United FC</span><span>FC Porto</span><span>Soho House International</span><span>Gleneagles Townhouse</span><span>ESPA International</span><span>PGA Catalunya</span><span>KX Life &amp; KXU</span><span>Repose Space</span>
+          <span aria-hidden="true">Manchester United FC</span><span aria-hidden="true">FC Porto</span><span aria-hidden="true">Soho House International</span><span aria-hidden="true">Gleneagles Townhouse</span><span aria-hidden="true">ESPA International</span><span aria-hidden="true">PGA Catalunya</span><span aria-hidden="true">KX Life &amp; KXU</span><span aria-hidden="true">Repose Space</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- PAGE CONTAINER -->
   <main id="app">
 
@@ -125,19 +138,31 @@
 
       <!-- HERO -->
       <div class="kx-hero">
-        <div class="kx-hero-aura" aria-hidden="true"></div>
-        <div class="kx-hero-content">
-          <p class="kx-eyebrow" data-i18n="hero.eyebrow">A Longevity Partnership &middot; Barcelona</p>
-          <h1 class="kx-hero-title" data-i18n-html="hero.title">The complete wellness &amp; longevity offer <br>for hospitality, delivered end to end.</h1>
-          <p class="kx-hero-sub" data-i18n="hero.sub">ELATEVE powered by Kloodos turns underused wellness space into a measurable recovery offer, for hotel spas, sports clubs, coworking spaces and wellness centres. Guests want real renewal, not passive relaxation. We deliver protocols, technology and training from one partner, exclusively for Spain and Europe.</p>
-          <div class="kx-hero-cta">
-            <a href="mailto:team@elatevewellness.com" class="btn btn--gold" data-contact data-i18n="cta.book">Book 30 Minutes</a>
-            <a href="#kx-system" class="btn btn--outline btn--ondark" data-i18n="hero.cta2">See What We Deliver</a>
+        <div class="kx-hero-wrap">
+          <div class="kx-hero-grid">
+            <div class="kx-hero-copy">
+              <p class="kx-eyebrow" data-i18n="hero.eyebrow">A Longevity Partnership &middot; Barcelona</p>
+              <h1 class="kx-hero-title" data-i18n-html="hero.title">The complete <span class="gold-text">wellness &amp; longevity</span> offer <br>for hospitality, delivered end to end.</h1>
+              <p class="kx-hero-sub" data-i18n="hero.sub">ELATEVE powered by Kloodos turns underused wellness space into a measurable recovery offer, for hotel spas, sports clubs, coworking spaces and wellness centres. Guests want real renewal, not passive relaxation. We deliver protocols, technology and training from one partner, exclusively for Spain and Europe.</p>
+              <div class="kx-hero-cta">
+                <a href="mailto:team@elatevewellness.com" class="btn btn--gold" data-contact data-i18n="cta.book">Book 30 Minutes</a>
+                <a href="#kx-system" class="btn btn--outline" data-i18n="hero.cta2">See What We Deliver</a>
+              </div>
+            </div>
+            <div class="kx-hero-media">
+              <div class="kx-hm">
+                <div class="kx-hm-cell kx-hm-cell--float"><img src="/images/web/hero-float.jpg" alt="K Float dry float couch" data-i18n-alt="alt.float" width="560" height="718" fetchpriority="high"></div>
+                <div class="kx-hm-cell kx-hm-cell--kokoon"><img src="/images/web/hero-kokoon.jpg" alt="Kokoon nervous system recovery pod" data-i18n-alt="alt.kokoon" width="560" height="718"></div>
+                <div class="kx-hm-cell kx-hm-cell--pbm"><img src="/images/web/hero-pbm.jpg" alt="Cell Stack red light therapy bed" data-i18n-alt="alt.pbm" width="560" height="718"></div>
+              </div>
+              <p class="kx-hm-cap"><span>K Float</span><span>Kokoon</span><span>Cell Stack</span></p>
+            </div>
           </div>
-          <div class="kx-hero-meta">
-            <div><span class="kx-hero-n">15+</span><span class="kx-hero-l" data-i18n="hero.m1">Medical grade technologies</span></div>
-            <div><span class="kx-hero-n">70+</span><span class="kx-hero-l" data-i18n="hero.m2">Years of protocol design</span></div>
-            <div><span class="kx-hero-n">1</span><span class="kx-hero-l" data-i18n="hero.m3">Partner, install to outcome</span></div>
+          <div class="kx-kpis">
+            <div class="kx-kpi"><span class="kx-kpi-n">+36%</span><span class="kx-kpi-l" data-i18n="hero.m4">More spend per trip from wellness travellers</span></div>
+            <div class="kx-kpi"><span class="kx-kpi-n">15+</span><span class="kx-kpi-l" data-i18n="hero.m1">Medical grade technologies</span></div>
+            <div class="kx-kpi"><span class="kx-kpi-n">70+</span><span class="kx-kpi-l" data-i18n="hero.m2">Years of protocol design</span></div>
+            <div class="kx-kpi"><span class="kx-kpi-n">1</span><span class="kx-kpi-l" data-i18n="hero.m3">Partner, install to outcome</span></div>
           </div>
         </div>
       </div>
@@ -154,17 +179,15 @@
         </div>
 
         <div class="kx-record-media kx-reveal">
-          <img src="/images/partnership/lounge.jpg" alt="A calm luxury spa pool and lounge" loading="lazy">
+          <img src="/images/web/p-lounge.jpg" alt="A calm luxury spa pool and lounge" data-i18n-alt="alt.lounge" loading="lazy">
         </div>
 
         <div class="kx-roll kx-reveal">
           <p class="kx-roll-label" data-i18n="rec.rolllabel">A few of the rooms it already runs in</p>
-          <p class="kx-roll-names">Manchester United FC<span>&middot;</span>FC Porto<span>&middot;</span>Soho House International<span>&middot;</span>Gleneagles Townhouse<span>&middot;</span>ESPA International<span>&middot;</span>PGA Catalunya<span>&middot;</span>KX Life &amp; KXU<span>&middot;</span>Repose Space</p>
+          <p class="kx-roll-names"><span>Manchester United FC</span> <span>FC Porto</span> <span>Soho House International</span> <span>Gleneagles Townhouse</span> <span>ESPA International</span> <span>PGA Catalunya</span> <span>KX Life &amp; KXU</span> <span>Repose Space</span></p>
           <p class="kx-roll-more" data-i18n="rec.rollmore">And more, shared on request</p>
         </div>
       </div>
-
-      <div class="kx-rule" aria-hidden="true"></div>
 
       <!-- WHO WE ARE -->
       <div class="section kx-section kx-section--band">
@@ -190,11 +213,9 @@
         </div>
       </div>
 
-      <div class="kx-rule" aria-hidden="true"></div>
-
       <!-- THE SYSTEM / WHAT WE DELIVER -->
       <div class="section kx-section" id="kx-system">
-        <div class="kx-section-head center kx-reveal">
+        <div class="kx-section-head kx-reveal">
           <p class="kx-eyebrow" data-i18n="sys.eyebrow">What We Deliver</p>
           <h2 class="kx-h2" data-i18n-html="sys.title">A turnkey longevity floor. <br>One contract, one partner.</h2>
           <p class="kx-lead" data-i18n="sys.lead">Not a catalogue of machines. A complete longevity offer, designed for your building and installed, staffed and marketed for you.</p>
@@ -234,13 +255,17 @@
         <p class="kx-system-line kx-reveal" data-i18n="sys.line">From the first drawing to the outcome your guests feel, end to end, under one roof.</p>
       </div>
 
-      <div class="kx-rule" aria-hidden="true"></div>
-
       <!-- THE MARKET / WHY NOW -->
       <div class="section kx-section kx-section--band" id="kx-market">
-        <div class="kx-section-head center kx-reveal">
-          <p class="kx-eyebrow" data-i18n="mkt.eyebrow">The Market</p>
-          <h2 class="kx-h2" data-i18n-html="mkt.title">The demand is already here. <br>The supply isn&rsquo;t.</h2>
+        <div class="kx-mk-head kx-reveal">
+          <div>
+            <p class="kx-eyebrow" data-i18n="mkt.eyebrow">The Market</p>
+            <h2 class="kx-h2" data-i18n-html="mkt.title">The demand is already here. <br>The supply isn&rsquo;t.</h2>
+          </div>
+          <div class="kx-fomo">
+            <p data-i18n-html="mkt.fomo1">The people driving that spend, wealthy guests, longevity travellers, executive health and elite sport budgets, are <strong>actively looking for a credible place to put it</strong>. Most properties cannot give them one.</p>
+            <p data-i18n-html="mkt.fomo2">There is room for roughly <strong>one serious longevity destination per city</strong>. Whoever installs first usually keeps that position. Your competitors are already having this conversation with us.</p>
+          </div>
         </div>
         <div class="kx-stats kx-reveal">
           <div class="kx-stat">
@@ -248,48 +273,36 @@
             <div class="kx-stat-l" data-i18n="mkt.s1l">What an international wellness traveller spends per trip over the average tourist</div>
           </div>
           <div class="kx-stat">
-            <div class="kx-stat-n">7.8% &rarr; 18%</div>
+            <div class="kx-stat-n" data-i18n="mkt.n2">7.8% &rarr; 18%</div>
             <div class="kx-stat-l" data-i18n="mkt.s2l">Wellness trips are 7.8% of all travel, but nearly a fifth of what travellers spend</div>
           </div>
           <div class="kx-stat">
-            <div class="kx-stat-n">$1.4tn</div>
+            <div class="kx-stat-n" data-i18n="mkt.n3">$1.4tn</div>
             <div class="kx-stat-l" data-i18n="mkt.s3l">Forecast size of wellness tourism by 2027, up from $1tn in 2024</div>
           </div>
           <div class="kx-stat">
-            <div class="kx-stat-n">$9.8tn</div>
+            <div class="kx-stat-n" data-i18n="mkt.n4">$9.8tn</div>
             <div class="kx-stat-l" data-i18n="mkt.s4l">Forecast global wellness economy by 2029. Longevity is its fastest growing part</div>
           </div>
         </div>
-        <div class="kx-fomo kx-reveal">
-          <p data-i18n-html="mkt.fomo1">The people driving that spend, wealthy guests, longevity travellers, executive health and elite sport budgets, are <strong>actively looking for a credible place to put it</strong>. Most properties cannot give them one.</p>
-          <p data-i18n-html="mkt.fomo2">There is room for roughly <strong>one serious longevity destination per city</strong>. Whoever installs first usually keeps that position. Your competitors are already having this conversation with us.</p>
-          <p class="kx-roi-note" data-i18n="mkt.src">Sources: Global Wellness Institute, 2023&ndash;2024.</p>
-        </div>
+        <p class="kx-roi-note" data-i18n="mkt.src">Sources: Global Wellness Institute, 2023&ndash;2024.</p>
       </div>
 
-      <div class="kx-rule" aria-hidden="true"></div>
-
       <!-- EXPLORE FURTHER (merged Why Us + Machinery teaser) -->
-      <div class="section kx-section kx-section--explore" id="kx-explore">
-        <div class="kx-section-head center kx-reveal">
+      <div class="section kx-section" id="kx-explore">
+        <div class="kx-section-head kx-reveal">
           <p class="kx-eyebrow" data-i18n="exp.eyebrow">Go Deeper</p>
           <h2 class="kx-h2" data-i18n="exp.title">See the case, and see the machines.</h2>
         </div>
-        <div class="kx-explore-cta kx-reveal">
-          <a href="/why-us" class="btn btn--gold" data-page="whyus" data-i18n="why.cta">See Why Us &amp; Who Trusts Us</a>
-          <a href="/machinery" class="btn btn--outline" data-page="machinery" data-i18n="inst.cta">See It For Yourself</a>
-        </div>
-      </div>
-
-      <!-- NEWSLETTER -->
-      <div class="section section--newsletter">
-        <div class="newsletter-inner">
-          <h2 data-i18n="news.title">Join the Elevation</h2>
-          <p data-i18n="news.p">Longevity thinking, curated finds and notes from the partnership. Delivered occasionally, never noisy.</p>
-          <form class="newsletter-form" id="newsletterForm">
-            <input type="email" placeholder="Your email" required data-i18n-placeholder="news.ph">
-            <button type="submit" class="btn btn--gold" data-i18n="news.btn">Subscribe</button>
-          </form>
+        <div class="kx-deeper kx-reveal">
+          <a href="/machinery" class="kx-deeper-card" data-page="machinery">
+            <img src="/images/web/m-hbot-oxystack.jpg" alt="" loading="lazy">
+            <div class="kx-deeper-t"><span data-i18n="nav.machinery">The Machinery</span><b data-i18n="inst.cta">See It For Yourself</b></div>
+          </a>
+          <a href="/why-us" class="kx-deeper-card" data-page="whyus">
+            <img src="/images/web/p-lounge.jpg" alt="" loading="lazy">
+            <div class="kx-deeper-t"><span data-i18n="nav.whyus">Why Us</span><b data-i18n="why.cta">See Why Us &amp; Who Trusts Us</b></div>
+          </a>
         </div>
       </div>
     </section>
@@ -326,7 +339,7 @@
 
       <!-- 360 APPROACH -->
       <div class="section kx-section kx-section--band" id="kx-approach">
-        <div class="kx-section-head center kx-reveal">
+        <div class="kx-section-head kx-reveal">
           <p class="kx-eyebrow" data-i18n="app.eyebrow">Our 360&deg; Approach</p>
           <h2 class="kx-h2" data-i18n="app.title">Regulate. Detoxify. Regenerate.</h2>
           <p class="kx-lead" data-i18n-html="app.lead">True health is not treating symptoms one by one. It is restoring the body&rsquo;s own ability to regulate, adapt, repair and thrive. At the centre of everything we build is <strong>nervous system regulation</strong>: the system behind brain performance, emotional resilience, hormones, immunity, cardiovascular health, digestion, recovery and cellular repair.</p>
@@ -351,96 +364,94 @@
         <p class="kx-stages-note kx-reveal" data-i18n="app.note">Not isolated treatments. An integrated system of clinically proven technologies, sequenced so each modality prepares the body for the next. The outcome is greater than the sum of its parts.</p>
       </div>
 
-      <div class="kx-rule" aria-hidden="true"></div>
-
       <div class="kx-machinery-grid">
         <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/machinery/cryotherapy-powercab.png" alt="Powercab whole body cryotherapy chamber" loading="lazy"></div>
+          <div class="kx-machine-photo"><img src="/images/web/m-cryotherapy-powercab.jpg" alt="Powercab whole body cryotherapy chamber" data-i18n-alt="mc.a1" loading="lazy"></div>
           <div class="kx-machine-body">
             <span class="kx-machine-tag">01</span>
-            <h3>Whole Body Cryotherapy</h3>
+            <h3 data-i18n="mc.t1">Whole Body Cryotherapy</h3>
             <p class="kx-machine-brand">Powercab</p>
-            <p>An electric cold chamber, no nitrogen, reaching &minus;110&deg;C. Medical grade and tailored to each client.</p>
+            <p data-i18n="mc.d1">An electric cold chamber, no nitrogen, reaching &minus;110&deg;C. Medical grade and tailored to each client.</p>
           </div>
         </article>
 
         <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/machinery/hbot-oxystack.png" alt="Oxy Stack hyperbaric oxygen chamber" loading="lazy"></div>
+          <div class="kx-machine-photo"><img src="/images/web/m-hbot-oxystack.jpg" alt="Oxy Stack hyperbaric oxygen chamber" data-i18n-alt="mc.a2" loading="lazy"></div>
           <div class="kx-machine-body">
             <span class="kx-machine-tag">02</span>
-            <h3>Hyperbaric Oxygen</h3>
+            <h3 data-i18n="mc.t2">Hyperbaric Oxygen</h3>
             <p class="kx-machine-brand">Oxy Stack</p>
-            <p>A certified, medical grade pressure chamber for one or two people. Full automation and real time monitoring.</p>
+            <p data-i18n="mc.d2">A certified, medical grade pressure chamber for one or two people. Full automation and real time monitoring.</p>
           </div>
         </article>
 
         <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/machinery/pbm-cellstack.png" alt="Cell Stack red light therapy bed" loading="lazy"></div>
+          <div class="kx-machine-photo"><img src="/images/web/m-pbm-cellstack.jpg" alt="Cell Stack red light therapy bed" data-i18n-alt="mc.a3" loading="lazy"></div>
           <div class="kx-machine-body">
             <span class="kx-machine-tag">03</span>
-            <h3>Photobiomodulation</h3>
-            <p class="kx-machine-brand">Cell Stack &middot; Red Light Therapy</p>
-            <p>A whole body red and near infrared light bed. Reduces inflammation and speeds recovery, no downtime.</p>
+            <h3 data-i18n="mc.t3">Photobiomodulation</h3>
+            <p class="kx-machine-brand" data-i18n="mc.b3">Cell Stack &middot; Red Light Therapy</p>
+            <p data-i18n="mc.d3">A whole body red and near infrared light bed. Reduces inflammation and speeds recovery, no downtime.</p>
           </div>
         </article>
 
         <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/machinery/ihht-cellready.png" alt="IHHT mask based cellular training" loading="lazy"></div>
+          <div class="kx-machine-photo"><img src="/images/web/m-ihht-cellready.jpg" alt="IHHT mask based cellular training" data-i18n-alt="mc.a4" loading="lazy"></div>
           <div class="kx-machine-body">
             <span class="kx-machine-tag">04</span>
-            <h3>IHHT</h3>
+            <h3 data-i18n="mc.t4">IHHT</h3>
             <p class="kx-machine-brand">Cell Ready</p>
-            <p>A mask based workout for the cells. Alternating oxygen levels train mitochondria in twenty five to forty minutes.</p>
+            <p data-i18n="mc.d4">A mask based workout for the cells. Alternating oxygen levels train mitochondria in twenty five to forty minutes.</p>
           </div>
         </article>
 
         <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/machinery/sauna-clearlight.png" alt="Clearlight infrared sauna" loading="lazy"></div>
+          <div class="kx-machine-photo"><img src="/images/web/m-sauna-clearlight.jpg" alt="Clearlight infrared sauna" data-i18n-alt="mc.a5" loading="lazy"></div>
           <div class="kx-machine-body">
             <span class="kx-machine-tag">05</span>
-            <h3>Infrared Sauna</h3>
+            <h3 data-i18n="mc.t5">Infrared Sauna</h3>
             <p class="kx-machine-brand">Clearlight Sanctuary</p>
-            <p>Full spectrum infrared with zero EMF and zero ELF. Pain relief, better sleep, sharper focus.</p>
+            <p data-i18n="mc.d5">Full spectrum infrared with zero EMF and zero ELF. Pain relief, better sleep, sharper focus.</p>
           </div>
         </article>
 
         <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/machinery/compression-ballancer.png" alt="Ballancer Gold compression therapy" loading="lazy"></div>
+          <div class="kx-machine-photo"><img src="/images/web/m-compression-ballancer.jpg" alt="Ballancer Gold compression therapy" data-i18n-alt="mc.a6" loading="lazy"></div>
           <div class="kx-machine-body">
             <span class="kx-machine-tag">06</span>
-            <h3>Compression Therapy</h3>
+            <h3 data-i18n="mc.t6">Compression Therapy</h3>
             <p class="kx-machine-brand">Ballancer Gold</p>
-            <p>Medical pneumatic compression built on lymphatic drainage. FDA cleared, over thirty five years of clinical use.</p>
+            <p data-i18n="mc.d6">Medical pneumatic compression built on lymphatic drainage. FDA cleared, over thirty five years of clinical use.</p>
           </div>
         </article>
 
         <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/machinery/dryfloat-kfloat.png" alt="K Float dry float couch" loading="lazy"></div>
+          <div class="kx-machine-photo"><img src="/images/web/m-dryfloat-kfloat.jpg" alt="K Float dry float couch" data-i18n-alt="mc.a7" loading="lazy"></div>
           <div class="kx-machine-body">
             <span class="kx-machine-tag">07</span>
-            <h3>Dry Float</h3>
+            <h3 data-i18n="mc.t7">Dry Float</h3>
             <p class="kx-machine-brand">K Float</p>
-            <p>A weightless float experience with no water contact. Sound, light and massage, combined in one session.</p>
+            <p data-i18n="mc.d7">A weightless float experience with no water contact. Sound, light and massage, combined in one session.</p>
           </div>
         </article>
 
         <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/machinery/coldplunge-kooled.png" alt="Kooled cold plunge ice baths" loading="lazy"></div>
+          <div class="kx-machine-photo"><img src="/images/web/m-coldplunge-kooled.jpg" alt="Kooled cold plunge ice baths" data-i18n-alt="mc.a8" loading="lazy"></div>
           <div class="kx-machine-body">
             <span class="kx-machine-tag">08</span>
-            <h3>Cold Plunge</h3>
+            <h3 data-i18n="mc.t8">Cold Plunge</h3>
             <p class="kx-machine-brand">Kooled Ice Baths</p>
-            <p>British handmade, stainless steel tubs. Temperature selectable from 0&deg;C to 10&deg;C, filtered and self cleaning.</p>
+            <p data-i18n="mc.d8">British handmade, stainless steel tubs. Temperature selectable from 0&deg;C to 10&deg;C, filtered and self cleaning.</p>
           </div>
         </article>
 
         <article class="kx-machine">
-          <div class="kx-machine-photo"><img src="/images/machinery/kokoon.png" alt="Kokoon nervous system recovery pod" loading="lazy"></div>
+          <div class="kx-machine-photo"><img src="/images/web/m-kokoon.jpg" alt="Kokoon nervous system recovery pod" data-i18n-alt="mc.a9" loading="lazy"></div>
           <div class="kx-machine-body">
             <span class="kx-machine-tag">09</span>
-            <h3>Nervous System Pods</h3>
+            <h3 data-i18n="mc.t9">Nervous System Pods</h3>
             <p class="kx-machine-brand">Kokoon</p>
-            <p>An immersive pod combining sound, vibration and light. The same technology built for Manchester United&rsquo;s first team recovery suite.</p>
+            <p data-i18n="mc.d9">An immersive pod combining sound, vibration and light. The same technology built for Manchester United&rsquo;s first team recovery suite.</p>
           </div>
         </article>
       </div>
@@ -458,7 +469,7 @@
       </div>
 
       <div class="section kx-section" id="wu-why">
-        <div class="kx-section-head center kx-reveal">
+        <div class="kx-section-head kx-reveal">
           <p class="kx-eyebrow" data-i18n="why.eyebrow">Why ELATEVE powered by Kloodos</p>
           <h2 class="kx-h2" data-i18n-html="why.title">The only partner that owns <br>the whole thing, end to end.</h2>
           <p class="kx-lead" data-i18n="why.lead">Most wellness suppliers sell you a machine and walk away. We design the concept, supply every technology, build the protocols that make them work together, train your team, and stay for the life of the installation.</p>
@@ -479,20 +490,24 @@
       <!-- THE OPPORTUNITY -->
       <div class="section kx-section" id="kx-opportunity">
         <div class="kx-opp kx-reveal">
-          <p class="kx-eyebrow" data-i18n="opp.eyebrow">The Opportunity</p>
-          <h2 class="kx-h2" data-i18n-html="opp.title">Your wellness floor is the most <br>underused space in the building.</h2>
-          <p class="kx-opp-lead" data-i18n="opp.lead">The clients who spend the most, and a fast growing wave of longevity travellers, are actively looking for somewhere to put that spend. A serious, science backed longevity offer is increasingly the reason they choose one property, or one club, over another.</p>
-          <p data-i18n="opp.p2">Most venues cannot meet that demand, because the offer has to be assembled from parts that were never designed to work together. We do not just supply the technology. We walk the space, draw the floor plan and advise on where every modality belongs.</p>
-          <p data-i18n="opp.p3">Your spa was designed for a different guest, in a different decade of demand. We assess what you already have and propose the changes that appeal to the client walking in now.</p>
-          <p class="kx-opp-sub" data-i18n="opp.sub">And it is not only spas. We plan the space and advise across hospitality:</p>
-          <div class="kx-opp-tags">
-            <span data-i18n="opp.t1">Hotels &amp; Resorts</span>
-            <span data-i18n="opp.t2">Private Members&rsquo; Clubs</span>
-            <span data-i18n="opp.t3">Coworking Spaces</span>
-            <span data-i18n="opp.t4">Gyms &amp; Fitness Clubs</span>
-            <span data-i18n="opp.t5">Athletic &amp; Sports Clubs</span>
-            <span data-i18n="opp.t6">Residences</span>
-            <span data-i18n="opp.t7">Longevity Clinics</span>
+          <div class="kx-opp-l">
+            <p class="kx-eyebrow" data-i18n="opp.eyebrow">The Opportunity</p>
+            <h2 class="kx-h2" data-i18n-html="opp.title">Your wellness floor is the most <br>underused space in the building.</h2>
+            <p class="kx-opp-lead" data-i18n="opp.lead">The clients who spend the most, and a fast growing wave of longevity travellers, are actively looking for somewhere to put that spend. A serious, science backed longevity offer is increasingly the reason they choose one property, or one club, over another.</p>
+          </div>
+          <div class="kx-opp-r">
+            <p data-i18n="opp.p2">Most venues cannot meet that demand, because the offer has to be assembled from parts that were never designed to work together. We do not just supply the technology. We walk the space, draw the floor plan and advise on where every modality belongs.</p>
+            <p data-i18n="opp.p3">Your spa was designed for a different guest, in a different decade of demand. We assess what you already have and propose the changes that appeal to the client walking in now.</p>
+            <p class="kx-opp-sub" data-i18n="opp.sub">And it is not only spas. We plan the space and advise across hospitality:</p>
+            <div class="kx-opp-tags">
+              <span data-i18n="opp.t1">Hotels &amp; Resorts</span>
+              <span data-i18n="opp.t2">Private Members&rsquo; Clubs</span>
+              <span data-i18n="opp.t3">Coworking Spaces</span>
+              <span data-i18n="opp.t4">Gyms &amp; Fitness Clubs</span>
+              <span data-i18n="opp.t5">Athletic &amp; Sports Clubs</span>
+              <span data-i18n="opp.t6">Residences</span>
+              <span data-i18n="opp.t7">Longevity Clinics</span>
+            </div>
           </div>
         </div>
       </div>
@@ -501,7 +516,7 @@
 
       <!-- THE RETURN / ROI -->
       <div class="section kx-section" id="kx-roi">
-        <div class="kx-section-head center kx-reveal">
+        <div class="kx-section-head kx-reveal">
           <p class="kx-eyebrow" data-i18n="roi.eyebrow">The Return</p>
           <h2 class="kx-h2" data-i18n="roi.title">What the floor gives back.</h2>
           <p class="kx-lead" data-i18n="roi.lead">Three illustrative examples. Real figures depend on your footprint, positioning and rate, modelled properly in the proposal.</p>
@@ -536,12 +551,10 @@
         </div>
         <div class="kx-roll kx-reveal">
           <p class="kx-roll-label" data-i18n="rec.rolllabel">A few of the rooms it already runs in</p>
-          <p class="kx-roll-names">Manchester United FC<span>&middot;</span>FC Porto<span>&middot;</span>Soho House International<span>&middot;</span>Gleneagles Townhouse<span>&middot;</span>ESPA International<span>&middot;</span>PGA Catalunya<span>&middot;</span>KX Life &amp; KXU<span>&middot;</span>Repose Space</p>
+          <p class="kx-roll-names"><span>Manchester United FC</span> <span>FC Porto</span> <span>Soho House International</span> <span>Gleneagles Townhouse</span> <span>ESPA International</span> <span>PGA Catalunya</span> <span>KX Life &amp; KXU</span> <span>Repose Space</span></p>
           <p class="kx-roll-more" data-i18n="rec.rollmore">And more, shared on request</p>
         </div>
       </div>
-
-      <div class="kx-rule" aria-hidden="true"></div>
 
       <div class="section kx-section kx-section--band" id="wu-asseen">
         <div class="kx-asseen kx-reveal">
@@ -550,12 +563,10 @@
           <p data-i18n="wu.asd">The Kokoon nervous system pod on our stack is the same technology built for Manchester United&rsquo;s first team Recovery &amp; Performance suite, the &lsquo;K-Suite&rsquo;, sequencing sound, vibration and light into their players&rsquo; recovery.</p>
         </div>
         <div class="kx-asseen-media kx-reveal">
-          <img src="/images/press/man-utd-recovery-pod.png" alt="Manchester United branded recovery pod concept">
-          <img src="/images/press/man-utd-ksuite.jpg" alt="Manchester United K-Suite recovery pod interior">
+          <img src="/images/web/man-utd-recovery-pod.jpg" alt="Manchester United branded recovery pod concept" data-i18n-alt="alt.mu1">
+          <img src="/images/press/man-utd-ksuite.jpg" alt="Manchester United K-Suite recovery pod interior" data-i18n-alt="alt.mu2">
         </div>
       </div>
-
-      <div class="kx-rule" aria-hidden="true"></div>
 
       <!-- THE ASK -->
       <div class="section kx-section kx-section--band" id="kx-ask">
@@ -698,7 +709,7 @@
 
       <!-- BARCELONA -->
       <div class="kx-place">
-        <img src="/images/partnership/barcelona.jpg" alt="Casa Batlló, Barcelona, at dusk" loading="lazy">
+        <img src="/images/web/p-barcelona.jpg" alt="Casa Batlló, Barcelona, at dusk" data-i18n-alt="alt.bcn" loading="lazy">
         <div class="kx-place-caption">
           <p class="kx-eyebrow" data-i18n="place.eyebrow">Home Base</p>
           <p class="kx-place-line" data-i18n-html="place.line">Based in Barcelona. <br>Partnering across Spain &amp; Europe.</p>
@@ -711,15 +722,16 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="/images/elateve-logo-lockup.png" alt="ELATEVE powered by Kloodos" class="footer-logo-img">
-        <p data-i18n="foot.tagline">Longevity, delivered end to end.</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 data-i18n="foot.company">Company</h4>
-          <a href="/about" data-page="about" data-i18n="foot.about">Who Are We</a>
-          <a href="/blog" data-page="blog" data-i18n="nav.journal">Journal</a>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/images/web/logo-lockup.png" alt="ELATEVE powered by Kloodos" class="footer-logo-img" width="640" height="157" loading="lazy">
+          <p class="footer-tagline" data-i18n="foot.tagline">Longevity, delivered end to end.</p>
+          <h4 data-i18n="news.title">Join the Elevation</h4>
+          <p data-i18n="news.p">Longevity thinking, curated finds and notes from the partnership. Delivered occasionally, never noisy.</p>
+          <form class="news" id="newsletterForm">
+            <input type="email" placeholder="Your email" required aria-label="Email" data-i18n-placeholder="news.ph">
+            <button type="submit" data-i18n="news.btn">Subscribe</button>
+          </form>
         </div>
         <div class="footer-col">
           <h4 data-i18n="foot.partnership">Partnership</h4>
@@ -729,14 +741,20 @@
           <a href="mailto:team@elatevewellness.com" data-contact data-i18n="cta.book">Book 30 Minutes</a>
         </div>
         <div class="footer-col">
+          <h4 data-i18n="foot.company">Company</h4>
+          <a href="/about" data-page="about" data-i18n="foot.about">Who Are We</a>
+          <a href="/blog" data-page="blog" data-i18n="nav.journal">Journal</a>
+        </div>
+        <div class="footer-col">
           <h4 data-i18n="foot.contact">Contact</h4>
           <a href="mailto:team@elatevewellness.com">team@elatevewellness.com</a>
           <a href="https://wa.me/34604866573" target="_blank" rel="noopener">WhatsApp &middot; +34 604 866 573</a>
           <a href="/" data-page="home">Barcelona &middot; Spain &amp; Europe</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p data-i18n="foot.rights">&copy; 2026 ELATEVE powered by Kloodos. All rights reserved.</p>
+      <div class="footer-base">
+        <span data-i18n="foot.rights">&copy; 2026 ELATEVE powered by Kloodos. All rights reserved.</span>
+        <span data-i18n="foot.excl">Exclusive longevity technology partnership &middot; Spain &amp; Europe</span>
       </div>
     </div>
   </footer>
@@ -764,7 +782,7 @@
     </div>
   </div>
 
-  <script src="/js/i18n.js?v=20261001-kx28"></script>
-  <script src="/js/app.js?v=20261001-kx28"></script>
+  <script src="/js/i18n.js?v=20261005-kx31"></script>
+  <script src="/js/app.js?v=20261005-kx31"></script>
 </body>
 </html>

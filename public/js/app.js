@@ -55,7 +55,7 @@ async function fetchBlog() {
 }
 
 // ==================== ROUTER ====================
-function navigateTo(page, category = null, season = null) {
+function navigateTo(page, category = null, season = null, { push = true } = {}) {
   const activePage = document.querySelector('.page.active');
   if (activePage) {
     activePage.classList.remove('visible');
@@ -90,6 +90,7 @@ function navigateTo(page, category = null, season = null) {
       currentPage = page;
       window.scrollTo({ top: 0, behavior: 'smooth' });
       updateNavActive(page);
+      if (window.ELATEVE_setTitle) window.ELATEVE_setTitle(page); // keep the tab title in step with the page and language
 
       // Update URL without reload
       const paths = { home: '/', shop: '/shop', blog: '/blog', about: '/about', machinery: '/machinery', whyus: '/why-us' };
@@ -98,14 +99,15 @@ function navigateTo(page, category = null, season = null) {
       if (season) params.set('season', season);
       const qs = params.toString();
       const url = qs ? `${paths[page]}?${qs}` : paths[page];
-      history.pushState({ page, category, season }, '', url);
+      if (push) history.pushState({ page, category, season }, "", url); // back/forward must not add new entries
     }, 300);
   }
 }
 
 function updateNavActive(page) {
   document.querySelectorAll('.nav-links a').forEach(link => {
-    link.style.color = link.dataset.page === page ? 'var(--gold)' : '';
+    if (link.dataset.page === page) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
   });
 }
 
@@ -280,24 +282,61 @@ function blogPostTime(label) {
   return Number.isNaN(t) ? 0 : t;
 }
 
-async function loadBlog() {
-  const grid = document.getElementById('blogGrid');
-  if (!grid || grid.children.length > 0) return;
+// ---- Spanish journal: English posts come from the API, Spanish copy from a static JSON keyed by post id ----
+// Lightweight square thumbnails for the journal list (full-size originals stay in /images/partnership)
+const THUMBS = {
+  '/images/partnership/coast.jpg': '/images/web/p-coast-sm.jpg',
+  '/images/partnership/lounge.jpg': '/images/web/p-lounge-sm.jpg',
+  '/images/partnership/sauna.jpg': '/images/web/p-sauna-sm.jpg',
+  '/images/partnership/barcelona.jpg': '/images/web/p-barcelona-sm.jpg'
+};
+const ES_MONTHS = { Jan: 'Ene', Feb: 'Feb', Mar: 'Mar', Apr: 'Abr', May: 'May', Jun: 'Jun', Jul: 'Jul', Aug: 'Ago', Sep: 'Sep', Oct: 'Oct', Nov: 'Nov', Dec: 'Dic' };
+const ASSET_QS = (document.querySelector('script[src*="/js/app.js"]')?.src.split('?')[1]) || '';
+let blogEsCache = null;
+let blogListCache = null;
+let openPostId = null;
 
-  const posts = await fetchBlog();
+const isEs = () => window.__elateveLang === 'es';
+const fmtBlogDate = (label) => isEs() ? String(label || '').replace(/^[A-Za-z]{3}/, (m) => ES_MONTHS[m] || m) : label;
+
+async function fetchBlogEs() {
+  if (blogEsCache) return blogEsCache;
+  try {
+    const res = await fetch(`/i18n/blog-es.json?${ASSET_QS}`);
+    blogEsCache = res.ok ? await res.json() : {};
+  } catch (err) { blogEsCache = {}; }
+  return blogEsCache;
+}
+
+// Returns the post with Spanish copy laid over it when the site is in Spanish
+async function localizePost(post) {
+  if (!isEs()) return post;
+  const es = (await fetchBlogEs())[String(post.id)];
+  return es ? { ...post, content: undefined, htmlContent: undefined, ...es } : post;
+}
+
+async function loadBlog(force = false) {
+  const grid = document.getElementById('blogGrid');
+  if (!grid) return;
+  const lang = isEs() ? 'es' : 'en';
+  if (!force && grid.children.length > 0 && grid.dataset.lang === lang) return;
+
+  if (!blogListCache) blogListCache = await fetchBlog();
   // Newest first (the API already sorts, but keep the client honest if it didn't)
-  posts.sort((a, b) => blogPostTime(b.date) - blogPostTime(a.date));
+  const posts = [...blogListCache].sort((a, b) => blogPostTime(b.date) - blogPostTime(a.date));
+  const localized = await Promise.all(posts.map(localizePost));
   grid.innerHTML = '';
-  posts.forEach(post => {
+  grid.dataset.lang = lang;
+  localized.forEach(post => {
     const card = document.createElement('div');
     card.className = 'blog-card';
     card.dataset.postId = post.id;
     const img = post.image
-      ? `<img class="blog-card-img" src="${post.image}" alt="" loading="lazy">`
+      ? `<img class="blog-card-img" src="${THUMBS[post.image] || post.image}" alt="" width="96" height="96" loading="lazy" decoding="async">`
       : `<span class="blog-card-img" aria-hidden="true"></span>`;
     card.innerHTML = `
       ${img}
-      <span class="blog-card-date">${post.date}</span>
+      <span class="blog-card-date">${fmtBlogDate(post.date)}</span>
       <div class="blog-card-content">
         <span class="blog-card-tag">${post.tag}</span>
         <h3>${post.title}</h3>
@@ -310,16 +349,18 @@ async function loadBlog() {
   });
 }
 
-async function openArticle(postId) {
+async function openArticle(postId, { relang = false } = {}) {
+  openPostId = postId;
   const res = await fetch(`/api/blog/${postId}`);
-  const post = await res.json();
+  const post = await localizePost(await res.json());
+  if (openPostId !== postId) return; // user moved on while this was loading
 
   const grid = document.getElementById('blogGrid');
   const hero = document.querySelector('.blog-hero');
   const article = document.getElementById('blogArticle');
 
   document.getElementById('articleTag').textContent = post.tag;
-  document.getElementById('articleDate').textContent = post.date;
+  document.getElementById('articleDate').textContent = fmtBlogDate(post.date);
   document.getElementById('articleRead').textContent = post.readTime || '';
   document.getElementById('articleTitle').textContent = post.title;
 
@@ -338,11 +379,13 @@ async function openArticle(postId) {
   grid.style.display = 'none';
   hero.style.display = 'none';
   article.style.display = 'block';
-  article.querySelector('.blog-article-inner').style.animation = 'none';
-  requestAnimationFrame(() => {
-    article.querySelector('.blog-article-inner').style.animation = 'fadeUp 0.6s var(--ease-out) forwards';
-  });
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (!relang) {
+    article.querySelector('.blog-article-inner').style.animation = 'none';
+    requestAnimationFrame(() => {
+      article.querySelector('.blog-article-inner').style.animation = 'fadeUp 0.6s var(--ease-out) forwards';
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 
 function closeArticle() {
@@ -350,9 +393,10 @@ function closeArticle() {
   const hero = document.querySelector('.blog-hero');
   const article = document.getElementById('blogArticle');
 
+  openPostId = null;
   if (article) article.style.display = 'none';
-  if (hero) hero.style.display = 'block';
-  if (grid) grid.style.display = 'flex';
+  if (hero) hero.style.display = '';
+  if (grid) grid.style.display = '';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -362,10 +406,19 @@ function resetBlogView() {
   const hero = document.querySelector('.blog-hero');
   const article = document.getElementById('blogArticle');
 
+  openPostId = null;
   if (article) article.style.display = 'none';
-  if (hero) hero.style.display = 'block';
-  if (grid) grid.style.display = 'flex';
+  if (hero) hero.style.display = '';
+  if (grid) grid.style.display = '';
 }
+
+// Switching language re-renders the journal (list and any open article) in place
+document.addEventListener('elateve:lang', async () => {
+  const grid = document.getElementById('blogGrid');
+  if (grid && grid.children.length) await loadBlog(true);
+  const article = document.getElementById('blogArticle');
+  if (openPostId != null && article && article.style.display !== 'none') await openArticle(openPostId, { relang: true });
+});
 
 // ==================== EVENT LISTENERS ====================
 function initNavigation() {
@@ -424,7 +477,7 @@ function initNavigation() {
           });
         } catch (err) { /* still show toast */ }
       }
-      showToast('Welcome to the elevation. Check your inbox.');
+      showToast(isEs() ? 'Gracias por suscribirse. Revise su bandeja de entrada.' : 'Welcome to the elevation. Check your inbox.');
       form.reset();
     });
   }
@@ -432,7 +485,7 @@ function initNavigation() {
   // Handle browser back/forward
   window.addEventListener('popstate', (e) => {
     if (e.state) {
-      navigateTo(e.state.page, e.state.category, e.state.season);
+      navigateTo(e.state.page, e.state.category, e.state.season, { push: false });
     }
   });
 }
@@ -440,9 +493,22 @@ function initNavigation() {
 // ==================== SCROLL EFFECTS ====================
 function initScrollEffects() {
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
+  const floatBook = document.querySelector('.kx-float-book');
+  let footerInView = false;
+  const onScroll = () => {
     nav?.classList.toggle('scrolled', window.scrollY > 60);
-  });
+    // Floating "Book 30 Minutes" appears once the hero is behind you, and steps aside at the footer
+    floatBook?.classList.toggle('show', window.scrollY > 420 && !footerInView);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  const footer = document.querySelector('.footer');
+  if (footer && 'IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      footerInView = entries[0].isIntersecting;
+      onScroll();
+    }, { threshold: 0.05 }).observe(footer);
+  }
+  onScroll();
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

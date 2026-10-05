@@ -5,7 +5,7 @@
      data-i18n="key"              -> sets textContent
      data-i18n-html="key"         -> sets innerHTML (for <br>, <strong>)
      data-i18n-placeholder="key"  -> sets the input placeholder
-   Journal article bodies are intentionally English-only for now.
+   The journal (rendered from data) is translated from /i18n/blog-es.json by app.js.
    ======================================== */
 (function () {
   var STORAGE = 'elateve_lang';
@@ -21,7 +21,9 @@
 
     // hero
     'hero.eyebrow': 'Una alianza de longevidad · Barcelona',
-    'hero.title': 'La propuesta integral de bienestar y longevidad <br>para la hostelería, de principio a fin.',
+    'strip.label': 'Instalado y funcionando en',
+    'hero.title': 'La propuesta integral de <span class="gold-text">bienestar y longevidad</span> <br>para la hostelería, de principio a fin.',
+    'hero.m4': 'Más gasto por viaje de los viajeros de bienestar',
     'hero.sub': 'ELATEVE powered by Kloodos convierte el espacio de bienestar infrautilizado en una propuesta de recuperación medible, para spas de hotel, clubes deportivos, espacios de coworking y centros de bienestar. Los huéspedes buscan renovación real, no relajación pasiva. Ofrecemos protocolos, tecnología y formación de un solo socio, en exclusiva para España y Europa.',
     'hero.cta2': 'Ver qué entregamos',
     'hero.m1': 'Tecnologías de grado médico',
@@ -31,17 +33,17 @@
     // the system / what we deliver
     'sys.eyebrow': 'Qué entregamos',
     'sys.title': 'Un espacio de longevidad llave en mano. <br>Un contrato, un socio.',
-    'sys.lead': 'No un catálogo de máquinas. Una propuesta de longevidad completa — diseñada para su edificio, su cliente y su tarifa, y luego instalada, dotada de personal y comercializada. Esto es lo que incluye.',
+    'sys.lead': 'No un catálogo de máquinas. Una propuesta de longevidad completa, diseñada para su edificio, que instalamos, dotamos de personal y comercializamos por usted.',
     'sys.s1t': 'Concepto y viabilidad',
-    'sys.s1d': 'Recorremos el espacio, dibujamos el plano y trazamos el recorrido del huésped antes de encargar nada — superficie, ubicación y flujo de cada modalidad.',
+    'sys.s1d': 'Recorremos el espacio, dibujamos el plano y trazamos el recorrido del huésped antes de encargar nada.',
     'sys.s2t': 'Suministro e instalación de tecnología',
-    'sys.s2d': 'Más de 15 modalidades de grado médico de un único proveedor: crioterapia de cuerpo entero, cámara hiperbárica, fotobiomodulación, sueroterapia y NAD+, compresión con certificación FDA, electroestimulación, flotación seca y más.',
+    'sys.s2d': 'Más de 15 modalidades de grado médico de un único proveedor: crioterapia de cuerpo entero, oxígeno hiperbárico (HBOT), terapia de luz roja, sueroterapia y NAD+, compresión con aprobación de la FDA, electroestimulación (EMS), flotación en seco y más.',
     'sys.s3t': 'Protocolos integrados',
-    'sys.s3d': 'Tratamientos secuenciados para funcionar juntos y diseñados para venta cruzada y ascendente — para que los huéspedes se queden más tiempo, gasten más y repitan.',
+    'sys.s3d': 'Tratamientos secuenciados para funcionar juntos, para que los huéspedes se queden más tiempo, gasten más y vuelvan.',
     'sys.s4t': 'Formación y certificación del equipo',
     'sys.s4d': 'Su personal formado en cada modalidad — el qué, el cómo, el cuándo y el porqué — con formación continua y soporte de protocolos.',
     'sys.s5t': 'Lanzamiento y soporte comercial',
-    'sys.s5d': 'Posicionamiento, naming, diseño de carta y materiales de lanzamiento, más orientación de precios — para que el espacio se llene desde la primera semana.',
+    'sys.s5d': 'Posicionamiento, nombre comercial, diseño de la carta, materiales de lanzamiento y orientación de precios, para que el espacio se llene desde la primera semana.',
     'sys.s6t': 'Servicio, mantenimiento y un único interlocutor',
     'sys.s6d': 'Un solo número para tecnología, repuestos, mantenimiento y soporte, durante toda la vida de la instalación.',
     'sys.line': 'Desde el primer plano hasta el resultado que sienten sus huéspedes — de principio a fin, bajo un mismo techo.',
@@ -52,17 +54,20 @@
     'rec.lead': 'La tecnología y los protocolos de ELATEVE powered by Kloodos están instalados y en funcionamiento en el deporte de élite, la hostelería de lujo y el bienestar médico privado — desde salas de recuperación de la Premier League hasta spas de cinco estrellas.',
     'rec.standard': 'Especificamos únicamente equipos de grado médico y clínicamente validados — nunca dispositivos de consumo, nunca materiales de segunda. Ese estándar es la razón por la que estos nombres lo dejan entrar en sus edificios.',
     'rec.rolllabel': 'Algunos de los espacios donde ya funciona',
-    'rec.rollmore': 'y más — bajo petición',
+    'rec.rollmore': 'Y más, que compartimos bajo petición',
 
     // the market
     'mkt.eyebrow': 'El mercado',
     'mkt.title': 'La demanda ya está aquí. <br>La oferta, no.',
+    'mkt.n2': '7,8% → 18%',
+    'mkt.n3': '$1,4 bill.',
+    'mkt.n4': '$9,8 bill.',
     'mkt.s1l': 'Lo que gasta por viaje un turista de bienestar internacional frente al turista medio',
     'mkt.s2l': 'Los viajes de bienestar son el 7,8% de todos los viajes — pero casi una quinta parte de lo que gastan los viajeros',
     'mkt.s3l': 'Tamaño previsto del turismo de bienestar en 2027, desde 1 billón de dólares en 2024',
     'mkt.s4l': 'Economía global del bienestar prevista para 2029 — la longevidad es su segmento de más rápido crecimiento',
     'mkt.fomo1': 'Las personas que impulsan ese gasto — huéspedes de alto poder adquisitivo, viajeros centrados en la longevidad, presupuestos de salud ejecutiva y deporte de élite — <strong>buscan activamente un lugar creíble donde destinarlo</strong>, y la mayoría de los establecimientos no pueden ofrecérselo.',
-    'mkt.fomo2': 'Hay espacio para aproximadamente <strong>un destino de longevidad serio por ciudad</strong>. El establecimiento que instala primero suele conservar esa posición; el resto acaba derivando a sus mejores clientes a la competencia. Sus competidores ya están teniendo esta conversación con nosotras — el espacio que no acondicione ahora es la reserva que perderá después.',
+    'mkt.fomo2': 'Hay espacio para aproximadamente <strong>un destino de longevidad serio por ciudad</strong>. Quien instala primero suele conservar esa posición. Sus competidores ya están teniendo esta conversación con nosotras.',
     'mkt.src': 'Fuentes: Global Wellness Institute, 2023–2024.',
     'exp.eyebrow': 'Profundice',
     'exp.title': 'Vea el caso, y vea las máquinas.',
@@ -71,8 +76,8 @@
     'opp.eyebrow': 'La oportunidad',
     'opp.title': 'Su planta de bienestar es el espacio <br>menos aprovechado del edificio.',
     'opp.lead': 'Los clientes que más gastan — y una ola creciente de viajeros centrados en la longevidad — buscan activamente dónde destinar ese gasto. Una propuesta de longevidad seria y con respaldo científico es, cada vez más, la razón por la que eligen un establecimiento, o un club, frente a otro.',
-    'opp.p2': 'La mayoría de los establecimientos no pueden atender esa demanda, porque la propuesta hay que ensamblarla con piezas que nunca se diseñaron para funcionar juntas — y alguien tiene que asumir el riesgo de equivocarse. No solo suministramos la tecnología; recorremos el espacio, dibujamos el plano, trazamos el flujo del huésped y asesoramos sobre la ubicación lógica de cada modalidad.',
-    'opp.p3': 'Su spa se diseñó para un cliente anterior — otro huésped, otra década de demanda. Evaluamos lo que ya tiene y proponemos los cambios que lo elevan para atraer al cliente que entra hoy.',
+    'opp.p2': 'La mayoría de los establecimientos no pueden atender esa demanda, porque la propuesta hay que ensamblarla con piezas que nunca se diseñaron para funcionar juntas. No solo suministramos la tecnología: recorremos el espacio, dibujamos el plano y asesoramos sobre dónde encaja cada modalidad.',
+    'opp.p3': 'Su spa se diseñó para otro huésped, en otra década de demanda. Evaluamos lo que ya tiene y proponemos los cambios que atraen al cliente que entra hoy.',
     'opp.sub': 'Y no solo spas. Planificamos el espacio y asesoramos en toda la hostelería:',
     'opp.t1': 'Hoteles y resorts',
     'opp.t2': 'Clubes privados',
@@ -94,7 +99,7 @@
     'roi.c2d': 'Reconvertir una sala de tratamiento infrautilizada en una suite de recuperación con crioterapia y compresión suele elevar la ocupación de la sala y añade una categoría de servicio premium por encima de los tratamientos estándar.',
     'roi.c3k': 'Membresía y fidelización',
     'roi.c3fig': 'Ingresos recurrentes',
-    'roi.c3d': 'Los operadores citan una propuesta de longevidad creíble entre las tres principales razones por las que los clientes se dan de alta y se quedan — así que protege los ingresos recurrentes, no solo los de tratamiento.',
+    'roi.c3d': 'Los operadores citan una propuesta de longevidad creíble como una de las principales razones por las que los clientes se asocian y se quedan, lo que protege los ingresos recurrentes, no solo los de tratamiento.',
     'roi.note': 'Los ejemplos mostrados son ilustrativos, no presupuestos ni garantías.',
 
     // who we are
@@ -111,19 +116,19 @@
     // why us
     'why.eyebrow': 'Por qué ELATEVE powered by Kloodos',
     'why.title': 'El único socio que asume <br>todo el proyecto, de principio a fin.',
-    'why.lead': 'La mayoría de los proveedores de bienestar le venden una máquina y se marchan. Nosotras diseñamos el concepto, suministramos toda la tecnología, creamos los protocolos que la hacen funcionar en conjunto, formamos a su equipo y permanecemos durante toda la vida de la instalación — un único punto de contacto para tecnología, servicio y soporte.',
+    'why.lead': 'La mayoría de los proveedores de bienestar le venden una máquina y se marchan. Nosotras diseñamos el concepto, suministramos toda la tecnología, creamos los protocolos que la hacen funcionar en conjunto, formamos a su equipo y permanecemos durante toda la vida de la instalación.',
     'why.i1t': 'Una agenda de contactos que no se compra',
     'why.i1d': 'Una red sin igual de expertos del deporte profesional de élite y la salud médica privada, disponible para su proyecto.',
     'why.i2t': 'Llave en mano, no a base de prueba y error',
     'why.i2d': 'Planos esquemáticos, orientación sobre el flujo lógico y la ubicación de cada tecnología, y soluciones llave en mano para un bienestar completo y real.',
     'why.i3t': 'Protocolos, no solo productos',
-    'why.i3d': 'Protocolos integrados que secuencian todas las tecnologías — diseñados para venta cruzada y ascendente, para que los huéspedes gasten más tiempo y vuelvan una y otra vez.',
+    'why.i3d': 'Protocolos integrados que secuencian todas las tecnologías para que los huéspedes se queden más tiempo y vuelvan una y otra vez.',
     'why.i4t': 'Formación en profundidad',
     'why.i4d': 'Formación exhaustiva en cada tecnología — el qué, el cómo, el cuándo y el porqué — más formación y soporte continuos de los protocolos.',
     'why.i5t': 'Más de 70 años de diseño de protocolos',
     'why.i5d': 'Un equipo con más de 70 años de experiencia combinada desarrollando protocolos de tratamiento galardonados para spas premium de todo el mundo.',
     'why.i6t': 'Probado en los dispositivos que ya llevan los huéspedes',
-    'why.i6d': 'Protocolos que demuestran resultados inmediatos y acumulativos en la diagnóstica de consumo — Whoop, Oura y el resto.',
+    'why.i6d': 'Protocolos que han demostrado resultados inmediatos y acumulativos en los dispositivos de diagnóstico cotidianos: Whoop, Oura y el resto.',
     'why.motto': 'Relevante · Coherente · Lógico · Fiable · Cautivador · Integrado · Completo',
     'why.cta': 'Ver por qué nosotras y quién ya confía',
 
@@ -133,7 +138,7 @@
     'wu.sub': 'El argumento de un solo socio, y los nombres que ya lo respaldan.',
     'wu.asl': 'Visto en',
     'wu.ast': 'Manchester United FC',
-    'wu.asd': 'El pod Kokoon para el sistema nervioso de nuestro stack es la misma tecnología creada para la suite de Recuperación y Rendimiento del primer equipo del Manchester United, el «K-Suite», que secuencia sonido, vibración y luz en la recuperación de sus jugadores.',
+    'wu.asd': 'La cápsula Kokoon para el sistema nervioso de nuestro stack es la misma tecnología creada para la suite de Recuperación y Rendimiento del primer equipo del Manchester United, la «K-Suite», que secuencia sonido, vibración y luz en la recuperación de sus jugadores.',
 
     // 360 approach
     'app.eyebrow': 'Nuestro enfoque 360°',
@@ -148,25 +153,16 @@
     'app.note': 'No son tratamientos aislados — un ecosistema integrado de tecnologías clínicamente probadas, secuenciadas de forma intencionada para que cada modalidad prepare el cuerpo para la siguiente. El resultado es mayor que la suma de las partes.',
 
     // what we install (short teaser; full detail lives on /machinery, English for now)
-    'inst.eyebrow': 'Qué instalamos',
-    'inst.title': 'Nueve tecnologías. <br>Un sistema secuenciado.',
-    'inst.lead': 'Crioterapia de cuerpo entero, cámara hiperbárica de grado médico, terapia de luz roja, IHHT, sauna infrarroja, compresión, flotación seca y cápsulas para el sistema nervioso. Máquinas reales, no renders.',
-    'inst.cta': 'Véalo usted misma',
+    'inst.cta': 'Véalo con sus propios ojos',
 
     // the machinery page (device cards stay English for now)
-    'mach.eyebrow': 'Véalo usted misma',
+    'mach.eyebrow': 'Véalo con sus propios ojos',
     'mach.title': 'La maquinaria',
     'mach.sub': 'Nueve tecnologías. Fotos reales, explicadas de forma sencilla.',
     'mach.note': 'Además, terapia de NAD y vitaminas, electroestimulación y más, dentro de su protocolo. Todo lo mostrado aquí es de grado médico y clínicamente validado.',
-    'mach.soon': 'También estamos preparando una lista y fotos de lo que cada uno de nuestros partners tiene instalado en su propio espacio. Próximamente.',
+    'mach.soon': 'También estamos preparando una lista y fotos de lo que cada uno de nuestros socios tiene instalado en su propio espacio. Próximamente.',
 
     // the people
-    'ppl.eyebrow': 'El equipo',
-    'ppl.title': 'Creado por mujeres cansadas <br>de que les dijeran que aguantaran.',
-    'ppl.e1': 'ELATEVE es un grupo de mujeres de 30, 40, 50 y 60 años. Cada una chocó con el mismo muro — nuestro propio agotamiento, nuestra propia revolución hormonal, una recuperación que los procedimientos estándar recibieron con un encogimiento de hombros, y una curiosidad que nadie a nuestro alrededor alimentaba.',
-    'ppl.e2': 'Venimos del mundo del lujo y el lifestyle en Barcelona, París y Londres — y de crear empresas. Entre todas hemos vivido la recuperación posparto, la perimenopausia, la menopausia y las décadas siguientes. Lo probamos todo en nosotras mismas antes de que llegue a un huésped.',
-    'ppl.k1': 'Kloodos es una empresa familiar liderada por mujeres que llegó a la tecnología de bienestar con las mismas preguntas que nosotras — y empezó a responderlas en 2014, asesorando a spas y gimnasios sobre recuperación avanzada mucho antes de que fuera una categoría.',
-    'ppl.k2': 'Detrás: más de 70 años de experiencia combinada diseñando protocolos de tratamiento galardonados para spas premium de todo el mundo, trabajo directo con departamentos de ciencia y medicina deportiva de la Premier League, y fabricación y distribución de las principales tecnologías de bienestar del mundo. Expertas en medicina, ciencia, fabricación y formación — al nivel más premium.',
 
     // barcelona
     'place.eyebrow': 'Nuestra base',
@@ -184,7 +180,6 @@
     'ask.s3d': 'Stack tecnológico, protocolos, personal y retorno modelado, adaptados a su establecimiento.',
 
     // closer + newsletter
-    'closer.quote': '«La longevidad no consiste en sumar años. <br>Consiste en vivirlos plenamente.»',
     'news.title': 'Únase a la elevación',
     'news.p': 'Pensamiento sobre longevidad, hallazgos seleccionados y notas de la alianza. Ocasional, nunca ruidoso.',
     'news.ph': 'Su correo electrónico',
@@ -196,6 +191,45 @@
     'blog.sub': 'Nuestras propias notas sobre la tecnología de longevidad que probamos, utilizamos y sobre la que nos preguntan — lo que funciona, lo que es exageración y lo que acaba de llegar al mercado.',
     'blog.back': '← Volver al diario',
 
+    // the machinery cards
+    'mc.t1': 'Crioterapia de cuerpo entero',
+    'mc.d1': 'Una cámara de frío eléctrica, sin nitrógeno, que alcanza los −110 °C. De grado médico y adaptada a cada cliente.',
+    'mc.t2': 'Oxígeno hiperbárico',
+    'mc.d2': 'Una cámara de presión certificada y de grado médico para una o dos personas. Automatización completa y monitorización en tiempo real.',
+    'mc.t3': 'Fotobiomodulación',
+    'mc.b3': 'Cell Stack · Terapia de luz roja',
+    'mc.d3': 'Una cama de luz roja e infrarroja cercana para todo el cuerpo. Reduce la inflamación y acelera la recuperación, sin tiempo de inactividad.',
+    'mc.t4': 'IHHT',
+    'mc.d4': 'Un entrenamiento para las células con mascarilla. Los niveles de oxígeno alternos entrenan las mitocondrias en veinticinco a cuarenta minutos.',
+    'mc.t5': 'Sauna de infrarrojos',
+    'mc.d5': 'Infrarrojos de espectro completo con cero EMF y cero ELF. Alivio del dolor, mejor sueño y mayor concentración.',
+    'mc.t6': 'Terapia de compresión',
+    'mc.d6': 'Compresión neumática médica basada en el drenaje linfático. Con aprobación de la FDA y más de treinta y cinco años de uso clínico.',
+    'mc.t7': 'Flotación en seco',
+    'mc.d7': 'Una experiencia de flotación ingrávida sin contacto con el agua. Sonido, luz y masaje combinados en una sola sesión.',
+    'mc.t8': 'Inmersión en frío',
+    'mc.d8': 'Bañeras de acero inoxidable hechas a mano en el Reino Unido. Temperatura seleccionable de 0 °C a 10 °C, filtradas y autolimpiables.',
+    'mc.t9': 'Cápsulas para el sistema nervioso',
+    'mc.d9': 'Una cápsula inmersiva que combina sonido, vibración y luz. La misma tecnología creada para la suite de recuperación del primer equipo del Manchester United.',
+
+    // image descriptions
+    'mc.a1': 'Cámara de crioterapia de cuerpo entero Powercab',
+    'mc.a2': 'Cámara de oxígeno hiperbárico Oxy Stack',
+    'mc.a3': 'Cama de terapia de luz roja Cell Stack',
+    'mc.a4': 'Entrenamiento celular IHHT con mascarilla',
+    'mc.a5': 'Sauna de infrarrojos Clearlight',
+    'mc.a6': 'Terapia de compresión Ballancer Gold',
+    'mc.a7': 'Camilla de flotación en seco K Float',
+    'mc.a8': 'Bañeras de inmersión en frío Kooled',
+    'mc.a9': 'Cápsula de recuperación del sistema nervioso Kokoon',
+    'alt.float': 'Camilla de flotación en seco K Float',
+    'alt.kokoon': 'Cápsula de recuperación del sistema nervioso Kokoon',
+    'alt.pbm': 'Cama de terapia de luz roja Cell Stack',
+    'alt.lounge': 'Una piscina de spa y una zona de descanso de lujo, en calma',
+    'alt.mu1': 'Concepto de cápsula de recuperación con la marca del Manchester United',
+    'alt.mu2': 'Interior de la cápsula de recuperación de la K-Suite del Manchester United',
+    'alt.bcn': 'Casa Batlló, Barcelona, al anochecer',
+
     // footer
     'foot.tagline': 'Longevidad, de principio a fin.',
     'foot.company': 'Empresa',
@@ -204,6 +238,7 @@
     'foot.track': 'Trayectoria',
     'foot.contact': 'Contacto',
     'foot.rights': '© 2026 ELATEVE powered by Kloodos. Todos los derechos reservados.',
+    'foot.excl': 'Alianza exclusiva de tecnología de longevidad · España y Europa',
 
     // contact modal
     'modal.title': 'Hablemos de longevidad.',
@@ -215,24 +250,10 @@
     'about.eyebrow': 'Nuestro equipo · Barcelona × Reino Unido',
     'about.title': 'Las personas detrás de <br>su planta de longevidad.',
     'about.sub': 'Gente de la hostelería que entiende la ciencia, y científicas que entienden la hostelería.',
-    'about.tagline': 'ELATEVE powered by Kloodos — <br>la alianza de tecnología de longevidad para España y Europa.',
     'about.pill1label': 'Elateve',
     'about.pill1text': 'Mujeres de 30, 40, 50 y 60 años, de la hostelería, el bienestar y el sector inmobiliario de lujo en Barcelona, París y Londres. Aportamos el concepto, el caso de negocio y un único partner que lidera su proyecto desde el plano hasta la apertura.',
     'about.pill2label': 'Kloodos',
     'about.pill2text': 'Una empresa familiar liderada por mujeres que lleva tecnología de recuperación del deporte profesional a los spas desde 2014. Aporta equipamiento de grado médico de primer nivel, protocolos desarrollados por médicos y formación interna.',
-    'about.introlead': 'Para nosotras, la longevidad no es cuestión de más años. Es sentirse una misma en todos ellos.',
-    'about.introp': 'Creamos ELATEVE, y nos aliamos en exclusiva con Kloodos, para que usted no tenga que adivinar qué protocolos y tecnología merecen realmente la pena.',
-    'about.l1': 'Las mujeres detrás de ELATEVE',
-    'about.w1': 'ELATEVE es un grupo de mujeres de 30, 40, 50 y 60 años. Todas hemos pasado por el agotamiento, los cambios hormonales y una recuperación que la atención estándar no se tomó en serio.',
-    'about.w2': 'Venimos de negocios de lujo y lifestyle en Barcelona, París y Londres. Entre todas hemos atravesado la recuperación posparto, la perimenopausia, la menopausia y los años siguientes, y siempre con la misma pregunta: ¿en qué protocolo, producto o profesional se puede confiar de verdad?',
-    'about.w3': 'Comparamos notas, discutimos sobre lo que funciona de verdad y lo probamos todo primero en nosotras mismas. Si no se lo recomendaríamos a nuestras propias madres, hermanas e hijas, no pasa el corte.',
-    'about.l2': 'Kloodos — nuestra socia tecnológica',
-    'about.k1': 'Kloodos es una empresa familiar liderada por mujeres que trabaja en tecnología de bienestar desde 2014, asesorando a spas y gimnasios sobre recuperación antes de que fuera una categoría habitual.',
-    'about.k2': 'Más de 70 años de experiencia combinada diseñando protocolos de tratamiento para spas premium de todo el mundo, trabajo directo con equipos de ciencia deportiva de la Premier League, y la fabricación y distribución de las principales tecnologías de bienestar del mundo: crioterapia, fotobiomodulación, oxígeno hiperbárico de grado médico, NAD y terapia vitamínica, compresión, flotación seca, IHHT y cápsulas de recuperación, todo clínicamente probado.',
-    'about.k3': 'Un único punto de contacto, desde el primer plano hasta el resultado que sienten sus huéspedes, con la tecnología, el conocimiento y el soporte continuo para que todo funcione en conjunto.',
-    'ppl.eyebrow': 'Conozca al equipo',
-    'ppl.title': 'Las personas detrás de <br>su planta de longevidad.',
-    'ppl.sub': 'Gente de la hostelería que entiende la ciencia, y científicas que entienden la hostelería.',
     'ppl.g1label': 'ELATEVE · Barcelona',
     'ppl.g1sub': 'Su equipo sobre el terreno',
     'ppl.g2label': 'KLOODOS · Reino Unido',
@@ -252,47 +273,53 @@
     'ppl.julie.role': 'Fundadora y Directora',
     'ppl.julie.bio': 'Con más de 30 años en spas premium y diseño de protocolos galardonados, Julie traduce la tecnología del deporte de élite en tratamientos que encantan a los huéspedes, combinando credibilidad clínica con un raro sentido de lo que el mercado necesitará después.',
     'ppl.harriet.role': 'Directora',
-    'ppl.harriet.bio': 'El foco de Harriet está en el rendimiento tras la apertura: instalaciones precisas, formación práctica del personal y optimización continua, para que cada tecnología dé resultados a los huéspedes e ingresos a la propiedad.',
-    'about.l3': 'Por qué confiar en nosotras',
-    'about.l3lead': 'Probado por nosotras. Respaldado por la ciencia.',
-    'about.p1t': 'Probado a través de generaciones',
-    'about.p1d': 'Cada protocolo o tecnología que recomendamos ha sido revisado por una mujer de nuestro equipo que ha vivido exactamente esa etapa de la vida.',
-    'about.p2t': 'Enfoque 360°',
-    'about.p2d': 'No creemos que una sola máquina lo arregle todo. El cambio real necesita la tecnología adecuada, la quietud mental y el cuidado físico avanzado trabajando juntos.',
-    'about.p3t': 'Conversaciones abiertas',
-    'about.p3d': 'Desde la salud del suelo pélvico posparto hasta la libido posmenopáusica, hablamos con apertura, honestidad y sin juzgar.',
-    'about.quote': '«Para nosotras, la longevidad no es solo vivir más. Es despertar con la mente clara, con fuerza para tu vida y con confianza en tu propio cuerpo.»',
-    'about.close1': 'Hemos hecho la investigación, validado la tecnología y probado los protocolos, para que usted no tenga que adivinar.',
-    'about.closelead': 'Déjenos 30 minutos en su espacio.',
-    'about.ctajournal': 'Leer lo último del diario'
+    'ppl.harriet.bio': 'El foco de Harriet está en el rendimiento tras la apertura: instalaciones precisas, formación práctica del personal y optimización continua, para que cada tecnología dé resultados a los huéspedes e ingresos a la propiedad.'
   };
 
   var original = {};
+  var SEL = '[data-i18n],[data-i18n-html],[data-i18n-placeholder],[data-i18n-alt]';
 
-  function collect() {
-    return document.querySelectorAll('[data-i18n],[data-i18n-html],[data-i18n-placeholder]');
+  // Browser-tab titles per page (English mirrors routes/pages.js)
+  var TITLES = {
+    home: { en: 'ELATEVE powered by Kloodos: Wellness & Longevity for Hospitality, End to End', es: 'ELATEVE powered by Kloodos: bienestar y longevidad para la hostelería, de principio a fin' },
+    machinery: { en: 'The Machinery — ELATEVE powered by Kloodos', es: 'La maquinaria — ELATEVE powered by Kloodos' },
+    whyus: { en: 'Why Us & Who Trusts Us Already — ELATEVE powered by Kloodos', es: 'Por qué nosotras y quién ya confía en nosotras — ELATEVE powered by Kloodos' },
+    blog: { en: 'The Journal — ELATEVE powered by Kloodos', es: 'El diario — ELATEVE powered by Kloodos' },
+    about: { en: 'Our Team — ELATEVE powered by Kloodos', es: 'Nuestro equipo — ELATEVE powered by Kloodos' }
+  };
+  var PATHS = { '/': 'home', '/machinery': 'machinery', '/why-us': 'whyus', '/blog': 'blog', '/about': 'about' };
+
+  function setTitle(page) {
+    if (page) window.__elatevePage = page;
+    var p = window.__elatevePage || PATHS[location.pathname.replace(/\/$/, '') || '/'] || 'home';
+    var t = TITLES[p];
+    if (t) document.title = t[window.__elateveLang === 'es' ? 'es' : 'en'];
   }
 
   function capture() {
-    collect().forEach(function (el) {
+    document.querySelectorAll(SEL).forEach(function (el) {
       var hk = el.getAttribute('data-i18n-html');
       var tk = el.getAttribute('data-i18n');
       var pk = el.getAttribute('data-i18n-placeholder');
+      var ak = el.getAttribute('data-i18n-alt');
       if (hk && !('h:' + hk in original)) original['h:' + hk] = el.innerHTML;
       if (tk && !('t:' + tk in original)) original['t:' + tk] = el.textContent;
       if (pk && !('p:' + pk in original)) original['p:' + pk] = el.getAttribute('placeholder') || '';
+      if (ak && !('a:' + ak in original)) original['a:' + ak] = el.getAttribute('alt') || '';
     });
   }
 
   function apply(lang) {
     var es = lang === 'es';
-    collect().forEach(function (el) {
+    document.querySelectorAll(SEL).forEach(function (el) {
       var hk = el.getAttribute('data-i18n-html');
       var tk = el.getAttribute('data-i18n');
       var pk = el.getAttribute('data-i18n-placeholder');
+      var ak = el.getAttribute('data-i18n-alt');
       if (hk) el.innerHTML = (es && ES[hk] != null) ? ES[hk] : original['h:' + hk];
       else if (tk) el.textContent = (es && ES[tk] != null) ? ES[tk] : original['t:' + tk];
       if (pk) el.setAttribute('placeholder', (es && ES[pk] != null) ? ES[pk] : original['p:' + pk]);
+      if (ak) el.setAttribute('alt', (es && ES[ak] != null) ? ES[ak] : original['a:' + ak]);
     });
     document.documentElement.lang = es ? 'es' : 'en';
     var btn = document.getElementById('langToggle');
@@ -302,6 +329,9 @@
     }
     try { localStorage.setItem(STORAGE, es ? 'es' : 'en'); } catch (e) {}
     window.__elateveLang = es ? 'es' : 'en';
+    setTitle();
+    // Lets the journal (rendered from data, not markup) switch language too
+    document.dispatchEvent(new CustomEvent('elateve:lang', { detail: { lang: window.__elateveLang } }));
   }
 
   function init() {
@@ -324,4 +354,5 @@
   }
 
   window.ELATEVE_applyLang = apply;
+  window.ELATEVE_setTitle = setTitle;
 })();

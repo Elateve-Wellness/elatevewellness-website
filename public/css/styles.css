@@ -79,8 +79,12 @@ html { scroll-behavior: auto; }
 .nav-links a.nav-book { background: var(--gold-grad); color: #fff; padding: 11px 18px; border: 0; box-shadow: 0 8px 24px -10px rgba(139, 105, 20, 0.55); transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease); }
 .nav-links a.nav-book:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(139, 105, 20, 0.65); }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
-.lang-toggle { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); font-family: var(--font-body); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.06em; display: grid; place-items: center; flex-shrink: 0; transition: border-color 0.25s, color 0.25s; }
-.lang-toggle:hover { border-color: var(--gold); color: var(--gold-dark); }
+.lang-switch { display: flex; flex-shrink: 0; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); overflow: hidden; }
+.lang-switch button { height: 32px; min-width: 32px; padding: 0 8px; font-family: var(--font-body); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.06em; color: var(--ink-2); transition: background 0.25s, color 0.25s; }
+.lang-switch button + button { border-left: 1px solid var(--line); }
+.lang-switch button:hover { color: var(--gold-dark); }
+.lang-switch button[aria-pressed="true"] { background: var(--gold-grad); color: #fff; }
+@media (max-width: 400px) { .lang-switch button { min-width: 28px; padding: 0 6px; } .nav-logo-img { height: 30px; } .nav-actions { gap: 6px; } }
 .nav-toggle { display: none; flex-direction: column; gap: 6px; padding: 8px; }
 .nav-toggle span { display: block; width: 24px; height: 1.5px; background: var(--ink); transition: transform 0.3s var(--ease); }
 .nav-toggle.active span:first-child { transform: translateY(3.75px) rotate(45deg); }

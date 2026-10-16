@@ -321,3 +321,23 @@
 .px .tbl{-webkit-overflow-scrolling:touch}
 .px .compare.small{min-width:0;table-layout:fixed}
 @media (max-width:560px){.px .compare.small th,.px .compare.small td{padding:10px 8px;font-size:.76rem;overflow-wrap:anywhere}.px .compare td:first-child{width:28%}}
+
+/* Manchester United video band */
+.px .vband{padding-block:clamp(26px,3.6vw,48px)}
+.px .vband-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(22px,4vw,56px);align-items:center}
+.px .vband-grid>*{min-width:0}
+.px .vband-copy{display:grid;gap:14px;justify-items:start;align-content:center}
+.px .vband-copy h2{font-size:clamp(1.5rem,2.6vw,2.1rem)}
+.px .vband-copy p.muted{font-size:.95rem}
+.px .btn-on-night{border-color:rgba(232,200,114,.6);color:var(--gold-light)}
+.px .btn-on-night:hover{background:rgba(232,200,114,.1)}
+.px .vframe{margin:0;display:grid;gap:8px}
+.px .vframe figcaption{color:var(--on-night-muted);font-size:.72rem;letter-spacing:.04em}
+.px .vbox{position:relative;container-type:inline-size;aspect-ratio:660/272;overflow:hidden;background:#000;border:1px solid rgba(255,255,255,.12)}
+.px .vbox video{position:absolute;left:50%;top:50%;width:calc(100cqw*384/660);height:calc(100cqw*848/660);max-width:none;object-fit:fill;background:#000;transform:translate(-50%,calc(-50% + 100cqw*56/660)) rotate(-90deg)}
+.px .vsound{position:absolute;right:10px;bottom:10px;z-index:2;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(10,8,5,.6);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.px .vsound:hover{background:rgba(10,8,5,.8);border-color:var(--gold-light)}
+.px .vsound .i-on{display:none}
+.px .vsound[aria-pressed="true"] .i-on{display:block}
+.px .vsound[aria-pressed="true"] .i-off{display:none}
+@media (max-width:860px){.px .vband-grid{grid-template-columns:1fr}.px .vframe{margin-inline:calc(-1*var(--gutter))}.px .vframe figcaption{margin-inline:var(--gutter)}.px .vbox{border-inline:0}}

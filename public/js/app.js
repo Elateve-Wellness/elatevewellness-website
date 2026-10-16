@@ -293,35 +293,39 @@ const THUMBS = {
   '/images/partnership/barcelona.jpg': '/images/web/p-barcelona-sm.jpg',
   '/images/machinery/pbm-cellstack.png': '/images/web/p-cellstack-sm.jpg'
 };
-const ES_MONTHS = { Jan: 'Ene', Feb: 'Feb', Mar: 'Mar', Apr: 'Abr', May: 'May', Jun: 'Jun', Jul: 'Jul', Aug: 'Ago', Sep: 'Sep', Oct: 'Oct', Nov: 'Nov', Dec: 'Dic' };
+const MONTHS = {
+  es: { Jan: 'Ene', Feb: 'Feb', Mar: 'Mar', Apr: 'Abr', May: 'May', Jun: 'Jun', Jul: 'Jul', Aug: 'Ago', Sep: 'Sep', Oct: 'Oct', Nov: 'Nov', Dec: 'Dic' },
+  fr: { Jan: 'janv.', Feb: 'févr.', Mar: 'mars', Apr: 'avr.', May: 'mai', Jun: 'juin', Jul: 'juil.', Aug: 'août', Sep: 'sept.', Oct: 'oct.', Nov: 'nov.', Dec: 'déc.' }
+};
 const ASSET_QS = (document.querySelector('script[src*="/js/app.js"]')?.src.split('?')[1]) || '';
-let blogEsCache = null;
+const blogCache = {};
 let blogListCache = null;
 let openPostId = null;
 
-const isEs = () => window.__elateveLang === 'es';
-const fmtBlogDate = (label) => isEs() ? String(label || '').replace(/^[A-Za-z]{3}/, (m) => ES_MONTHS[m] || m) : label;
+const curLang = () => window.__elateveLang || 'en';
+const fmtBlogDate = (label) => { const m = MONTHS[curLang()]; return m ? String(label || '').replace(/^[A-Za-z]{3}/, (x) => m[x] || x) : label; };
 
-async function fetchBlogEs() {
-  if (blogEsCache) return blogEsCache;
+async function fetchBlogLang(lang) {
+  if (blogCache[lang]) return blogCache[lang];
   try {
-    const res = await fetch(`/i18n/blog-es.json?${ASSET_QS}`);
-    blogEsCache = res.ok ? await res.json() : {};
-  } catch (err) { blogEsCache = {}; }
-  return blogEsCache;
+    const res = await fetch(`/i18n/blog-${lang}.json?${ASSET_QS}`);
+    blogCache[lang] = res.ok ? await res.json() : {};
+  } catch (err) { blogCache[lang] = {}; }
+  return blogCache[lang];
 }
 
-// Returns the post with Spanish copy laid over it when the site is in Spanish
+// Returns the post with translated copy laid over it when the site is in Spanish or French
 async function localizePost(post) {
-  if (!isEs()) return post;
-  const es = (await fetchBlogEs())[String(post.id)];
-  return es ? { ...post, content: undefined, htmlContent: undefined, ...es } : post;
+  const lang = curLang();
+  if (lang === 'en') return post;
+  const tr = (await fetchBlogLang(lang))[String(post.id)];
+  return tr ? { ...post, content: undefined, htmlContent: undefined, ...tr } : post;
 }
 
 async function loadBlog(force = false) {
   const grid = document.getElementById('blogGrid');
   if (!grid) return;
-  const lang = isEs() ? 'es' : 'en';
+  const lang = curLang();
   if (!force && grid.children.length > 0 && grid.dataset.lang === lang) return;
 
   if (!blogListCache) blogListCache = await fetchBlog();
@@ -490,7 +494,7 @@ function initNavigation() {
           });
         } catch (err) { /* still show toast */ }
       }
-      showToast(isEs() ? 'Gracias por suscribirse. Revise su bandeja de entrada.' : 'Welcome to the elevation. Check your inbox.');
+      showToast({ es: 'Gracias por suscribirse. Revise su bandeja de entrada.', fr: 'Merci de votre inscription. Vérifiez votre boîte de réception.' }[curLang()] || 'Welcome to the elevation. Check your inbox.');
       form.reset();
     });
   }
@@ -536,6 +540,32 @@ function initScrollEffects() {
 
   // Partnership sections use their own .kx-reveal hook
   document.querySelectorAll('.kx-reveal').forEach(el => observer.observe(el));
+}
+
+// ==================== MANCHESTER UNITED VIDEO ====================
+// Autoplays muted (browsers require it), plays only while on screen, with a button to turn the sound on.
+function initVideo() {
+  const video = document.getElementById('mufcVideo');
+  if (!video) return;
+  const btn = document.getElementById('mufcSound');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    video.removeAttribute('autoplay');
+    video.pause();
+    video.controls = true;
+    btn?.remove();
+    return;
+  }
+  const play = () => { const p = video.play(); if (p && p.catch) p.catch(() => {}); };
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => { if (entries[0].isIntersecting) play(); else video.pause(); }, { threshold: 0.25 }).observe(video);
+  } else {
+    play();
+  }
+  btn?.addEventListener('click', () => {
+    video.muted = !video.muted;
+    btn.setAttribute('aria-pressed', String(!video.muted));
+    if (!video.muted) play();
+  });
 }
 
 // ==================== TOAST ====================
@@ -602,6 +632,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   initNavigation();
   initScrollEffects();
+  initVideo();
   initContactModal();
 
   // Push initial state

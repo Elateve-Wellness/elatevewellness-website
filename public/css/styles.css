@@ -220,7 +220,6 @@ html { scroll-behavior: auto; }
 .contact-options { display: grid; gap: 10px; margin-top: 4px; }
 .contact-opt { display: grid; gap: 4px; padding: 16px; border: 1px solid var(--line); background: var(--surface); transition: border-color 0.25s, transform 0.25s var(--ease); }
 .contact-opt:hover { border-color: var(--gold); transform: translateY(-2px); }
-.contact-opt--primary { border-color: var(--gold); }
 .contact-opt-k { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; color: var(--gold-dark); }
 .contact-opt-v { font-family: var(--font-display); font-weight: 300; font-size: 1.15rem; }
 /* ── TOAST ── */

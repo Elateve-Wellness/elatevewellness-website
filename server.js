@@ -10,6 +10,11 @@ const pagesRouter = require('./routes/pages');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Short booking link -> shared Google Calendar booking page (Melissa + Anne Claire).
+// To change where it points, edit BOOKING_URL only; every link already sent keeps working.
+const BOOKING_URL = 'https://calendar.app.google/sUFdqTqbaDEXnPV59';
+app.get(['/reservar', '/book'], (req, res) => res.redirect(302, BOOKING_URL));
+
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
 
